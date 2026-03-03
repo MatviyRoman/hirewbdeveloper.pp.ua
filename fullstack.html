@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FullStack розробник Laravel + Vue.js — Проєкт під ключ | Roman Matviy</title>
+<meta name="description" content="FullStack розробник Roman Matviy — Laravel + Vue.js проєкти під ключ. Backend, Frontend, Docker, CI/CD, REST API, адмін-панель Filament. 6+ років. Hire FullStack developer Ukraine. Від $1500.">
+<meta name="keywords" content="FullStack розробник, FullStack developer Ukraine, Laravel Vue.js developer, hire fullstack developer Ukraine, веб-розробник під ключ, fullstack developer Lviv, SaaS розробник Ukraine">
+<meta name="author" content="Roman Matviy"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://romandev.pp.ua/services/fullstack.html">
+<meta property="og:title" content="FullStack розробник Laravel + Vue.js — Проєкт під ключ | Roman Matviy"><meta property="og:description" content="FullStack розробник Roman Matviy — Laravel + Vue.js проєкти під ключ. Backend, Frontend, Docker, CI/CD, REST API, адмін-панель Filament. 6+ років. Hire FullStack developer Ukraine. Від $1500."><meta property="og:url" content="https://romandev.pp.ua/services/fullstack.html"><meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>  :root {
+    --bg: #03050d; --bg2: #070d1a; --bg3: #0a1428;
+    --cyan: #00f5d4; --orange: #ff6b35; --blue: #3b82f6;
+    --purple: #8b5cf6; --green: #22c55e;
+    --text: #e8edf5; --muted: #5a6a85;
+    --card: rgba(255,255,255,0.04);
+    --border: rgba(0,245,212,0.12);
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-mono); overflow-x: hidden; line-height: 1.7; cursor: none; }
+  a { color: inherit; text-decoration: none; } ul { list-style: none; }
+  /* CURSOR */
+  .cur { width: 8px; height: 8px; background: var(--cyan); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; mix-blend-mode: screen; transition: transform 0.08s ease; }
+  .cur-ring { width: 36px; height: 36px; border: 1.5px solid var(--cyan); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998; transition: all 0.18s ease; opacity: 0.4; }
+  .cur-ring.hovered { transform: scale(2) !important; opacity: 0.15; }
+  /* SCROLL PROGRESS */
+  .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; z-index: 600; background: linear-gradient(90deg, var(--cyan), var(--orange)); transition: width 0.1s linear; }
+  /* GRID BG */
+  .bg-grid { position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(0,245,212,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,212,0.025) 1px, transparent 1px); background-size: 70px 70px; }
+  /* BLOBS */
+  .bg-blob { position: fixed; pointer-events: none; z-index: 0; border-radius: 50%; filter: blur(130px); }
+  @keyframes floatBlob { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(40px,-60px) scale(1.1)} 66%{transform:translate(-30px,40px) scale(0.95)} }
+  /* NAV */
+  nav.main-nav { position: fixed; top: 0; inset-inline: 0; z-index: 500; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 5vw; background: rgba(3,5,13,0.88); backdrop-filter: blur(24px) saturate(1.4); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.03em; }
+  .nav-logo em { color: var(--cyan); font-style: normal; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.6rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; border-radius: 2px; clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%); transition: all 0.3s; white-space: nowrap; }
+  .nav-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+  .nav-menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--text); }
+  /* MOBILE NAV */
+  .mobile-nav { position: fixed; inset: 0; z-index: 400; background: var(--bg); padding: 5rem 2rem 2rem; display: none; flex-direction: column; gap: 2rem; }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--text); }
+  .mobile-nav a:hover { color: var(--cyan); }
+  .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+  /* BREADCRUMB */
+  .breadcrumb { position: relative; z-index: 1; padding: 6.5rem 5vw 0; display: flex; align-items: center; gap: 0.5rem; font-size: 0.68rem; color: var(--muted); }
+  .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+  .breadcrumb a:hover, .breadcrumb span { color: var(--cyan); }
+  /* PAGE HERO */
+  .page-hero { position: relative; z-index: 1; padding: 2.5rem 5vw 5rem; overflow: hidden; }
+  .page-badge { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px solid var(--border); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 1.2rem; }
+  .page-badge::before { content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: blink 2s ease infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .page-h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: 1.02; letter-spacing: -0.04em; margin-bottom: 0.5rem; }
+  .page-tagline { font-family: var(--font-display); font-size: clamp(0.9rem, 2vw, 1.2rem); color: var(--orange); font-weight: 600; margin-bottom: 1.5rem; }
+  .page-desc { font-size: 0.88rem; color: var(--muted); max-width: 680px; line-height: 1.9; margin-bottom: 2.5rem; }
+  .page-desc strong { color: var(--text); }
+  .hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  /* BUTTONS */
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-p { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; border-radius: 2px; transition: all 0.3s; letter-spacing: 0.03em; }
+  .btn-primary { background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
+  .btn-primary:hover { filter: brightness(1.12); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,245,212,0.25); }
+  .btn-secondary { border: 1px solid rgba(255,107,53,0.35); color: var(--orange); clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
+  .btn-secondary:hover { background: rgba(255,107,53,0.08); transform: translateY(-2px); }
+  /* STATS */
+  .stats-row { display: flex; flex-wrap: wrap; gap: 2.5rem; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
+  .stat-val { font-family: var(--font-display); font-weight: 800; font-size: 2.2rem; color: var(--cyan); line-height: 1; }
+  .stat-label { font-size: 0.66rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem; }
+  /* SECTIONS */
+  section { position: relative; z-index: 1; padding: 5.5rem 5vw; }
+  section.dark { background: var(--bg2); }
+  .section-label { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.8rem; }
+  .section-label::before { content: '// '; color: var(--muted); }
+  .section-h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+  .section-h2 em { color: var(--cyan); font-style: normal; }
+  .section-sub { font-size: 0.86rem; color: var(--muted); max-width: 580px; line-height: 1.85; margin-bottom: 3.5rem; }
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(36px); transition: all 0.65s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  /* FEATURES GRID */
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.2rem; }
+  .feat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 2rem 1.8rem; transition: all 0.35s; position: relative; overflow: hidden; }
+  .feat-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), transparent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+  .feat-card:hover { border-color: rgba(0,245,212,0.25); }
+  .feat-card:hover::after { transform: scaleX(1); }
+  .feat-icon { width: 44px; height: 44px; background: rgba(0,245,212,0.07); border: 1px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1.2rem; }
+  .feat-title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .feat-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
+  /* TECH GRID */
+  .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.8rem; }
+  .tech-item { background: var(--card); border: 1px solid var(--border); border-radius: 3px; padding: 1.2rem 1rem; text-align: center; transition: all 0.3s; cursor: default; }
+  .tech-item:hover { border-color: var(--cyan); background: rgba(0,245,212,0.05); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+  .tech-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .tech-name { font-size: 0.72rem; font-weight: 600; color: var(--text); }
+  .tech-sub { font-size: 0.62rem; color: var(--muted); margin-top: 0.2rem; }
+  /* PROCESS */
+  .process-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5px; background: var(--border); border: 1px solid var(--border); }
+  .process-step { background: var(--bg2); padding: 2.2rem 1.8rem; position: relative; transition: background 0.3s; }
+  .process-step:hover { background: var(--bg3); }
+  .step-num { font-family: var(--font-display); font-weight: 800; font-size: 3.5rem; line-height: 1; color: rgba(0,245,212,0.07); position: absolute; top: 1.2rem; right: 1.5rem; }
+  .step-icon { font-size: 1.6rem; margin-bottom: 1rem; }
+  .step-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .step-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
+  /* FAQ */
+  .faq-list { display: grid; gap: 0; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 1.8rem; cursor: pointer; background: var(--bg2); transition: background 0.2s; font-family: var(--font-display); font-weight: 600; font-size: 0.92rem; gap: 1rem; }
+  .faq-q:hover { background: var(--bg3); }
+  .faq-toggle { width: 24px; height: 24px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; color: var(--cyan); transition: transform 0.3s, background 0.3s; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); background: rgba(0,245,212,0.1); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.8rem; }
+  .faq-item.open .faq-a { max-height: 400px; padding: 1rem 1.8rem 1.6rem; }
+  .faq-a p { font-size: 0.82rem; color: var(--muted); line-height: 1.85; }
+  /* SERVICES MEGA GRID */
+  .services-mega { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.5px; background: var(--border); border: 1px solid var(--border); margin-top: 3rem; }
+  .svc-card { background: var(--bg2); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 0.8rem; position: relative; transition: background 0.3s; overflow: hidden; }
+  .svc-card:hover { background: var(--bg3); }
+  .svc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+  .svc-card:hover::before { transform: scaleX(1); }
+  .svc-icon { width: 52px; height: 52px; background: rgba(0,245,212,0.07); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+  .svc-title { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; }
+  .svc-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.85; flex: 1; }
+  .svc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .svc-tag { font-size: 0.62rem; padding: 0.22rem 0.6rem; background: rgba(0,245,212,0.06); border: 1px solid rgba(0,245,212,0.14); border-radius: 2px; color: var(--cyan); }
+  .svc-price { font-family: var(--font-display); font-size: 0.75rem; color: var(--muted); margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .svc-price span { color: var(--cyan); font-weight: 700; }
+  .svc-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--cyan); font-size: 0.76rem; transition: gap 0.2s; }
+  .svc-link:hover { gap: 0.7rem; }
+  /* RELATED */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+  .related-card { display: flex; flex-direction: column; gap: 0.5rem; background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 1.5rem; transition: all 0.3s; }
+  .related-card:hover { border-color: rgba(0,245,212,0.3); transform: translateY(-3px); }
+  .related-icon { font-size: 1.4rem; }
+  .related-title { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
+  .related-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.7; flex: 1; }
+  .related-link { font-size: 0.7rem; color: var(--cyan); margin-top: 0.3rem; }
+  /* CTA SECTION */
+  .cta-section { position: relative; z-index: 1; background: linear-gradient(135deg, var(--bg3) 0%, rgba(0,245,212,0.04) 50%, var(--bg3) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6rem 5vw; text-align: center; overflow: hidden; }
+  .cta-bg { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: var(--cyan); filter: blur(160px); opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .cta-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3.2rem); letter-spacing: -0.03em; margin-bottom: 1rem; position: relative; }
+  .cta-sub { font-size: 0.88rem; color: var(--muted); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.85; position: relative; }
+  .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; }
+  .promo-pill { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px dashed rgba(0,245,212,0.3); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.72rem; color: var(--cyan); margin-bottom: 2rem; position: relative; }
+  /* CODE WINDOW */
+  .code-window { background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; font-size: 0.78rem; }
+  .code-bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1rem; background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border); }
+  .code-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .code-body { padding: 1.5rem; line-height: 2; overflow-x: auto; white-space: pre; }
+  .kw{color:#ff79c6} .fn{color:#50fa7b} .str{color:#f1fa8c} .cm{color:#6272a4;font-style:italic} .cl{color:#00f5d4} .vr{color:#bd93f9} .tg{color:#ff6b6b} .at{color:#50fa7b}
+  /* QUICK FORM */
+  .quick-form { display: grid; gap: 0.9rem; }
+  .qf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  .qf-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); display: block; margin-bottom: 0.3rem; }
+  .qf-input, .qf-textarea { width: 100%; background: var(--card); border: 1px solid var(--border); color: var(--text); font-family: var(--font-mono); font-size: 0.8rem; padding: 0.75rem; border-radius: 2px; outline: none; transition: border 0.3s; }
+  .qf-input:focus, .qf-textarea:focus { border-color: var(--cyan); }
+  .qf-textarea { resize: none; min-height: 110px; }
+  .qf-btn { padding: 0.85rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; border: none; border-radius: 2px; cursor: pointer; clip-path: polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%); transition: all 0.3s; width: 100%; }
+  .qf-btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+  .qf-ok { display: none; text-align: center; color: var(--green); font-size: 0.8rem; padding: 0.5rem; }
+  /* FOOTER */
+  footer.main-footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 1.8rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .footer-copy { font-size: 0.7rem; color: var(--muted); }
+  .footer-copy a { color: var(--cyan); }
+  .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .footer-nav a { font-size: 0.68rem; color: var(--muted); transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--cyan); }
+  /* RESPONSIVE */
+  @media (max-width: 900px) { .hero-split { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) { nav.main-nav .nav-links { display: none; } .nav-menu-btn { display: flex; } section { padding: 4rem 5vw; } .qf-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cur" id="cur"></div><div class="cur-ring" id="curRing"></div>
+<div class="bg-grid"></div>
+<div class="bg-blob" style="width:650px;height:650px;top:-200px;right:-150px;background:var(--purple);opacity:0.08;animation:floatBlob 20s ease-in-out infinite;"></div>
+<div class="bg-blob" style="width:400px;height:400px;bottom:-100px;left:-80px;background:var(--cyan);opacity:0.06;animation:floatBlob 25s ease-in-out infinite reverse;"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">&#10005;</button>
+  <a href="/">Головна</a><a href="index.html">Послуги</a><a href="/#portfolio">Портфоліо</a><a href="/#contact">Контакти</a>
+</nav>
+<nav class="main-nav">
+  <a href="/" class="nav-logo">Roman<em>Dev</em></a>
+  <ul class="nav-links">
+    <li><a href="/">Головна</a></li><li><a href="index.html">Послуги</a></li>
+    <li><a href="/#portfolio">Портфоліо</a></li><li><a href="/#contact">Контакти</a></li>
+  </ul>
+  <a href="https://t.me/RomanMatviy" class="nav-btn" target="_blank" rel="noopener">&#9889; Найняти</a>
+  <button class="nav-menu-btn" id="menuBtn"><svg width="22" height="16" viewBox="0 0 22 16"><rect y="0" width="22" height="2" rx="1" fill="currentColor"/><rect y="7" width="16" height="2" rx="1" fill="currentColor"/><rect y="14" width="22" height="2" rx="1" fill="currentColor"/></svg></button>
+</nav>
+<nav class="breadcrumb"><a href="/">Головна</a> &rsaquo; <a href="index.html">Послуги</a> &rsaquo; <span>FullStack розробник</span></nav>
+<header class="page-hero">
+  <div class="page-badge">FullStack &middot; Laravel + Vue.js &middot; Під ключ</div>
+  <h1 class="page-h1">FullStack<br><em style="color:var(--cyan)">розробник</em><br>проєкт під ключ</h1>
+  <p class="page-tagline">Laravel &middot; Vue.js &middot; TypeScript &middot; Docker &middot; REST API &middot; CI/CD</p>
+  <p class="page-desc">Беру на себе <strong>повний цикл розробки</strong>: від аналізу вимог до деплою і підтримки. Laravel backend + Vue.js frontend + REST API + Filament адмін + Docker. <strong>Один розробник — весь стек.</strong></p>
+  <div class="hero-ctas">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">&#128172; Обговорити FullStack проєкт</a>
+    <a href="/#portfolio" class="btn-p btn-secondary">&#128194; Мої роботи</a>
+  </div>
+  <div class="stats-row">
+    <div><div class="stat-val">6+</div><div class="stat-label">Років FullStack</div></div>
+    <div><div class="stat-val">50+</div><div class="stat-label">Проєктів</div></div>
+    <div><div class="stat-val">від $1500</div><div class="stat-label">Під ключ</div></div>
+  </div>
+</header>
+<section class="dark">
+  <div class="section-label">Стек</div>
+  <h2 class="section-h2 reveal">Технологічний <em>стек</em></h2>
+  <div style="display:grid;gap:1.5px;background:var(--border);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin-top:2rem;">
+    <div style="background:var(--bg2);padding:1.2rem 2rem;display:flex;align-items:center;gap:1.5rem;transition:background 0.3s;" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='var(--bg2)'"><div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);min-width:80px;">Frontend</div><div style="display:flex;flex-wrap:wrap;gap:0.5rem;"><span style="background:rgba(66,184,131,0.12);color:#42b883;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Vue.js 3</span><span style="background:rgba(66,184,131,0.12);color:#42b883;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">TypeScript</span><span style="background:rgba(66,184,131,0.12);color:#42b883;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Pinia</span><span style="background:rgba(66,184,131,0.12);color:#42b883;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Vue Router</span><span style="background:rgba(66,184,131,0.12);color:#42b883;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">TailwindCSS</span><span style="background:rgba(66,184,131,0.12);color:#42b883;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Vite</span></div></div>
+    <div style="background:var(--bg2);padding:1.2rem 2rem;display:flex;align-items:center;gap:1.5rem;" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='var(--bg2)'"><div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);min-width:80px;">Backend</div><div style="display:flex;flex-wrap:wrap;gap:0.5rem;"><span style="background:rgba(255,45,32,0.12);color:#ff2d20;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Laravel 11</span><span style="background:rgba(255,45,32,0.12);color:#ff2d20;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">PHP 8.3</span><span style="background:rgba(255,45,32,0.12);color:#ff2d20;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Livewire</span><span style="background:rgba(255,45,32,0.12);color:#ff2d20;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Filament</span><span style="background:rgba(255,45,32,0.12);color:#ff2d20;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Queue/Jobs</span></div></div>
+    <div style="background:var(--bg2);padding:1.2rem 2rem;display:flex;align-items:center;gap:1.5rem;" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='var(--bg2)'"><div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);min-width:80px;">API</div><div style="display:flex;flex-wrap:wrap;gap:0.5rem;"><span style="background:rgba(255,45,32,0.12);color:#ff2d20;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">REST API</span><span style="background:rgba(255,45,32,0.12);color:#ff2d20;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">JWT / Sanctum</span><span style="background:rgba(255,45,32,0.12);color:#ff2d20;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Swagger</span><span style="background:rgba(255,45,32,0.12);color:#ff2d20;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Postman</span></div></div>
+    <div style="background:var(--bg2);padding:1.2rem 2rem;display:flex;align-items:center;gap:1.5rem;" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='var(--bg2)'"><div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);min-width:80px;">DB</div><div style="display:flex;flex-wrap:wrap;gap:0.5rem;"><span style="background:rgba(0,117,194,0.12);color:#0075c2;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">MySQL 8</span><span style="background:rgba(0,117,194,0.12);color:#0075c2;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Eloquent ORM</span><span style="background:rgba(0,117,194,0.12);color:#0075c2;font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Redis</span></div></div>
+    <div style="background:var(--bg2);padding:1.2rem 2rem;display:flex;align-items:center;gap:1.5rem;" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='var(--bg2)'"><div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);min-width:80px;">DevOps</div><div style="display:flex;flex-wrap:wrap;gap:0.5rem;"><span style="background:rgba(255,107,53,0.12);color:var(--orange);font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Docker</span><span style="background:rgba(255,107,53,0.12);color:var(--orange);font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Docker Compose</span><span style="background:rgba(255,107,53,0.12);color:var(--orange);font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Nginx</span><span style="background:rgba(255,107,53,0.12);color:var(--orange);font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">CI/CD</span><span style="background:rgba(255,107,53,0.12);color:var(--orange);font-size:0.72rem;padding:0.22rem 0.7rem;border-radius:2px;font-weight:600;">Linux</span></div></div>
+  </div>
+</section>
+<section>
+  <div class="section-label">Що будую</div>
+  <h2 class="section-h2 reveal">Типи <em>проєктів</em></h2>
+  <div class="features-grid">
+    <div class="feat-card reveal"><div class="feat-icon">&#127970;</div><h3 class="feat-title">CRM / ERP системи</h3><p class="feat-desc">Управління клієнтами, задачами, замовленнями. Ролі, права, звіти, інтеграції з 1C.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">&#128717;</div><h3 class="feat-title">E-commerce платформи</h3><p class="feat-desc">Інтернет-магазини: каталог, кошик, платежі, склад, особистий кабінет.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">&#128241;</div><h3 class="feat-title">API для мобільних</h3><p class="feat-desc">Backend + REST API для iOS/Android. Push-нотифікації, file upload, real-time.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">&#127891;</div><h3 class="feat-title">LMS / E-learning</h3><p class="feat-desc">Rocket LMS платформи. Курси, квізи, сертифікати, прогрес студентів.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">&#127807;</div><h3 class="feat-title">Галузеві платформи</h3><p class="feat-desc">Агро, медицина, логістика, нерухомість. Кастомна бізнес-логіка під ваш ринок.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">&#9881;</div><h3 class="feat-title">SaaS продукти</h3><p class="feat-desc">Multi-tenant SaaS, subscription billing, onboarding, аналітика, API для партнерів.</p></div>
+  </div>
+</section>
+<section class="dark">
+  <div class="section-label">FAQ</div>
+  <h2 class="section-h2 reveal">Часті <em>запитання</em></h2>
+  <div class="faq-list reveal">
+    <div class="faq-item"><div class="faq-q">Скільки коштує FullStack проєкт під ключ?<div class="faq-toggle">+</div></div><div class="faq-a"><p>MVP — від $1500. Середній проєкт (CRM, LMS, магазин) — $3000–$8000. Складна SaaS — від $10000. Оцінка безкоштовно. Промокод <strong>HireRomanDev</strong> = 10%.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Які терміни розробки?<div class="faq-toggle">+</div></div><div class="faq-a"><p>MVP — 4–8 тижнів. Середній проєкт — 2–4 місяці. Дедлайн фіксується у договорі.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Що після завершення розробки?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Гарантійна підтримка, документація коду, передача знань. Далі — щомісячна підтримка за домовленістю.</p></div></div>
+  </div>
+</section>
+<section class="dark">
+  <div class="section-label">Зв'язок</div>
+  <h2 class="section-h2 reveal">Обговорити <em>проєкт</em></h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="reveal">
+    <div>
+      <p style="font-size:0.84rem;color:var(--muted);line-height:1.9;margin-bottom:2rem;">Опишіть ваш проєкт — безкоштовно проконсультую і оціню вартість. Відповідаю протягом кількох годин.</p>
+      <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener" style="display:inline-flex;margin-bottom:1rem;">&#128172; Telegram @RomanMatviy</a><br><br>
+      <a href="mailto:roman@matviy.pp.ua" class="btn-p btn-secondary" style="display:inline-flex;">&#128231; roman@matviy.pp.ua</a>
+    </div>
+    <form id="quickForm" class="quick-form">
+  <div class="qf-row">
+    <div><label class="qf-label">Ім'я</label><input id="qfn" class="qf-input" placeholder="Ваше ім'я"></div>
+    <div><label class="qf-label">Email</label><input id="qfe" class="qf-input" type="email" placeholder="email@example.com"></div>
+  </div>
+  <div><label class="qf-label">Повідомлення</label><textarea id="qfm" class="qf-textarea" placeholder="Опишіть вашу ідею для FullStack проєкту..." required></textarea></div>
+  <button type="submit" class="qf-btn">&#128640; Відправити в Telegram</button>
+  <div id="qfOk" class="qf-ok">&#9989; Дякую! Відповім найближчим часом.</div>
+</form>
+  </div>
+</section><div class="cta-section reveal">
+  <div class="cta-bg"></div>
+  <div class="promo-pill">&#127873; <strong>HireRomanDev</strong> &mdash; 10% знижки на перший проєкт</div>
+  <h2 class="cta-title">Замовити <em style="color:var(--cyan)">FullStack проєкт</em></h2>
+  <p class="cta-sub">Розкажіть про ідею — оціню архітектуру і вартість. Безкоштовно.</p>
+  <div class="cta-btns">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">&#128172; Написати в Telegram</a>
+    <a href="mailto:roman@matviy.pp.ua" class="btn-p btn-secondary">&#128231; Email</a>
+  </div>
+</div>
+<footer class="main-footer">
+  <div class="footer-copy">&#169; 2018&#8211;2026 <a href="/">Roman Matviy</a> &middot; FullStack Developer &middot; Lviv, Ukraine</div>
+  <nav class="footer-nav">
+    <a href="/">Головна</a><a href="index.html">Послуги</a><a href="laravel.html">Laravel</a>
+    <a href="wordpress.html">WordPress</a><a href="prestashop.html">PrestaShop</a>
+    <a href="vuejs.html">Vue.js</a><a href="php.html">PHP</a><a href="api.html">REST API</a><a href="fullstack.html">FullStack</a>
+  </nav>
+</footer>
+<script>
+(function(){
+  var c=document.getElementById('cur'),r=document.getElementById('curRing');
+  if(c&&r){var mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c.style.transform='translate('+(mx-4)+'px,'+(my-4)+'px)';});
+    (function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;r.style.transform='translate('+(rx-18)+'px,'+(ry-18)+'px)';requestAnimationFrame(a);})();
+    document.querySelectorAll('a,button').forEach(function(el){el.addEventListener('mouseenter',function(){r.classList.add('hovered');});el.addEventListener('mouseleave',function(){r.classList.remove('hovered');});});}
+  var sp=document.getElementById('scrollProgress');
+  if(sp)window.addEventListener('scroll',function(){sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';});
+  new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'}).observe||(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});});
+  var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var item=q.parentElement,was=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!was)item.classList.add('open');});});
+  var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobileNav'),mc=document.getElementById('mobileClose');
+  if(mb&&mn&&mc){mb.addEventListener('click',function(){mn.classList.add('open');});mc.addEventListener('click',function(){mn.classList.remove('open');});mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');});});}
+  var form=document.getElementById('quickForm');
+  if(form){form.addEventListener('submit',function(e){e.preventDefault();var n=(document.getElementById('qfn')||{}).value||'',em=(document.getElementById('qfe')||{}).value||'',msg=(document.getElementById('qfm')||{}).value||'';if(!msg)return;window.open('https://t.me/RomanMatviy?text='+encodeURIComponent(document.title+'\n'+n+' ('+em+')\n\n'+msg),'_blank');var ok=document.getElementById('qfOk');if(ok){ok.style.display='block';form.reset();setTimeout(function(){ok.style.display='none';},4000);}});} 
+})();
+</script>
+</body></html>
