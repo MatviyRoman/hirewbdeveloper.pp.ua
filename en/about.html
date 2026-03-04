@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Roman Matviy — FullStack Developer from Lviv, Ukraine. 6+ years of experience. Laravel, PHP, Vue.js, WordPress, PrestaShop, Docker. Learn about my journey and values.">
+  <meta name="keywords" content="FullStack Developer, Laravel, Vue.js, PHP, WordPress, PrestaShop, Docker, REST API, Lviv, Ukraine">
+  <meta name="author" content="Roman Matviy">
+  <link rel="canonical" href="https://hirewebdeveloper.pp.ua/en/about.html">
+  <link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/about.html">
+  <link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/about.html">
+  <title>About Me — Roman Matviy, FullStack Developer Lviv | Experience & Skills</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Roman Matviy","jobTitle":"FullStack Developer","url":"https://hirewebdeveloper.pp.ua/en/","workLocation":{"@type":"Place","name":"Lviv, Ukraine"},"sameAs":["https://github.com/MatviyRoman","https://linkedin.com/in/MatviyRoman","https://t.me/RomanMatviy"]}</script>
+<style>
+  :root { --bg: #03050d; --bg2: #070d1a; --bg3: #0a1428; --card: #0e1527; --border: #1a273b; --cyan: #00f5d4; --orange: #ff6b35; --blue: #3b82f6; --purple: #8b5cf6; --green: #22c55e; --text: #e8edf5; --muted: #5a6a85; --font-display: 'Syne', sans-serif; --font-mono: 'JetBrains Mono', monospace; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-size: 1rem; line-height: 1.6; position: relative; overflow-x: hidden; }
+  section { position: relative; z-index: 1; padding: 5rem 5vw; }
+  section.dark { background: linear-gradient(180deg, #030609 0%, #070d1a 50%, #030609 100%); }
+  .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue)); width: 0; z-index: 9999; }
+  .cur, .cur-ring { position: fixed; pointer-events: none; z-index: 9998; }
+  .cur { width: 8px; height: 8px; background: var(--cyan); border-radius: 50%; }
+  .cur-ring { width: 36px; height: 36px; border: 1px solid var(--cyan); border-radius: 50%; opacity: 0.5; transition: width 0.3s, height 0.3s, opacity 0.3s; }
+  .cur-ring.hovered { width: 50px; height: 50px; opacity: 1; }
+  .bg-grid { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-image: linear-gradient(rgba(0,245,212,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,212,0.03) 1px, transparent 1px); background-size: 100px 100px; pointer-events: none; z-index: 0; }
+  .bg-blob { position: fixed; border-radius: 50%; filter: blur(100px); z-index: 0; pointer-events: none; animation: floatBlob 20s ease-in-out infinite; }
+  @keyframes floatBlob { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(30px, -30px); } }
+  nav.main-nav { position: fixed; top: 0; left: 0; right: 0; height: 4.2rem; display: flex; justify-content: space-between; align-items: center; padding: 0 5vw; background: rgba(3,5,13,0.7); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 100; font-family: var(--font-display); }
+  .nav-logo { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; text-decoration: none; color: var(--text); }
+  .nav-logo em { color: var(--cyan); font-style: normal; }
+  .nav-links { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
+  .nav-links a { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-btn { padding: 0.6rem 1.5rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.72rem; border: none; border-radius: 3px; cursor: pointer; text-decoration: none; transition: all 0.3s; }
+  .nav-btn:hover { filter: brightness(1.1); transform: translateY(-2px); }
+  .nav-menu-btn { display: none; background: none; border: none; color: var(--text); font-size: 1.4rem; cursor: pointer; align-items: center; gap: 0.5rem; }
+  .nav-menu-btn:hover { color: var(--cyan); }
+  nav.mobile-nav { display: none; position: fixed; top: 0; left: -300px; width: 300px; height: 100%; background: var(--bg3); border-right: 1px solid var(--border); padding: 5rem 1.5rem 2rem; z-index: 101; flex-direction: column; gap: 2rem; transition: left 0.3s; }
+  nav.mobile-nav.open { left: 0; }
+  .mobile-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+  nav.mobile-nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  nav.mobile-nav a:hover { color: var(--cyan); }
+  nav.breadcrumb { position: relative; z-index: 1; padding: 0.8rem 5vw; font-size: 0.75rem; color: var(--muted); border-bottom: 1px solid var(--border); }
+  nav.breadcrumb a { color: var(--cyan); text-decoration: none; }
+  nav.breadcrumb a:hover { text-decoration: underline; }
+  .reveal { }
+  .reveal.visible { }
+  .section-label { display: inline-block; font-family: var(--font-mono); font-size: 0.65rem; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem; }
+  .section-h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: -0.02em; margin-bottom: 0.5rem; line-height: 1.2; }
+  .section-h2 em { font-style: normal; color: var(--cyan); }
+  .section-sub { font-size: 0.88rem; color: var(--muted); max-width: 600px; line-height: 1.85; margin-bottom: 3rem; }
+  .btn-p { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 2rem; border-radius: 3px; font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; cursor: pointer; text-decoration: none; user-select: none; border: 1px solid transparent; transition: all 0.3s; }
+  .btn-primary { background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); }
+  .btn-primary:hover { filter: brightness(1.15); transform: translateY(-2px); }
+  .btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text); }
+  .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+  header.page-hero { position: relative; z-index: 1; padding: 7rem 5vw 4rem; }
+  .page-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+  .page-h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+  .page-tagline { font-size: 0.95rem; color: var(--muted); margin-bottom: 2rem; letter-spacing: 0.05em; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .services-mega { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.5px; background: var(--border); border: 1px solid var(--border); margin-top: 3rem; }
+  .svc-card { background: var(--bg2); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 0.8rem; position: relative; transition: background 0.3s; overflow: hidden; }
+  .svc-card:hover { background: var(--bg3); }
+  .svc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+  .svc-card:hover::before { transform: scaleX(1); }
+  .svc-icon { width: 52px; height: 52px; background: rgba(0,245,212,0.07); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+  .svc-title { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; }
+  .svc-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.85; flex: 1; }
+  .svc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .svc-tag { font-size: 0.62rem; padding: 0.22rem 0.6rem; background: rgba(0,245,212,0.06); border: 1px solid rgba(0,245,212,0.14); border-radius: 2px; color: var(--cyan); }
+  .faq-list { display: grid; gap: 0; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 1.8rem; cursor: pointer; background: var(--bg2); transition: background 0.2s; font-family: var(--font-display); font-weight: 600; font-size: 0.92rem; gap: 1rem; }
+  .faq-q:hover { background: var(--bg3); }
+  .faq-toggle { width: 24px; height: 24px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; color: var(--cyan); transition: transform 0.3s, background 0.3s; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); background: rgba(0,245,212,0.1); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.8rem; }
+  .faq-item.open .faq-a { max-height: 400px; padding: 1rem 1.8rem 1.6rem; }
+  .faq-a p { font-size: 0.82rem; color: var(--muted); line-height: 1.85; }
+  .cta-section { position: relative; z-index: 1; background: linear-gradient(135deg, var(--bg3) 0%, rgba(0,245,212,0.04) 50%, var(--bg3) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6rem 5vw; text-align: center; overflow: hidden; }
+  .cta-bg { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: var(--cyan); filter: blur(160px); opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .cta-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3.2rem); letter-spacing: -0.03em; margin-bottom: 1rem; position: relative; }
+  .cta-sub { font-size: 0.88rem; color: var(--muted); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.85; position: relative; }
+  .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; }
+  .promo-pill { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px dashed rgba(0,245,212,0.3); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.72rem; color: var(--cyan); margin-bottom: 2rem; position: relative; }
+  footer.main-footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 1.8rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .footer-copy { font-size: 0.7rem; color: var(--muted); }
+  .footer-copy a { color: var(--cyan); }
+  .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .footer-nav a { font-size: 0.68rem; color: var(--muted); transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--cyan); }
+  .timeline { padding-left: 2rem; border-left: 1px solid var(--border); display: grid; gap: 0; }
+  .tl-item { position: relative; padding: 0 0 2.5rem 2rem; }
+  .tl-item::before { content: ''; position: absolute; left: -2.42rem; top: 0.35rem; width: 10px; height: 10px; border-radius: 50%; background: var(--bg); border: 2px solid var(--border); transition: border-color 0.3s; }
+  .tl-item:hover::before { border-color: var(--cyan); }
+  .tl-item.current::before { background: var(--cyan); border-color: var(--cyan); box-shadow: 0 0 12px rgba(0,245,212,0.5); }
+  .tl-date { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .tl-company { font-size: 0.72rem; color: var(--cyan); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.2rem; }
+  .tl-role { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .tl-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
+  .tl-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.7rem; }
+  .tl-tag { font-size: 0.6rem; padding: 0.18rem 0.55rem; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.18); border-radius: 2px; color: var(--blue); }
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .value-card { background: var(--bg2); padding: 2rem 1.8rem; transition: background 0.3s; }
+  .value-card:hover { background: var(--bg3); }
+  .value-num { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; color: rgba(0,245,212,0.1); line-height: 1; margin-bottom: 0.6rem; }
+  .value-title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .value-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
+  .stat-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5px; background: var(--border); border: 1px solid var(--border); margin-top: 2rem; }
+  .stat-card { background: var(--bg2); padding: 2rem 1.5rem; text-align: center; transition: background 0.3s; }
+  .stat-card:hover { background: var(--bg3); }
+  .sc-val { font-family: var(--font-display); font-weight: 800; font-size: 2.8rem; color: var(--cyan); line-height: 1; }
+  .sc-lbl { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.4rem; }
+  @media (max-width: 900px) { .stat-cards { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 768px) { nav.main-nav .nav-links { display: none; } .nav-menu-btn { display: flex; } section { padding: 4rem 5vw; } header.page-hero { padding: 5rem 5vw 3rem; } }
+</style>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#00f5d4">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cur" id="cur"></div><div class="cur-ring" id="curRing"></div>
+<div class="bg-grid"></div><div class="bg-blob" style="width:650px;height:650px;top:-200px;right:-150px;background:var(--cyan);opacity:0.07;animation:floatBlob 20s ease-in-out infinite;"></div><div class="bg-blob" style="width:450px;height:450px;bottom:-100px;left:-80px;background:var(--purple);opacity:0.06;animation:floatBlob 25s ease-in-out infinite reverse;"></div>
+<nav class="mobile-nav" id="mobileNav"><button class="mobile-close" id="mobileClose">&#10005;</button>
+  <a href="/en/">Home</a><a href="about.html" style="color:var(--cyan)">About</a>
+  <a href="/en/services/">Services</a><a href="/en/pricing.html">Pricing</a>
+  <a href="/en/#portfolio">Portfolio</a><a href="/en/#contact">Contact</a>
+  <a href="/" style="color:var(--muted);font-size:1.1rem;">UK &#127482;&#127462;</a>
+</nav>
+<nav class="main-nav">
+  <a href="/en/" class="nav-logo">Roman<em>Dev</em></a>
+  <ul class="nav-links">
+    <li><a href="/en/">Home</a></li><li><a href="about.html" class="active">About</a></li>
+    <li><a href="/en/services/">Services</a></li><li><a href="/en/pricing.html">Pricing</a></li>
+    <li><a href="/en/#portfolio">Portfolio</a></li><li><a href="/en/#contact">Contact</a></li>
+    <li><a href="/" style="color:var(--muted);font-size:0.65rem;border:1px solid var(--border);padding:0.3rem 0.7rem;border-radius:100px;">UK</a></li>
+  </ul>
+  <a href="https://t.me/RomanMatviy" class="nav-btn" target="_blank" rel="noopener">&#9889; Hire Me</a>
+  <button class="nav-menu-btn" id="menuBtn"><svg width="22" height="16" viewBox="0 0 22 16"><rect y="0" width="22" height="2" rx="1" fill="currentColor"/><rect y="7" width="16" height="2" rx="1" fill="currentColor"/><rect y="14" width="22" height="2" rx="1" fill="currentColor"/></svg></button>
+</nav>
+<nav class="breadcrumb"><a href="/en/">Home</a> &#8250; <span>About</span></nav>
+
+<header class="page-hero">
+  <div class="page-badge">Roman Matviy &middot; Lviv, Ukraine &#127482;&#127462;</div>
+  <h1 class="page-h1">Hello, I'm<br><em style="color:var(--cyan)">Roman</em></h1>
+  <p class="page-tagline">FullStack Developer &middot; Laravel &middot; PHP &middot; Vue.js</p>
+  <p style="font-size:0.95rem;color:var(--muted);line-height:1.85;margin-bottom:2rem;max-width:700px;">I'm a <strong style="color:var(--text);">FullStack Developer from Lviv, Ukraine</strong> with over <strong style="color:var(--text);">6 years of commercial experience</strong>. I specialize in Laravel, PHP, and Vue.js — from business websites to complex SaaS platforms and enterprise systems.</p>
+  <div class="hero-ctas" style="margin-bottom:3rem;">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">&#128172; Message on Telegram</a>
+    <a href="/en/services/" class="btn-p btn-secondary">&#9881;&#65039; My Services</a>
+  </div>
+</header>
+
+<div style="position:relative;z-index:1;padding:0 5vw 3rem;">
+  <div class="stat-cards reveal"><div class="stat-card"><div class="sc-val">6+</div><div class="sc-lbl">Years of Experience</div></div><div class="stat-card"><div class="sc-val">50+</div><div class="sc-lbl">Projects</div></div><div class="stat-card"><div class="sc-val">7</div><div class="sc-lbl">Companies</div></div><div class="stat-card"><div class="sc-val">90h</div><div class="sc-lbl">PHP/SQL Course</div></div></div>
+</div>
+
+<section class="dark">
+  <div class="section-label">Technical Skills</div>
+  <h2 class="section-h2 reveal">Level of <em>Mastery</em></h2>
+  <p class="section-sub reveal">Eight main focus areas — where I have the most experience and confidence.</p>
+  <div class="services-mega reveal">
+    <div class="svc-card">
+      <div class="svc-icon">🎯</div>
+      <div class="svc-title">Laravel / PHP</div>
+      <div class="svc-desc">My primary specialty. 6+ years of commercial experience. Laravel 11, PHP 8.3, clean code, SOLID principles.</div>
+      <div class="svc-tags"><span class="svc-tag">Laravel</span><span class="svc-tag">PHP 8.3</span><span class="svc-tag">SOLID</span><span class="svc-tag">95%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">📱</div>
+      <div class="svc-title">Vue.js 3 & TypeScript</div>
+      <div class="svc-desc">Modern frontend with Vue 3, TypeScript, Pinia, Vue Router, TailwindCSS. Reactive, composition API.</div>
+      <div class="svc-tags"><span class="svc-tag">Vue.js 3</span><span class="svc-tag">TypeScript</span><span class="svc-tag">Pinia</span><span class="svc-tag">85%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">📦</div>
+      <div class="svc-title">WordPress & WooCommerce</div>
+      <div class="svc-desc">Themes, plugins, ACF, custom fields. WooCommerce — from simple stores to complex systems.</div>
+      <div class="svc-tags"><span class="svc-tag">WordPress</span><span class="svc-tag">WooCommerce</span><span class="svc-tag">ACF</span><span class="svc-tag">92%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🛒</div>
+      <div class="svc-title">PrestaShop & Thirty Bees</div>
+      <div class="svc-desc">E-commerce platforms. Modules, themes, Smarty, API integrations. Mostly B2B systems.</div>
+      <div class="svc-tags"><span class="svc-tag">PrestaShop</span><span class="svc-tag">Thirty Bees</span><span class="svc-tag">Twig</span><span class="svc-tag">88%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">⚙️</div>
+      <div class="svc-title">REST API & Swagger</div>
+      <div class="svc-desc">API-first architecture. RESTful design, Swagger documentation, testing, versioning.</div>
+      <div class="svc-tags"><span class="svc-tag">REST API</span><span class="svc-tag">Swagger</span><span class="svc-tag">Postman</span><span class="svc-tag">93%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">💾</div>
+      <div class="svc-title">MySQL & Databases</div>
+      <div class="svc-desc">Schema design, optimization, normalization. MariaDB, Redis, Eloquent ORM, migrations.</div>
+      <div class="svc-tags"><span class="svc-tag">MySQL</span><span class="svc-tag">MariaDB</span><span class="svc-tag">Eloquent</span><span class="svc-tag">87%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🐳</div>
+      <div class="svc-title">Docker & DevOps</div>
+      <div class="svc-desc">Containerization, docker-compose, Nginx, CI/CD, Linux, SSH. Production-ready setup.</div>
+      <div class="svc-tags"><span class="svc-tag">Docker</span><span class="svc-tag">Nginx</span><span class="svc-tag">CI/CD</span><span class="svc-tag">78%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">✨</div>
+      <div class="svc-title">Filament & Livewire</div>
+      <div class="svc-desc">Modern Laravel admin panels and interactive components. Filament 3, Livewire 3, rapid development.</div>
+      <div class="svc-tags"><span class="svc-tag">Filament</span><span class="svc-tag">Livewire</span><span class="svc-tag">Admin</span><span class="svc-tag">88%</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Career</div>
+  <h2 class="section-h2 reveal">My journey <em>in development</em></h2>
+  <p class="section-sub reveal">From my first HTML pages to enterprise Laravel systems. 7 companies, 6+ years of commercial experience.</p>
+  <div class="timeline reveal">
+    <div class="tl-item current">
+      <div class="tl-date">Currently</div>
+      <div class="tl-company">Freelancehunt · Remote</div>
+      <h3 class="tl-role">Backend / FullStack Developer (Freelance)</h3>
+      <p class="tl-desc">Development with Laravel, Livewire, Docker, REST API, Swagger, MySQL. Server architecture for reliable productive applications.</p>
+      <div class="tl-tags"><span class="tl-tag">Laravel</span><span class="tl-tag">PHP</span><span class="tl-tag">Livewire</span><span class="tl-tag">Docker</span><span class="tl-tag">REST API</span><span class="tl-tag">MySQL</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">NC-ONE.com</div>
+      <div class="tl-company">NC-ONE.com · FullTime</div>
+      <h3 class="tl-role">Fullstack Engineer — Laravel, Vue.js</h3>
+      <p class="tl-desc">Full product development cycle. Laravel + Vue.js, API-first, TypeScript, TailwindCSS, Docker.</p>
+      <div class="tl-tags"><span class="tl-tag">Laravel</span><span class="tl-tag">Vue.js</span><span class="tl-tag">TypeScript</span><span class="tl-tag">Docker</span><span class="tl-tag">Swagger</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Teacher</div>
+      <div class="tl-company">nikos-ltv.lviv.ua · PartTime</div>
+      <h3 class="tl-role">PHP & SQL Teacher</h3>
+      <p class="tl-desc">PHP and SQL teaching. 90-hour training course — mentoring students from zero to confident level.</p>
+      <div class="tl-tags"><span class="tl-tag">PHP</span><span class="tl-tag">SQL</span><span class="tl-tag">Teaching</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">WebSpirit</div>
+      <div class="tl-company">WebSpirit.com.ua · FullTime</div>
+      <h3 class="tl-role">Fullstack Engineer — PHP Developer</h3>
+      <p class="tl-desc">WhiteLion framework (Laravel-like). HTML5, CSS3, SCSS, JS, jQuery, AJAX, PHP, SQL, Figma, Git.</p>
+      <div class="tl-tags"><span class="tl-tag">PHP</span><span class="tl-tag">WhiteLion</span><span class="tl-tag">SCSS</span><span class="tl-tag">jQuery</span><span class="tl-tag">MySQL</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">SoftSprint</div>
+      <div class="tl-company">SoftSprint.net · FullTime</div>
+      <h3 class="tl-role">Fullstack Engineer — PrestaShop Developer</h3>
+      <p class="tl-desc">Themes and modules for PrestaShop, WordPress, Thirty Bees. Smarty/Twig, frontend and backend.</p>
+      <div class="tl-tags"><span class="tl-tag">PrestaShop</span><span class="tl-tag">WordPress</span><span class="tl-tag">Thirty Bees</span><span class="tl-tag">Twig</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">APARTNER</div>
+      <div class="tl-company">APARTNER.PRO · FullTime</div>
+      <h3 class="tl-role">Fullstack Engineer — WordPress, PrestaShop, Laravel</h3>
+      <p class="tl-desc">WordPress, PrestaShop, Laravel. HTML/CSS/SCSS, PHP, SQL, ACF, JS, jQuery, Laravel Mix.</p>
+      <div class="tl-tags"><span class="tl-tag">Laravel</span><span class="tl-tag">WordPress</span><span class="tl-tag">PrestaShop</span><span class="tl-tag">ACF</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Start</div>
+      <div class="tl-company">First Steps · Freelance</div>
+      <h3 class="tl-role">HTML, CSS, PHP — first commercial projects</h3>
+      <p class="tl-desc">Beginning of my web development journey. First freelance orders.</p>
+      <div class="tl-tags"><span class="tl-tag">HTML</span><span class="tl-tag">CSS</span><span class="tl-tag">PHP</span><span class="tl-tag">JS</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Work Approach</div>
+  <h2 class="section-h2 reveal">My <em>Values</em></h2>
+  <div class="values-grid">
+    <div class="value-card reveal">
+      <div class="value-num">01</div>
+      <h3 class="value-title">Quality Over Speed</h3>
+      <p class="value-desc">Better to do it well and take a bit longer than rush and rework. Technical debt is business enemy.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-num">02</div>
+      <h3 class="value-title">Clear Communication</h3>
+      <p class="value-desc">If something won't fit the deadline — I'll say so immediately. You always know the real project status.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-num">03</div>
+      <h3 class="value-title">Code is Language</h3>
+      <p class="value-desc">I write code so another developer understands without explanations. PSR, comments, clean names — always.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-num">04</div>
+      <h3 class="value-title">Continuous Growth</h3>
+      <p class="value-desc">I follow Laravel and Vue.js ecosystem. I test new patterns in side projects before production.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-num">05</div>
+      <h3 class="value-title">Results Oriented</h3>
+      <p class="value-desc">Important that project solves real problem, not just technically work.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-num">06</div>
+      <h3 class="value-title">Reliability</h3>
+      <p class="value-desc">If I took it — I'll finish it. No disappearances, no surprise deadline shifts.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Questions</div>
+  <h2 class="section-h2 reveal">Frequently <em>Asked</em></h2>
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <div class="faq-q">Where are you located and what timezone?<div class="faq-toggle">+</div></div>
+      <div class="faq-a"><p>Lviv, Ukraine — UTC+2/UTC+3. Available from 9:00 to 21:00. For clients from USA or Asia — we can discuss convenient format.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Are you freelancer or open for full employment?<div class="faq-toggle">+</div></div>
+      <div class="faq-a"><p>Currently mostly freelance and remote contracts. Open to full-time remote from foreign companies.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you have public projects or GitHub?<div class="faq-toggle">+</div></div>
+      <div class="faq-a"><p>Yes: github.com/MatviyRoman. Laravel Task Manager, Project Management System (FilamentPHP), OpenHealth and more.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What languages do you speak?<div class="faq-toggle">+</div></div>
+      <div class="faq-a"><p>Ukrainian (native), English B2, some Polish. With international clients — comfortable in English.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-section reveal">
+  <div class="cta-bg"></div>
+  <div class="promo-pill">&#127873; <strong>HireRomanDev</strong> &mdash; 10% discount on first project</div>
+  <h2 class="cta-title">Got a <em style="color:var(--cyan)">project</em>?</h2>
+  <p class="cta-sub">Write — we'll discuss details, estimate scope. First consultation is free.</p>
+  <div class="cta-btns">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">&#128172; Message on Telegram</a>
+    <a href="mailto:roman@hirewebdeveloper.pp.ua" class="btn-p btn-secondary">&#128231; Email</a>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="footer-copy">&#169; 2018&#8211;2026 <a href="/en/">Roman Matviy</a> &middot; FullStack Developer &middot; Lviv, Ukraine &#127482;&#127462;</div>
+  <nav class="footer-nav">
+    <a href="/en/">Home</a><a href="about.html">About</a><a href="/en/services/">Services</a><a href="/en/pricing.html">Pricing</a><a href="/en/#portfolio">Portfolio</a><a href="/">UK</a>
+  </nav>
+</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('cur'),r=document.getElementById('curRing');
+  if(c&&r){var mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c.style.transform='translate('+(mx-4)+'px,'+(my-4)+'px)';});
+    (function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;r.style.transform='translate('+(rx-18)+'px,'+(ry-18)+'px)';requestAnimationFrame(a);})();
+    document.querySelectorAll('a,button').forEach(function(el){el.addEventListener('mouseenter',function(){r.classList.add('hovered');});el.addEventListener('mouseleave',function(){r.classList.remove('hovered');});});}
+  var sp=document.getElementById('scrollProgress');
+  if(sp)window.addEventListener('scroll',function(){sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';});
+  var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal,.sbi').forEach(function(el){obs.observe(el);});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var item=q.parentElement,was=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!was)item.classList.add('open');});});
+  var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobileNav'),mc=document.getElementById('mobileClose');
+  if(mb&&mn){mb.addEventListener('click',function(){mn.classList.toggle('open');});mc.addEventListener('click',function(){mn.classList.remove('open');});}
+})();
+</script>
+</body>
+</html>
