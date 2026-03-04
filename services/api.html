@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>REST API розробник — OpenAPI, JWT, OAuth2 | Roman Matviy</title>
+<meta name="description" content="REST API розробка: проектування, документування, OpenAPI/Swagger, JWT, OAuth2. Інтеграції сервісів, кешування. Від $25/год або фіксована ціна від $2000.">
+<meta name="keywords" content="REST API розробник Україна, OpenAPI, Swagger, JWT, OAuth2, Postman, Laravel API, API developer, REST API documentation">
+<meta name="author" content="Roman Matviy"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hirewebdeveloper.pp.ua/services/api.html">
+<link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/api.html">
+<link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/api.html">
+<meta property="og:title" content="REST API розробник — OpenAPI, JWT, OAuth2 | Roman Matviy">
+<meta property="og:description" content="REST API розробка: проектування, документування, OpenAPI/Swagger, JWT, OAuth2. Постман колекції, інтеграції. Від $25/год.">
+<meta property="og:url" content="https://hirewebdeveloper.pp.ua/services/api.html">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"REST API розробник — OpenAPI, JWT, OAuth2 | Roman Matviy","provider":{"@type":"Person","name":"Roman Matviy","url":"https://hirewebdeveloper.pp.ua"},"url":"https://hirewebdeveloper.pp.ua/services/api.html"}</script>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#00f5d4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+<style>  :root {
+    --bg: #03050d; --bg2: #070d1a; --bg3: #0a1428;
+    --cyan: #00f5d4; --orange: #ff6b35; --blue: #3b82f6;
+    --purple: #8b5cf6; --green: #22c55e;
+    --text: #e8edf5; --muted: #5a6a85;
+    --card: rgba(255,255,255,0.04);
+    --border: rgba(0,245,212,0.12);
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-mono); overflow-x: hidden; line-height: 1.7; cursor: none; }
+  a { color: inherit; text-decoration: none; } ul { list-style: none; }
+  .cur { width: 8px; height: 8px; background: var(--cyan); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; mix-blend-mode: screen; transition: transform 0.08s ease; }
+  .cur-ring { width: 36px; height: 36px; border: 1.5px solid var(--cyan); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998; transition: all 0.18s ease; opacity: 0.4; }
+  .cur-ring.hovered { transform: scale(2) !important; opacity: 0.15; }
+  .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; z-index: 600; background: linear-gradient(90deg, var(--cyan), var(--orange)); transition: width 0.1s linear; }
+  .bg-grid { position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(0,245,212,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,212,0.025) 1px, transparent 1px); background-size: 70px 70px; }
+  .bg-blob { position: fixed; pointer-events: none; z-index: 0; border-radius: 50%; filter: blur(130px); }
+  @keyframes floatBlob { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(40px,-60px) scale(1.1)} 66%{transform:translate(-30px,40px) scale(0.95)} }
+  nav.main-nav { position: fixed; top: 0; inset-inline: 0; z-index: 500; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 5vw; background: rgba(3,5,13,0.88); backdrop-filter: blur(24px) saturate(1.4); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.03em; }
+  .nav-logo em { color: var(--cyan); font-style: normal; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.6rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; border-radius: 2px; clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%); transition: all 0.3s; white-space: nowrap; }
+  .nav-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+  .nav-menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--text); }
+  .mobile-nav { position: fixed; inset: 0; z-index: 400; background: var(--bg); padding: 5rem 2rem 2rem; display: none; flex-direction: column; gap: 2rem; }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--text); }
+  .mobile-nav a:hover { color: var(--cyan); }
+  .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+  .breadcrumb { position: relative; z-index: 1; padding: 6.5rem 5vw 0; display: flex; align-items: center; gap: 0.5rem; font-size: 0.68rem; color: var(--muted); }
+  .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+  .breadcrumb a:hover, .breadcrumb span { color: var(--cyan); }
+  .page-hero { position: relative; z-index: 1; padding: 2.5rem 5vw 5rem; overflow: hidden; }
+  .page-badge { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px solid var(--border); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 1.2rem; }
+  .page-badge::before { content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: blink 2s ease infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .page-h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: 1.02; letter-spacing: -0.04em; margin-bottom: 0.5rem; }
+  .page-tagline { font-family: var(--font-display); font-size: clamp(0.9rem, 2vw, 1.2rem); color: var(--orange); font-weight: 600; margin-bottom: 1.5rem; }
+  .page-desc { font-size: 0.88rem; color: var(--muted); max-width: 680px; line-height: 1.9; margin-bottom: 2.5rem; }
+  .page-desc strong { color: var(--text); }
+  .hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-p { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; border-radius: 2px; transition: all 0.3s; letter-spacing: 0.03em; }
+  .btn-primary { background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
+  .btn-primary:hover { filter: brightness(1.12); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,245,212,0.25); }
+  .btn-secondary { border: 1px solid rgba(255,107,53,0.35); color: var(--orange); clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
+  .btn-secondary:hover { background: rgba(255,107,53,0.08); transform: translateY(-2px); }
+  section { position: relative; z-index: 1; padding: 5.5rem 5vw; }
+  section.dark { background: var(--bg2); }
+  .section-label { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.8rem; }
+  .section-label::before { content: '// '; color: var(--muted); }
+  .section-h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+  .section-h2 em { color: var(--cyan); font-style: normal; }
+  .section-sub { font-size: 0.86rem; color: var(--muted); max-width: 580px; line-height: 1.85; margin-bottom: 3.5rem; }
+  .reveal { opacity: 0; transform: translateY(36px); transition: all 0.65s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.2rem; }
+  .feat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 2rem 1.8rem; transition: all 0.35s; position: relative; overflow: hidden; }
+  .feat-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), transparent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+  .feat-card:hover { border-color: rgba(0,245,212,0.25); }
+  .feat-card:hover::after { transform: scaleX(1); }
+  .feat-icon { width: 44px; height: 44px; background: rgba(0,245,212,0.07); border: 1px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1.2rem; }
+  .feat-title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .feat-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
+  .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.8rem; }
+  .tech-item { background: var(--card); border: 1px solid var(--border); border-radius: 3px; padding: 1.2rem 1rem; text-align: center; transition: all 0.3s; cursor: default; }
+  .tech-item:hover { border-color: var(--cyan); background: rgba(0,245,212,0.05); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+  .tech-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .tech-name { font-size: 0.72rem; font-weight: 600; color: var(--text); }
+  .tech-sub { font-size: 0.62rem; color: var(--muted); margin-top: 0.2rem; }
+  .process-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5px; background: var(--border); border: 1px solid var(--border); }
+  .process-step { background: var(--bg2); padding: 2.2rem 1.8rem; position: relative; transition: background 0.3s; }
+  .process-step:hover { background: var(--bg3); }
+  .step-num { font-family: var(--font-display); font-weight: 800; font-size: 3.5rem; line-height: 1; color: rgba(0,245,212,0.07); position: absolute; top: 1.2rem; right: 1.5rem; }
+  .step-icon { font-size: 1.6rem; margin-bottom: 1rem; }
+  .step-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .step-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
+  .faq-list { display: grid; gap: 0; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 1.8rem; cursor: pointer; background: var(--bg2); transition: background 0.2s; font-family: var(--font-display); font-weight: 600; font-size: 0.92rem; gap: 1rem; }
+  .faq-q:hover { background: var(--bg3); }
+  .faq-toggle { width: 24px; height: 24px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; color: var(--cyan); transition: transform 0.3s, background 0.3s; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); background: rgba(0,245,212,0.1); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.8rem; }
+  .faq-item.open .faq-a { max-height: 400px; padding: 1rem 1.8rem 1.6rem; }
+  .faq-a p { font-size: 0.82rem; color: var(--muted); line-height: 1.85; }
+  .services-mega { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.5px; background: var(--border); border: 1px solid var(--border); margin-top: 3rem; }
+  .svc-card { background: var(--bg2); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 0.8rem; position: relative; transition: background 0.3s; overflow: hidden; }
+  .svc-card:hover { background: var(--bg3); }
+  .svc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+  .svc-card:hover::before { transform: scaleX(1); }
+  .svc-icon { width: 52px; height: 52px; background: rgba(0,245,212,0.07); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+  .svc-title { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; }
+  .svc-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.85; flex: 1; }
+  .svc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .svc-tag { font-size: 0.62rem; padding: 0.22rem 0.6rem; background: rgba(0,245,212,0.06); border: 1px solid rgba(0,245,212,0.14); border-radius: 2px; color: var(--cyan); }
+  .svc-price { font-family: var(--font-display); font-size: 0.75rem; color: var(--muted); margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .svc-price span { color: var(--cyan); font-weight: 700; }
+  .svc-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--cyan); font-size: 0.76rem; transition: gap 0.2s; }
+  .svc-link:hover { gap: 0.8rem; }
+  footer { position: relative; z-index: 1; background: var(--bg2); padding: 2.5rem 5vw; text-align: center; font-size: 0.78rem; color: var(--muted); border-top: 1px solid var(--border); }
+  footer a { color: var(--cyan); transition: color 0.2s; }
+  footer a:hover { color: var(--text); }
+  .code-block { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; overflow-x: auto; font-size: 0.78rem; line-height: 1.6; color: var(--muted); margin-bottom: 3rem; }
+  .code-block .kw { color: var(--blue); }
+  .code-block .st { color: var(--green); }
+  .code-block .cm { color: var(--muted); opacity: 0.6; }
+  @media (max-width: 768px) { .nav-menu-btn { display: block; } .nav-links { display: none; } .hero-split { grid-template-columns: 1fr; } .features-grid, .tech-grid { grid-template-columns: 1fr; } .process-grid { grid-template-columns: 1fr; } .page-h1 { font-size: 2rem; } }
+</style>
+</head>
+<body>
+<div class="bg-grid"></div>
+<div class="cur"></div>
+<div class="cur-ring"></div>
+
+<nav class="main-nav">
+  <a href="/services/" class="nav-logo">Roman <em>Matviy</em></a>
+  <div class="nav-links">
+    <a href="/services/">Послуги</a>
+    <a href="/pricing.html">Ціни</a>
+    <a href="/about.html">Про мене</a>
+    <a href="/en/services/api.html" style="color: var(--orange); font-weight: 700;">EN</a>
+  </div>
+  <button class="nav-btn" onclick="window.open('https://t.me/RomanMatviy', '_blank')">Связь</button>
+  <button class="nav-menu-btn" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">☰</button>
+</nav>
+<div class="mobile-nav">
+  <button class="mobile-close" onclick="this.parentElement.classList.remove('open')">✕</button>
+  <a href="/services/">Послуги</a>
+  <a href="/pricing.html">Ціни</a>
+  <a href="/about.html">Про мене</a>
+  <a href="/en/services/api.html">English 🇬🇧</a>
+  <button class="nav-btn" onclick="window.open('https://t.me/RomanMatviy', '_blank'); document.querySelector('.mobile-nav').classList.remove('open');" style="width: 100%; margin-top: 1rem;">Написати в Telegram</button>
+</div>
+
+<div class="breadcrumb">
+  <a href="/">Головна</a> <span>/</span> <a href="/services/">Послуги</a> <span>/</span> <span>REST API</span>
+</div>
+
+<div class="page-hero">
+  <div class="page-badge">🔌 Backend розробка</div>
+  <h1 class="page-h1">REST <em>API</em></h1>
+  <p class="page-tagline">OpenAPI, JWT, OAuth2, Документація</p>
+  <p class="page-desc">Розробка сучасних REST API для веб-додатків і мобільних клієнтів. <strong>OpenAPI/Swagger документація</strong> для легкої інтеграції, <strong>JWT аутентифікація</strong>, <strong>OAuth2</strong> для соціальних мереж. Постман колекції, юніт-тести, кешування Redis. Масштабовна архітектура для мільйонів запитів.</p>
+  <div class="hero-ctas">
+    <button class="btn-p btn-primary" onclick="window.open('https://t.me/RomanMatviy', '_blank')">Написати в Telegram</button>
+    <a href="/pricing.html" class="btn-p btn-secondary">Дізнатися ціни</a>
+  </div>
+</div>
+
+<section>
+  <div class="hero-split reveal">
+    <div>
+      <h2 class="section-h2">Modern <em>API</em></h2>
+      <p class="section-sub">Проектую і розробляю надійні REST API для будь-яких завдань: від мобільних додатків до інтеграцій із зовнішніми сервісами.</p>
+      <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.9; margin-bottom: 1rem;"><strong>OpenAPI/Swagger:</strong> Автоматична документація, інтерактивне тестування, генерація SDK для клієнтів.</p>
+      <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.9; margin-bottom: 1rem;"><strong>Безпека:</strong> JWT токени, OAuth2, rate limiting, CORS, SQL injection захист, XSS prevention.</p>
+      <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.9;"><strong>Оптимізація:</strong> Кешування Redis, database оптимізація, пагінація, фільтрування.</p>
+    </div>
+    <div class="code-block reveal">
+<span class="cm">// RESTful API endpoint з аутентифікацією</span>
+<span class="kw">Route</span>::middleware([<span class="st">'auth:api'</span>])
+  ->prefix(<span class="st">'api/v1'</span>)
+  ->group(<span class="kw">function</span> () {
+    <span class="kw">Route</span>::apiResource(<span class="st">'products'</span>, ProductController::class);
+    <span class="kw">Route</span>::post(<span class="st">'/products/{id}/publish'</span>, 
+      [ProductController::class, <span class="st">'publish'</span>]);
+  });
+
+<span class="kw">class</span> ProductController <span class="kw">extends</span> Controller
+{
+  <span class="cm">// GET /api/v1/products?page=1&per_page=20</span>
+  <span class="kw">public function</span> index(Request <span class="st">$request</span>)
+  {
+    <span class="kw">return</span> Product::query()
+      ->when(<span class="st">$request</span>->filled(<span class="st">'search'</span>), 
+        <span class="kw">fn</span> (<span class="st">$q</span>) => <span class="st">$q</span>->search(<span class="st">$request</span>->search))
+      ->paginate();
+  }
+}
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Можливості</div>
+  <h2 class="section-h2">Що створюю</h2>
+  <div class="features-grid">
+    <div class="feat-card reveal">
+      <div class="feat-icon">📚</div>
+      <p class="feat-title">OpenAPI документація</p>
+      <p class="feat-desc">Автоматична Swagger генерація, інтерактивні тести,點-click клієнти для API.</p>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">🔐</div>
+      <p class="feat-title">Аутентифікація</p>
+      <p class="feat-desc">JWT токени, OAuth2, refresh tokens, API key управління, логування.</p>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">⚡</div>
+      <p class="feat-title">Performance</p>
+      <p class="feat-desc">Redis кешування, query оптимізація, бачення N+1 проблем, indexing.</p>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">🧪</div>
+      <p class="feat-title">Тестування</p>
+      <p class="feat-desc">Unit tests, integration тести, Postman колекції з автоматизацією.</p>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">🔌</div>
+      <p class="feat-title">Інтеграції</p>
+      <p class="feat-desc">Stripe, Twilio, SendGrid, Google Maps, Slack webhook интеграции.</p>
+    </div>
+    <div class="feat-card reveal">
+      <div class="feat-icon">📈</div>
+      <p class="feat-title">Масштабування</p>
+      <p class="feat-desc">Message queues, job scheduling, background processing, async operations.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Стек технологій</div>
+  <h2 class="section-h2">Інструменти розробки</h2>
+  <div class="tech-grid">
+    <div class="tech-item reveal">
+      <div class="tech-icon">🎯</div>
+      <p class="tech-name">Laravel 11</p>
+      <p class="tech-sub">REST API</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">📚</div>
+      <p class="tech-name">OpenAPI 3.0</p>
+      <p class="tech-sub">Swagger UI</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">🔐</div>
+      <p class="tech-name">JWT</p>
+      <p class="tech-sub">Auth</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">🔑</div>
+      <p class="tech-name">OAuth2</p>
+      <p class="tech-sub">Social</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">💾</div>
+      <p class="tech-name">Redis</p>
+      <p class="tech-sub">Caching</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">📦</div>
+      <p class="tech-name">MySQL 8</p>
+      <p class="tech-sub">Database</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">💌</div>
+      <p class="tech-name">Postman</p>
+      <p class="tech-sub">Collections</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">🧪</div>
+      <p class="tech-name">PHPUnit</p>
+      <p class="tech-sub">Tests</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">🔄</div>
+      <p class="tech-name">CI/CD</p>
+      <p class="tech-sub">GitHub Actions</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">🐳</div>
+      <p class="tech-name">Docker</p>
+      <p class="tech-sub">Containers</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">⚙️</div>
+      <p class="tech-name">Queue Jobs</p>
+      <p class="tech-sub">Redis/RabbitMQ</p>
+    </div>
+    <div class="tech-item reveal">
+      <div class="tech-icon">📊</div>
+      <p class="tech-name">GraphQL</p>
+      <p class="tech-sub">Optional</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Розробка</div>
+  <h2 class="section-h2">Процес створення</h2>
+  <div class="process-grid">
+    <div class="process-step reveal">
+      <div class="step-num">1</div>
+      <div class="step-icon">📋</div>
+      <p class="step-title">Проектування API</p>
+      <p class="step-desc">Визначення endpoints, методів, схеми даних, авт-за, обробка помилок.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">2</div>
+      <div class="step-icon">📐</div>
+      <p class="step-title">OpenAPI схема</p>
+      <p class="step-desc">Створення Swagger/OpenAPI документації, інтерактивні примери.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">3</div>
+      <div class="step-icon">🛠️</div>
+      <p class="step-title">Розробка</p>
+      <p class="step-desc">Реалізація endpoints, бізнес-логіка, валідація, обробка помилок.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">4</div>
+      <div class="step-icon">🔐</div>
+      <p class="step-title">Безпека</p>
+      <p class="step-desc">JWT аутентифікація, OAuth2, rate limiting, CORS налаштування.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">5</div>
+      <div class="step-icon">🧪</div>
+      <p class="step-title">Тестування</p>
+      <p class="step-desc">Unit тести, integration тести, Postman авторизацію.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">6</div>
+      <div class="step-icon">🚀</div>
+      <p class="step-title">Деплой</p>
+      <p class="step-desc">Deployment на продакшені, моніторинг, документація для клієнтів.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Найчастіші питання</div>
+  <h2 class="section-h2">FAQ</h2>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <div class="faq-q">
+        <span>Чи можна використовувати інші фреймворки крім Laravel?</span>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>Звичайно! Можу розробляти на Node.js (Express, Fastify), Python (Flask, Django, FastAPI), Go, або іншому фреймворку. Laravel — моя основна спеціалізація, але досвід з іншими стеком теж є.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">
+        <span>Як забезпечується безпека API?</span>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>JWT або OAuth2 для аутентифікації, CORS налаштування, rate limiting, SQL injection захист, XSS prevention, HTTPS/TLS, регулярні security audits, моніторинг аномалій.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">
+        <span>Що таке OpenAPI і чи однаково це Swagger?</span>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>OpenAPI — це стандарт для документування REST API. Swagger UI — інструмент для візуалізації OpenAPI схеми. Генерую обидва автоматично з коду, що робить документацію завжди актуальною.</p>
+      </div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">
+        <span>Скільки коштує розробка REST API?</span>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>Від $25/год для консультацій або $2000-5000+ для повної розробки з документацією та тестами. Точна ціна залежить від кількості endpoints, складності логіки, і потрібних інтеграцій.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Інші послуги</div>
+  <h2 class="section-h2">Послуги розробника</h2>
+  <div class="services-mega">
+    <a href="laravel.html" class="svc-card reveal">
+      <div class="svc-icon">🟣</div>
+      <p class="svc-title">Laravel розробка</p>
+      <p class="svc-desc">Backend системи, REST API, Livewire, Filament адмін</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Laravel</span>
+        <span class="svc-tag">Backend</span>
+      </div>
+    </a>
+    <a href="vuejs.html" class="svc-card reveal">
+      <div class="svc-icon">🟢</div>
+      <p class="svc-title">Vue.js розробка</p>
+      <p class="svc-desc">SPA, SSR, Composition API, інтеграція з API</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Vue.js</span>
+        <span class="svc-tag">Frontend</span>
+      </div>
+    </a>
+    <a href="fullstack.html" class="svc-card reveal">
+      <div class="svc-icon">🚀</div>
+      <p class="svc-title">FullStack розробка</p>
+      <p class="svc-desc">Laravel + Vue.js під ключ, повний цикл</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Laravel</span>
+        <span class="svc-tag">Vue.js</span>
+      </div>
+    </a>
+    <a href="docker.html" class="svc-card reveal">
+      <div class="svc-icon">🐳</div>
+      <p class="svc-title">Docker &amp; DevOps</p>
+      <p class="svc-desc">Контейнеризація, CI/CD, GitHub Actions</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Docker</span>
+        <span class="svc-tag">DevOps</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section>
+  <div style="text-align: center;">
+    <div class="page-badge" style="justify-content: center; margin: 0 auto 2rem;">Потрібен REST API?</div>
+    <h2 class="section-h2" style="text-align: center;">Почніть API розробку сьогодні</h2>
+    <p class="section-sub" style="text-align: center; margin-left: auto; margin-right: auto;">Напишіть мені в Telegram або надайте детальний brief з вимогами</p>
+    <div class="hero-ctas" style="justify-content: center; margin-top: 2rem;">
+      <button class="btn-p btn-primary" onclick="window.open('https://t.me/RomanMatviy', '_blank')">Написати в Telegram</button>
+      <a href="/pricing.html" class="btn-p btn-secondary">Дізнатися ціни</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Roman Matviy. Всі права захищені. | <a href="/services/">Послуги</a> | <a href="/pricing.html">Ціни</a> | <a href="/about.html">Про мене</a> | <a href="https://t.me/RomanMatviy" target="_blank">Telegram</a></p>
+</footer>
+
+<script>
+const cur = document.querySelector('.cur');
+const curRing = document.querySelector('.cur-ring');
+document.addEventListener('mousemove', (e) => {
+  cur.style.left = (e.clientX - 4) + 'px';
+  cur.style.top = (e.clientY - 4) + 'px';
+  curRing.style.left = (e.clientX - 18) + 'px';
+  curRing.style.top = (e.clientY - 18) + 'px';
+});
+document.addEventListener('mousedown', () => curRing.classList.add('hovered'));
+document.addEventListener('mouseup', () => curRing.classList.remove('hovered'));
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const scrollProgress = document.querySelector('.scroll-progress');
+if(scrollProgress) {
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement, b = document.body, st = 'scrollTop', sh = 'scrollHeight';
+    const percent = (h[st] || b[st]) / ((h[sh] || b[sh]) - window.innerHeight) * 100;
+    scrollProgress.style.width = percent + '%';
+  });
+}
+
+document.querySelectorAll('.faq-q').forEach(el => {
+  el.addEventListener('click', () => el.parentElement.classList.toggle('open'));
+});
+</script>
+</body>
+</html>
