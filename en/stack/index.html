@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Technology Stack — PHP, Laravel, Vue.js, Docker | Roman Matviy</title>
+<meta name="description" content="Complete technology stack: PHP 8.3, Laravel 11, Vue.js, TypeScript, Docker, MySQL, PostgreSQL, Redis, CI/CD. Modern web development tools and frameworks.">
+<meta name="keywords" content="technology stack, PHP Laravel Vue.js, TypeScript Docker, web development stack, developer tools, CI/CD">
+<meta name="author" content="Roman Matviy"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hirewebdeveloper.pp.ua/en/stack/">
+<link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/stack/">
+<link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/stack/">
+<meta property="og:title" content="Technology Stack — PHP, Laravel, Vue.js, Docker | Roman Matviy">
+<meta property="og:description" content="Complete technology stack: PHP 8.3, Laravel 11, Vue.js, TypeScript, Docker, MySQL, PostgreSQL, Redis, CI/CD. Modern web development tools and frameworks.">
+<meta property="og:url" content="https://hirewebdeveloper.pp.ua/en/stack/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Technology Stack — PHP, Laravel, Vue.js, Docker | Roman Matviy","url":"https://hirewebdeveloper.pp.ua/en/stack/","author":{"@type":"Person","name":"Roman Matviy"}}</script>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#00f5d4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+<style>  :root {
+    --bg: #03050d; --bg2: #070d1a; --bg3: #0a1428;
+    --cyan: #00f5d4; --orange: #ff6b35; --blue: #3b82f6;
+    --purple: #8b5cf6; --green: #22c55e;
+    --text: #e8edf5; --muted: #5a6a85;
+    --card: rgba(255,255,255,0.04);
+    --border: rgba(0,245,212,0.12);
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-mono); overflow-x: hidden; line-height: 1.7; cursor: none; }
+  a { color: inherit; text-decoration: none; } ul { list-style: none; }
+  .cur { width: 8px; height: 8px; background: var(--cyan); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; mix-blend-mode: screen; transition: transform 0.08s ease; }
+  .cur-ring { width: 36px; height: 36px; border: 1.5px solid var(--cyan); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998; transition: all 0.18s ease; opacity: 0.4; }
+  .cur-ring.hovered { transform: scale(2) !important; opacity: 0.15; }
+  .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; z-index: 600; background: linear-gradient(90deg, var(--cyan), var(--orange)); transition: width 0.1s linear; }
+  .bg-grid { position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(0,245,212,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,212,0.025) 1px, transparent 1px); background-size: 70px 70px; }
+  .bg-blob { position: fixed; pointer-events: none; z-index: 0; border-radius: 50%; filter: blur(130px); }
+  @keyframes floatBlob { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(40px,-60px) scale(1.1)} 66%{transform:translate(-30px,40px) scale(0.95)} }
+  nav.main-nav { position: fixed; top: 0; inset-inline: 0; z-index: 500; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 5vw; background: rgba(3,5,13,0.88); backdrop-filter: blur(24px) saturate(1.4); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.03em; }
+  .nav-logo em { color: var(--cyan); font-style: normal; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.6rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; border-radius: 2px; clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%); transition: all 0.3s; white-space: nowrap; }
+  .nav-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+  .nav-menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--text); }
+  .mobile-nav { position: fixed; inset: 0; z-index: 400; background: var(--bg); padding: 5rem 2rem 2rem; display: none; flex-direction: column; gap: 2rem; }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--text); }
+  .mobile-nav a:hover { color: var(--cyan); }
+  .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+  .page-hero { position: relative; z-index: 1; padding: 6.5rem 5vw 5rem; overflow: hidden; }
+  .page-badge { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px solid var(--border); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 1.2rem; }
+  .page-badge::before { content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: blink 2s ease infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .page-h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: 1.02; letter-spacing: -0.04em; margin-bottom: 0.5rem; }
+  .page-tagline { font-family: var(--font-display); font-size: clamp(0.9rem, 2vw, 1.2rem); color: var(--orange); font-weight: 600; margin-bottom: 1.5rem; }
+  .page-desc { font-size: 0.88rem; color: var(--muted); max-width: 680px; line-height: 1.9; margin-bottom: 2.5rem; }
+  .page-desc strong { color: var(--text); }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-p { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; border-radius: 2px; transition: all 0.3s; letter-spacing: 0.03em; }
+  .btn-primary { background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
+  .btn-primary:hover { filter: brightness(1.12); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,245,212,0.25); }
+  .btn-secondary { border: 1px solid rgba(255,107,53,0.35); color: var(--orange); clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
+  .btn-secondary:hover { background: rgba(255,107,53,0.08); transform: translateY(-2px); }
+  section { position: relative; z-index: 1; padding: 5.5rem 5vw; }
+  section.dark { background: var(--bg2); }
+  .section-label { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.8rem; }
+  .section-label::before { content: '// '; color: var(--muted); }
+  .section-h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+  .section-h2 em { color: var(--cyan); font-style: normal; }
+  .reveal { opacity: 0; transform: translateY(36px); transition: all 0.65s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .stack-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+  .stack-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 2rem; transition: all 0.35s; position: relative; overflow: hidden; }
+  .stack-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), transparent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+  .stack-card:hover { border-color: rgba(0,245,212,0.25); transform: translateY(-3px); }
+  .stack-card:hover::after { transform: scaleX(1); }
+  .stack-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .stack-icon { width: 48px; height: 48px; background: rgba(0,245,212,0.07); border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+  .stack-title { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--text); }
+  .stack-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
+  .tech-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tech-item { padding: 0.35rem 0.85rem; font-size: 0.69rem; font-family: var(--font-mono); border: 1px solid var(--border); color: var(--muted); border-radius: 2px; transition: all 0.25s; }
+  .tech-item:hover { border-color: rgba(0,245,212,0.32); color: var(--cyan); }
+  .cta-section { position: relative; z-index: 1; background: linear-gradient(135deg, var(--bg3) 0%, rgba(0,245,212,0.04) 50%, var(--bg3) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6rem 5vw; text-align: center; overflow: hidden; }
+  .cta-bg { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: var(--cyan); filter: blur(160px); opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .cta-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3.2rem); letter-spacing: -0.03em; margin-bottom: 1rem; position: relative; }
+  .cta-sub { font-size: 0.88rem; color: var(--muted); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.85; position: relative; }
+  .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; }
+  .promo-pill { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px dashed rgba(0,245,212,0.3); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.72rem; color: var(--cyan); margin-bottom: 2rem; position: relative; }
+  footer.main-footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 1.8rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .footer-copy { font-size: 0.7rem; color: var(--muted); }
+  .footer-copy a { color: var(--cyan); }
+  .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .footer-nav a { font-size: 0.68rem; color: var(--muted); transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--cyan); }
+  @media (max-width: 768px) { nav.main-nav .nav-links { display: none; } .nav-menu-btn { display: flex; } section { padding: 4rem 5vw; } .stack-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="sp"></div>
+<div class="cur" id="cur"></div><div class="cur-ring" id="curRing"></div>
+<div class="bg-grid"></div>
+<div class="bg-blob" style="width:650px;height:650px;top:-180px;right:-120px;background:var(--purple);opacity:.07;animation:floatBlob 22s ease-in-out infinite;"></div>
+<div class="bg-blob" style="width:400px;height:400px;bottom:-100px;left:-80px;background:var(--cyan);opacity:.05;animation:floatBlob 28s ease-in-out infinite reverse;"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">✕</button><a href="/en/">Home</a><a href="/en/about.html">About</a><a href="/en/services/">Services</a><a href="/en/pricing.html">Pricing</a><a href="/stack/" style="color:var(--muted);">UA 🇺🇦</a>
+</nav>
+<nav class="main-nav">
+  <a href="/en/" class="nav-logo">Roman<em>Dev</em></a>
+  <ul class="nav-links"><li><a href="/en/">Home</a></li><li><a href="/en/about.html">About</a></li><li><a href="/en/services/">Services</a></li><li><a href="/en/pricing.html">Pricing</a></li><li><a href="/en/stack/" class="active">Stack</a></li>
+    <li><a href="/stack/" style="color:var(--muted);font-size:.63rem;border:1px solid var(--border);padding:.27rem .6rem;border-radius:100px;">UA 🇺🇦</a></li>
+  </ul>
+  <a href="https://t.me/RomanMatviy" class="nav-btn" target="_blank" rel="noopener">⚡ Hire Me</a>
+  <button class="nav-menu-btn" id="menuBtn"><svg width="22" height="16" viewBox="0 0 22 16"><rect y="0" width="22" height="2" rx="1" fill="currentColor"/><rect y="7" width="16" height="2" rx="1" fill="currentColor"/><rect y="14" width="22" height="2" rx="1" fill="currentColor"/></svg></button>
+</nav>
+
+<header class="page-hero">
+  <div class="page-badge">Technology Stack · Tools · Frameworks</div>
+  <h1 class="page-h1">Technology <em style="color:var(--cyan)">Stack</em></h1>
+  <p class="page-tagline">Modern tools for web development</p>
+  <p class="page-desc">Complete technology stack for <strong>full-stack web development</strong>. PHP 8.3, Laravel 11, Vue.js, TypeScript, Docker, MySQL, PostgreSQL, Redis, CI/CD. Modern tools and frameworks for building scalable applications.</p>
+  <div class="hero-ctas">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">
+      💬 Discuss Project
+    </a>
+    <a href="/en/services/" class="btn-p btn-secondary">
+      🛠️ Services
+    </a>
+  </div>
+</header>
+
+<section>
+  <div class="section-label">Backend Technologies</div>
+  <h2 class="section-h2 reveal"><em>Backend Stack</em></h2>
+  <div class="stack-grid">
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🐘</div>
+        <h3 class="stack-title">PHP</h3>
+      </div>
+      <p class="stack-desc">Modern PHP development with latest features and best practices. Object-oriented programming, design patterns, performance optimization.</p>
+      <div class="tech-list">
+        <span class="tech-item">PHP 8.3</span>
+        <span class="tech-item">OOP</span>
+        <span class="tech-item">Design Patterns</span>
+        <span class="tech-item">Composer</span>
+        <span class="tech-item">PSR Standards</span>
+      </div>
+    </div>
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🟥</div>
+        <h3 class="stack-title">Laravel</h3>
+      </div>
+      <p class="stack-desc">Powerful PHP framework for modern web applications. Elegant syntax, comprehensive ecosystem, built-in tools for common tasks.</p>
+      <div class="tech-list">
+        <span class="tech-item">Laravel 11</span>
+        <span class="tech-item">Eloquent ORM</span>
+        <span class="tech-item">Blade Templates</span>
+        <span class="tech-item">Artisan</span>
+        <span class="tech-item">Filament</span>
+      </div>
+    </div>
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🎯</div>
+        <h3 class="stack-title">Symfony</h3>
+      </div>
+      <p class="stack-desc">Enterprise PHP framework with reusable components. Flexible architecture, robust performance, extensive component library.</p>
+      <div class="tech-list">
+        <span class="tech-item">Symfony 7</span>
+        <span class="tech-item">Doctrine ORM</span>
+        <span class="tech-item">Twig</span>
+        <span class="tech-item">Console</span>
+        <span class="tech-item">Security</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Frontend Technologies</div>
+  <h2 class="section-h2 reveal"><em>Frontend Stack</em></h2>
+  <div class="stack-grid">
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🟩</div>
+        <h3 class="stack-title">Vue.js</h3>
+      </div>
+      <p class="stack-desc">Progressive JavaScript framework for building user interfaces. Reactive data binding, component-based architecture, excellent performance.</p>
+      <div class="tech-list">
+        <span class="tech-item">Vue 3</span>
+        <span class="tech-item">Composition API</span>
+        <span class="tech-item">Pinia</span>
+        <span class="tech-item">Vue Router</span>
+        <span class="tech-item">Vite</span>
+      </div>
+    </div>
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🔷</div>
+        <h3 class="stack-title">TypeScript</h3>
+      </div>
+      <p class="stack-desc">Typed JavaScript for large-scale applications. Better IDE support, catch errors early, improved code maintainability.</p>
+      <div class="tech-list">
+        <span class="tech-item">TypeScript 5</span>
+        <span class="tech-item">Type Safety</span>
+        <span class="tech-item">Interfaces</span>
+        <span class="tech-item">Generics</span>
+        <span class="tech-item">Decorators</span>
+      </div>
+    </div>
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🎨</div>
+        <h3 class="stack-title">CSS & Styling</h3>
+      </div>
+      <p class="stack-desc">Modern CSS solutions for responsive design. Utility-first CSS, component styling, animations, and responsive layouts.</p>
+      <div class="tech-list">
+        <span class="tech-item">TailwindCSS</span>
+        <span class="tech-item">SCSS</span>
+        <span class="tech-item">PostCSS</span>
+        <span class="tech-item">CSS Modules</span>
+        <span class="tech-item">Animations</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Database & Storage</div>
+  <h2 class="section-h2 reveal"><em>Data Stack</em></h2>
+  <div class="stack-grid">
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🐬</div>
+        <h3 class="stack-title">MySQL</h3>
+      </div>
+      <p class="stack-desc">Popular relational database for web applications. Reliable performance, extensive features, strong community support.</p>
+      <div class="tech-list">
+        <span class="tech-item">MySQL 8</span>
+        <span class="tech-item">InnoDB</span>
+        <span class="tech-item">Indexing</span>
+        <span class="tech-item">Replication</span>
+        <span class="tech-item">Optimization</span>
+      </div>
+    </div>
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🐘</div>
+        <h3 class="stack-title">PostgreSQL</h3>
+      </div>
+      <p class="stack-desc">Advanced open-source relational database. Extensive data types, complex queries, excellent performance at scale.</p>
+      <div class="tech-list">
+        <span class="tech-item">PostgreSQL 15</span>
+        <span class="tech-item">JSONB</span>
+        <span class="tech-item">Full-text Search</span>
+        <span class="tech-item">Extensions</span>
+        <span class="tech-item">Partitioning</span>
+      </div>
+    </div>
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🔴</div>
+        <h3 class="stack-title">Redis</h3>
+      </div>
+      <p class="stack-desc">In-memory data structure store. Caching, session storage, message queues, real-time analytics. Lightning-fast performance.</p>
+      <div class="tech-list">
+        <span class="tech-item">Redis 7</span>
+        <span class="tech-item">Caching</span>
+        <span class="tech-item">Sessions</span>
+        <span class="tech-item">Queues</span>
+        <span class="tech-item">Pub/Sub</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">DevOps & Deployment</div>
+  <h2 class="section-h2 reveal"><em>DevOps Stack</em></h2>
+  <div class="stack-grid">
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🐳</div>
+        <h3 class="stack-title">Docker</h3>
+      </div>
+      <p class="stack-desc">Container platform for application deployment. Consistent environments, easy scaling, simplified dependency management.</p>
+      <div class="tech-list">
+        <span class="tech-item">Docker</span>
+        <span class="tech-item">Docker Compose</span>
+        <span class="tech-item">Multi-stage builds</span>
+        <span class="tech-item">Volumes</span>
+        <span class="tech-item">Networking</span>
+      </div>
+    </div>
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🔄</div>
+        <h3 class="stack-title">CI/CD</h3>
+      </div>
+      <p class="stack-desc">Continuous integration and deployment pipelines. Automated testing, deployment, and monitoring workflows.</p>
+      <div class="tech-list">
+        <span class="tech-item">GitHub Actions</span>
+        <span class="tech-item">GitLab CI</span>
+        <span class="tech-item">Automated Testing</span>
+        <span class="tech-item">Deployment</span>
+        <span class="tech-item">Monitoring</span>
+      </div>
+    </div>
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">☁️</div>
+        <h3 class="stack-title">Cloud Services</h3>
+      </div>
+      <p class="stack-desc">Cloud platforms for hosting and infrastructure. Scalable solutions, managed services, global distribution.</p>
+      <div class="tech-list">
+        <span class="tech-item">AWS</span>
+        <span class="tech-item">DigitalOcean</span>
+        <span class="tech-item">Vultr</span>
+        <span class="tech-item">Load Balancers</span>
+        <span class="tech-item">CDN</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Testing & Quality</div>
+  <h2 class="section-h2 reveal"><em>Testing Stack</em></h2>
+  <div class="stack-grid">
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🧪</div>
+        <h3 class="stack-title">PHP Testing</h3>
+      </div>
+      <p class="stack-desc">Comprehensive testing solutions for PHP applications. Unit tests, feature tests, integration tests with high coverage.</p>
+      <div class="tech-list">
+        <span class="tech-item">PHPUnit</span>
+        <span class="tech-item">Pest</span>
+        <span class="tech-item">Codeception</span>
+        <span class="tech-item">Mockery</span>
+        <span class="tech-item">Faker</span>
+      </div>
+    </div>
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">🎭</div>
+        <h3 class="stack-title">Frontend Testing</h3>
+      </div>
+      <p class="stack-desc">Modern testing tools for JavaScript applications. Component testing, end-to-end testing, visual regression testing.</p>
+      <div class="tech-list">
+        <span class="tech-item">Vitest</span>
+        <span class="tech-item">Jest</span>
+        <span class="tech-item">Cypress</span>
+        <span class="tech-item">Playwright</span>
+        <span class="tech-item">Testing Library</span>
+      </div>
+    </div>
+    <div class="stack-card reveal">
+      <div class="stack-header">
+        <div class="stack-icon">📊</div>
+        <h3 class="stack-title">Code Quality</h3>
+      </div>
+      <p class="stack-desc">Tools for maintaining code quality and standards. Static analysis, code formatting, security scanning.</p>
+      <div class="tech-list">
+        <span class="tech-item">PHPStan</span>
+        <span class="tech-item">ESLint</span>
+        <span class="tech-item">Prettier</span>
+        <span class="tech-item">PHP-CS-Fixer</span>
+        <span class="tech-item">SonarQube</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-section reveal">
+  <div class="cta-bg"></div>
+  <div class="promo-pill">🎁 <strong>HireRomanDev</strong> — 10% discount on first project</div>
+  <h2 class="cta-title">Ready to build with <em>modern tech?</em></h2>
+  <p class="cta-sub">Let's discuss your project requirements and choose the right technology stack.</p>
+  <div class="cta-btns">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">💬 Message on Telegram</a>
+    <a href="/en/services/" class="btn-p btn-secondary">🛠️ View Services</a>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="footer-copy">© 2018–2026 <a href="/en/">Roman Matviy</a> · Full Stack Developer · Lviv, Ukraine 🇺🇦</div>
+  <nav class="footer-nav">
+    <a href="/en/">Home</a><a href="/en/about.html">About</a>
+    <a href="/en/services/">Services</a><a href="/en/pricing.html">Pricing</a><a href="/en/stack/">Stack</a>
+  </nav>
+</footer>
+<script>
+(function(){
+  var c=document.getElementById('cur'),r=document.getElementById('curRing');
+  if(c&&r){var mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c.style.transform='translate('+(mx-4)+'px,'+(my-4)+'px)';});
+    (function lp(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;r.style.transform='translate('+(rx-18)+'px,'+(ry-18)+'px)';requestAnimationFrame(lp);})();
+    document.querySelectorAll('a,button').forEach(function(el){
+      el.addEventListener('mouseenter',function(){r.classList.add('hovered');});
+      el.addEventListener('mouseleave',function(){r.classList.remove('hovered');});
+    });}
+  var sp=document.getElementById('sp');
+  if(sp)window.addEventListener('scroll',function(){sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';});
+  var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.07,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobileNav'),mc=document.getElementById('mobileClose');
+  if(mb&&mn&&mc){mb.addEventListener('click',function(){mn.classList.add('open');});mc.addEventListener('click',function(){mn.classList.remove('open');});mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');});});}
+})();
+</script>
+</body></html>
