@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Портфоліо та відгуки — Laravel, WooCommerce, PrestaShop | Roman Matviy</title>
+<meta name="description" content="Реальні проєкти: Laravel REST API, Filament CRM, WooCommerce магазини, PrestaShop, Vue.js. Відгуки клієнтів з Upwork і Freelancehunt. 6+ років, 50+ проєктів.">
+<meta name="keywords" content="портфоліо веб-розробника, Laravel проєкти, WooCommerce приклади, PrestaShop розробник відгуки, найняти розробника Україна">
+<meta name="author" content="Roman Matviy"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hirewebdeveloper.pp.ua/portfolio.html">
+<link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/portfolio.html">
+<link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/portfolio.html">
+<meta property="og:title" content="Портфоліо та відгуки — Laravel, WooCommerce, PrestaShop | Roman Matviy">
+<meta property="og:description" content="Реальні проєкти: Laravel REST API, Filament CRM, WooCommerce магазини, PrestaShop, Vue.js. Відгуки клієнтів з Upwork і Freelancehunt. 6+ років, 50+ проєктів.">
+<meta property="og:url" content="https://hirewebdeveloper.pp.ua/portfolio.html">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="uk_UA">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Roman Matviy","url":"https://hirewebdeveloper.pp.ua","description":"Реальні проєкти: Laravel REST API, Filament CRM, WooCommerce магазини, PrestaShop, Vue.js. Відгуки клієнтів з Upwork і Freelancehunt. 6+ років, 50+ проєктів.","jobTitle":"FullStack Developer"}}</script>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#00f5d4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+<style>  :root {
+    --bg: #03050d; --bg2: #070d1a; --bg3: #0a1428;
+    --cyan: #00f5d4; --orange: #ff6b35; --blue: #3b82f6;
+    --purple: #8b5cf6; --green: #22c55e;
+    --text: #e8edf5; --muted: #5a6a85;
+    --card: rgba(255,255,255,0.04);
+    --border: rgba(0,245,212,0.12);
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-mono); overflow-x: hidden; line-height: 1.7; cursor: none; }
+  a { color: inherit; text-decoration: none; } ul { list-style: none; }
+  /* CURSOR */
+  .cur { width: 8px; height: 8px; background: var(--cyan); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; mix-blend-mode: screen; transition: transform 0.08s ease; }
+  .cur-ring { width: 36px; height: 36px; border: 1.5px solid var(--cyan); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998; transition: all 0.18s ease; opacity: 0.4; }
+  .cur-ring.hovered { transform: scale(2) !important; opacity: 0.15; }
+  /* SCROLL PROGRESS */
+  .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; z-index: 600; background: linear-gradient(90deg, var(--cyan), var(--orange)); transition: width 0.1s linear; }
+  /* GRID BG */
+  .bg-grid { position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(0,245,212,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,212,0.025) 1px, transparent 1px); background-size: 70px 70px; }
+  /* BLOBS */
+  .bg-blob { position: fixed; pointer-events: none; z-index: 0; border-radius: 50%; filter: blur(130px); }
+  @keyframes floatBlob { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(40px,-60px) scale(1.1)} 66%{transform:translate(-30px,40px) scale(0.95)} }
+  /* NAV */
+  nav.main-nav { position: fixed; top: 0; inset-inline: 0; z-index: 500; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 5vw; background: rgba(3,5,13,0.88); backdrop-filter: blur(24px) saturate(1.4); border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.03em; }
+  .nav-logo em { color: var(--cyan); font-style: normal; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color 0.3s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.6rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; border-radius: 2px; clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%); transition: all 0.3s; white-space: nowrap; }
+  .nav-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+  .nav-menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--text); }
+  /* MOBILE NAV */
+  .mobile-nav { position: fixed; inset: 0; z-index: 400; background: var(--bg); padding: 5rem 2rem 2rem; display: none; flex-direction: column; gap: 2rem; }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--text); }
+  .mobile-nav a:hover { color: var(--cyan); }
+  .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+  /* BREADCRUMB */
+  .breadcrumb { position: relative; z-index: 1; padding: 6.5rem 5vw 0; display: flex; align-items: center; gap: 0.5rem; font-size: 0.68rem; color: var(--muted); }
+  .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+  .breadcrumb a:hover, .breadcrumb span { color: var(--cyan); }
+  /* PAGE HERO */
+  .page-hero { position: relative; z-index: 1; padding: 2.5rem 5vw 5rem; overflow: hidden; }
+  .page-badge { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px solid var(--border); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 1.2rem; }
+  .page-badge::before { content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: blink 2s ease infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .page-h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: 1.02; letter-spacing: -0.04em; margin-bottom: 0.5rem; }
+  .page-tagline { font-family: var(--font-display); font-size: clamp(0.9rem, 2vw, 1.2rem); color: var(--orange); font-weight: 600; margin-bottom: 1.5rem; }
+  .page-desc { font-size: 0.88rem; color: var(--muted); max-width: 680px; line-height: 1.9; margin-bottom: 2.5rem; }
+  .page-desc strong { color: var(--text); }
+  .hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  /* BUTTONS */
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-p { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; border-radius: 2px; transition: all 0.3s; letter-spacing: 0.03em; }
+  .btn-primary { background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
+  .btn-primary:hover { filter: brightness(1.12); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,245,212,0.25); }
+  .btn-secondary { border: 1px solid rgba(255,107,53,0.35); color: var(--orange); clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
+  .btn-secondary:hover { background: rgba(255,107,53,0.08); transform: translateY(-2px); }
+  /* STATS */
+  .stats-row { display: flex; flex-wrap: wrap; gap: 2.5rem; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
+  .stat-val { font-family: var(--font-display); font-weight: 800; font-size: 2.2rem; color: var(--cyan); line-height: 1; }
+  .stat-label { font-size: 0.66rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem; }
+  /* SECTIONS */
+  section { position: relative; z-index: 1; padding: 5.5rem 5vw; }
+  section.dark { background: var(--bg2); }
+  .section-label { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.8rem; }
+  .section-label::before { content: '// '; color: var(--muted); }
+  .section-h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+  .section-h2 em { color: var(--cyan); font-style: normal; }
+  .section-sub { font-size: 0.86rem; color: var(--muted); max-width: 580px; line-height: 1.85; margin-bottom: 3.5rem; }
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(36px); transition: all 0.65s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  /* FEATURES GRID */
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.2rem; }
+  .feat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 2rem 1.8rem; transition: all 0.35s; position: relative; overflow: hidden; }
+  .feat-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), transparent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+  .feat-card:hover { border-color: rgba(0,245,212,0.25); }
+  .feat-card:hover::after { transform: scaleX(1); }
+  .feat-icon { width: 44px; height: 44px; background: rgba(0,245,212,0.07); border: 1px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1.2rem; }
+  .feat-title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .feat-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
+  /* TECH GRID */
+  .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.8rem; }
+  .tech-item { background: var(--card); border: 1px solid var(--border); border-radius: 3px; padding: 1.2rem 1rem; text-align: center; transition: all 0.3s; cursor: default; }
+  .tech-item:hover { border-color: var(--cyan); background: rgba(0,245,212,0.05); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+  .tech-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .tech-name { font-size: 0.72rem; font-weight: 600; color: var(--text); }
+  .tech-sub { font-size: 0.62rem; color: var(--muted); margin-top: 0.2rem; }
+  /* PROCESS */
+  .process-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5px; background: var(--border); border: 1px solid var(--border); }
+  .process-step { background: var(--bg2); padding: 2.2rem 1.8rem; position: relative; transition: background 0.3s; }
+  .process-step:hover { background: var(--bg3); }
+  .step-num { font-family: var(--font-display); font-weight: 800; font-size: 3.5rem; line-height: 1; color: rgba(0,245,212,0.07); position: absolute; top: 1.2rem; right: 1.5rem; }
+  .step-icon { font-size: 1.6rem; margin-bottom: 1rem; }
+  .step-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .step-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
+  /* FAQ */
+  .faq-list { display: grid; gap: 0; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 1.8rem; cursor: pointer; background: var(--bg2); transition: background 0.2s; font-family: var(--font-display); font-weight: 600; font-size: 0.92rem; gap: 1rem; }
+  .faq-q:hover { background: var(--bg3); }
+  .faq-toggle { width: 24px; height: 24px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; color: var(--cyan); transition: transform 0.3s, background 0.3s; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); background: rgba(0,245,212,0.1); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.8rem; }
+  .faq-item.open .faq-a { max-height: 400px; padding: 1rem 1.8rem 1.6rem; }
+  .faq-a p { font-size: 0.82rem; color: var(--muted); line-height: 1.85; }
+  /* SERVICES MEGA GRID */
+  .services-mega { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.5px; background: var(--border); border: 1px solid var(--border); margin-top: 3rem; }
+  .svc-card { background: var(--bg2); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 0.8rem; position: relative; transition: background 0.3s; overflow: hidden; }
+  .svc-card:hover { background: var(--bg3); }
+  .svc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+  .svc-card:hover::before { transform: scaleX(1); }
+  .svc-icon { width: 52px; height: 52px; background: rgba(0,245,212,0.07); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+  .svc-title { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; }
+  .svc-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.85; flex: 1; }
+  .svc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .svc-tag { font-size: 0.62rem; padding: 0.22rem 0.6rem; background: rgba(0,245,212,0.06); border: 1px solid rgba(0,245,212,0.14); border-radius: 2px; color: var(--cyan); }
+  .svc-price { font-family: var(--font-display); font-size: 0.75rem; color: var(--muted); margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .svc-price span { color: var(--cyan); font-weight: 700; }
+  .svc-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--cyan); font-size: 0.76rem; transition: gap 0.2s; }
+  .svc-link:hover { gap: 0.7rem; }
+  /* RELATED */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+  .related-card { display: flex; flex-direction: column; gap: 0.5rem; background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 1.5rem; transition: all 0.3s; }
+  .related-card:hover { border-color: rgba(0,245,212,0.3); transform: translateY(-3px); }
+  .related-icon { font-size: 1.4rem; }
+  .related-title { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
+  .related-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.7; flex: 1; }
+  .related-link { font-size: 0.7rem; color: var(--cyan); margin-top: 0.3rem; }
+  /* CTA SECTION */
+  .cta-section { position: relative; z-index: 1; background: linear-gradient(135deg, var(--bg3) 0%, rgba(0,245,212,0.04) 50%, var(--bg3) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6rem 5vw; text-align: center; overflow: hidden; }
+  .cta-bg { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: var(--cyan); filter: blur(160px); opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .cta-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3.2rem); letter-spacing: -0.03em; margin-bottom: 1rem; position: relative; }
+  .cta-sub { font-size: 0.88rem; color: var(--muted); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.85; position: relative; }
+  .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; }
+  .promo-pill { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px dashed rgba(0,245,212,0.3); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.72rem; color: var(--cyan); margin-bottom: 2rem; position: relative; }
+  /* CODE WINDOW */
+  .code-window { background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; font-size: 0.78rem; }
+  .code-bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1rem; background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border); }
+  .code-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .code-body { padding: 1.5rem; line-height: 2; overflow-x: auto; white-space: pre; }
+  .kw{color:#ff79c6} .fn{color:#50fa7b} .str{color:#f1fa8c} .cm{color:#6272a4;font-style:italic} .cl{color:#00f5d4} .vr{color:#bd93f9} .tg{color:#ff6b6b} .at{color:#50fa7b}
+  /* QUICK FORM */
+  .quick-form { display: grid; gap: 0.9rem; }
+  .qf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  .qf-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); display: block; margin-bottom: 0.3rem; }
+  .qf-input, .qf-textarea { width: 100%; background: var(--card); border: 1px solid var(--border); color: var(--text); font-family: var(--font-mono); font-size: 0.8rem; padding: 0.75rem; border-radius: 2px; outline: none; transition: border 0.3s; }
+  .qf-input:focus, .qf-textarea:focus { border-color: var(--cyan); }
+  .qf-textarea { resize: none; min-height: 110px; }
+  .qf-btn { padding: 0.85rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; border: none; border-radius: 2px; cursor: pointer; clip-path: polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%); transition: all 0.3s; width: 100%; }
+  .qf-btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+  .qf-ok { display: none; text-align: center; color: var(--green); font-size: 0.8rem; padding: 0.5rem; }
+  /* FOOTER */
+  footer.main-footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 1.8rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .footer-copy { font-size: 0.7rem; color: var(--muted); }
+  .footer-copy a { color: var(--cyan); }
+  .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .footer-nav a { font-size: 0.68rem; color: var(--muted); transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--cyan); }
+  /* RESPONSIVE */
+  @media (max-width: 900px) { .hero-split { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) { nav.main-nav .nav-links { display: none; } .nav-menu-btn { display: flex; } section { padding: 4rem 5vw; } .qf-row { grid-template-columns: 1fr; } }
+
+  /* ── PAGE HERO ─────────────────────────────── */
+  .page-hero{position:relative;z-index:1;padding:6.5rem 5vw 3rem;max-width:1280px;margin:0 auto;}
+  .ph-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:.85rem;display:flex;align-items:center;gap:.6rem;}
+  .ph-label::before{content:'';width:28px;height:1.5px;background:var(--cyan);}
+  .ph-h1{font-family:var(--font-display);font-weight:900;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05;letter-spacing:-.03em;margin-bottom:.9rem;}
+  .ph-h1 em{color:var(--cyan);font-style:normal;}
+  .ph-lead{font-size:.87rem;color:var(--muted);max-width:600px;line-height:1.9;}
+  .lang-switcher{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;font-size:.65rem;border:1px solid var(--border);padding:.3rem .3rem .3rem .8rem;border-radius:100px;}
+  .lang-switcher span{color:var(--muted);}
+  .lang-pill{padding:.25rem .75rem;border-radius:100px;color:var(--bg);background:var(--cyan);font-weight:700;font-size:.62rem;text-decoration:none;font-family:var(--font-display);}
+  .lang-pill.inactive{background:transparent;color:var(--muted);}
+  .lang-pill.inactive:hover{color:var(--cyan);}
+
+  /* ── STATS BAR ──────────────────────────────── */
+  .stats-bar{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 5vw 3rem;}
+  .stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.5px;background:var(--border);border:1px solid var(--border);}
+  .stat-cell{background:var(--bg2);padding:1.5rem 1.2rem;text-align:center;}
+  .stat-val{font-family:var(--font-display);font-weight:900;font-size:1.7rem;color:var(--cyan);line-height:1;margin-bottom:.3rem;}
+  .stat-lbl{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+
+  /* ── SECTION ────────────────────────────────── */
+  .port-section{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 5vw 4rem;}
+  .sep{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
+  .sep-lbl{font-size:.61rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);white-space:nowrap;}
+  .sep-line{flex:1;height:1px;background:var(--border);}
+
+  /* ── PROJECT CARDS ──────────────────────────── */
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1px solid var(--border);margin-bottom:1rem;}
+  .proj-card{background:var(--bg2);display:flex;flex-direction:column;transition:background .25s;overflow:hidden;}
+  .proj-card:hover{background:var(--bg3);}
+  .proj-card:hover .proj-arrow{transform:translate(4px,-4px);}
+
+  /* thumb */
+  .proj-thumb{height:160px;background:var(--bg3);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+  .proj-code{position:absolute;inset:0;padding:1rem 1.1rem;font-size:.59rem;line-height:1.85;font-family:var(--font-mono);color:rgba(0,245,212,.18);overflow:hidden;white-space:pre;}
+  .proj-icon{position:relative;z-index:1;font-size:2rem;}
+
+  /* body */
+  .proj-body{padding:1.6rem 1.5rem;flex:1;display:flex;flex-direction:column;}
+  .proj-type{font-size:.59rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem;}
+  .proj-name{font-family:var(--font-display);font-weight:800;font-size:1rem;color:var(--text);margin-bottom:.55rem;line-height:1.2;}
+  .proj-desc{font-size:.74rem;color:var(--muted);line-height:1.85;flex:1;margin-bottom:1.2rem;}
+  .proj-stack{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.2rem;}
+  .stag{font-size:.6rem;font-family:var(--font-mono);padding:.15rem .5rem;border:1px solid var(--border);color:var(--muted);border-radius:2px;}
+
+  .proj-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:.9rem;border-top:1px solid var(--border);}
+  .proj-result{font-size:.66rem;color:var(--cyan);font-family:var(--font-mono);}
+  .proj-links{display:flex;gap:.6rem;}
+  .proj-link{font-size:.66rem;color:var(--muted);border:1px solid var(--border);padding:.22rem .65rem;border-radius:2px;text-decoration:none;transition:all .2s;display:flex;align-items:center;gap:.3rem;}
+  .proj-link:hover{color:var(--cyan);border-color:rgba(0,245,212,.3);}
+  .proj-arrow{color:var(--cyan);font-size:.8rem;transition:transform .25s;}
+
+  /* ── TESTIMONIALS ───────────────────────────── */
+  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1px solid var(--border);}
+  .test-card{background:var(--bg2);padding:1.8rem 1.6rem;display:flex;flex-direction:column;transition:background .25s;}
+  .test-card:hover{background:var(--bg3);}
+  .test-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;}
+  .test-av{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:1.05rem;color:var(--bg);flex-shrink:0;}
+  .test-name{font-family:var(--font-display);font-weight:700;font-size:.88rem;color:var(--text);}
+  .test-meta{font-size:.66rem;color:var(--muted);margin-top:.15rem;}
+  .test-stars{color:#fbbf24;font-size:.75rem;letter-spacing:.05em;margin-bottom:.6rem;}
+  .test-project{font-size:.65rem;font-family:var(--font-mono);color:var(--cyan);margin-bottom:.85rem;padding:.25rem .65rem;background:rgba(0,245,212,.06);border:1px solid rgba(0,245,212,.12);border-radius:2px;display:inline-block;}
+  .test-text{font-size:.77rem;color:var(--muted);line-height:1.9;flex:1;}
+  .test-platform{margin-top:1rem;font-size:.62rem;color:var(--muted);display:flex;align-items:center;gap:.4rem;}
+  .test-platform::before{content:'';width:16px;height:1px;background:var(--border);}
+
+  /* ── FREELANCEHUNT STRIP ────────────────────── */
+  .fh-strip{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:2rem 2.2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-top:2rem;}
+  .fh-text{font-size:.8rem;color:var(--muted);line-height:1.75;}
+  .fh-text strong{color:var(--text);}
+  .fh-rating{font-family:var(--font-display);font-weight:900;font-size:2.2rem;color:var(--cyan);white-space:nowrap;line-height:1;}
+  .fh-rating span{font-size:.7rem;color:var(--muted);font-family:var(--font-mono);font-weight:400;display:block;margin-top:.2rem;}
+
+  /* ── CTA ─────────────────────────────────────── */
+  .port-cta{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:2.5rem;text-align:center;margin-bottom:4rem;}
+  .port-cta h2{font-family:var(--font-display);font-weight:800;font-size:1.3rem;margin-bottom:.6rem;}
+  .port-cta p{font-size:.79rem;color:var(--muted);line-height:1.8;max-width:520px;margin:0 auto 1.5rem;}
+  .cta-btns{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;}
+
+  @media(max-width:1000px){.proj-grid{grid-template-columns:repeat(2,1fr);}.test-grid{grid-template-columns:1fr 1fr;}.stats-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:640px){.proj-grid,.test-grid,.stats-grid{grid-template-columns:1fr;}.fh-strip{flex-direction:column;text-align:center;}}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="sp"></div>
+<div class="cur" id="cur"></div><div class="cur-ring" id="curRing"></div>
+<div class="bg-grid"></div>
+<div class="bg-blob" style="width:700px;height:700px;top:-200px;right:-150px;background:var(--cyan);opacity:.05;animation:floatBlob 26s ease-in-out infinite;"></div>
+<div class="bg-blob" style="width:450px;height:450px;bottom:-100px;left:-100px;background:var(--purple);opacity:.05;animation:floatBlob 32s ease-in-out infinite reverse;"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">&#10005;</button>
+  <a href="/">Головна</a><a href="/about.html">Про мене</a>
+  <a href="/services/">Послуги</a><a href="/pricing.html">Ціни</a>
+  <a href="/portfolio.html" style="color:var(--cyan)">Портфоліо</a>
+  <a href="/blog/ua/">Блог</a>
+  <a href="/en/portfolio.html" style="color:var(--muted);font-size:1.1rem;">EN &#127468;&#127463;</a>
+</nav>
+<nav class="main-nav">
+  <a href="/" class="nav-logo">Roman<em>Dev</em></a>
+  <ul class="nav-links">
+    <li><a href="/">Головна</a></li>
+    <li><a href="/about.html">Про мене</a></li>
+    <li><a href="/services/">Послуги</a></li>
+    <li><a href="/pricing.html">Ціни</a></li>
+    <li><a href="/portfolio.html" class="active">Портфоліо</a></li>
+    <li><a href="/blog/ua/">Блог</a></li>
+    <li><a href="/en/portfolio.html" style="color:var(--muted);font-size:.63rem;border:1px solid var(--border);padding:.27rem .6rem;border-radius:100px;">EN &#127468;&#127463;</a></li>
+  </ul>
+  <a href="https://t.me/RomanMatviy" class="nav-btn" target="_blank" rel="noopener">&#9889; Найняти</a>
+  <button class="nav-menu-btn" id="menuBtn"><svg width="22" height="16" viewBox="0 0 22 16"><rect y="0" width="22" height="2" rx="1" fill="currentColor"/><rect y="7" width="16" height="2" rx="1" fill="currentColor"/><rect y="14" width="22" height="2" rx="1" fill="currentColor"/></svg></button>
+</nav>
+<nav class="breadcrumb"><a href="/">Головна</a> &rsaquo; <span>Портфоліо</span></nav>
+
+<div class="page-hero">
+  <div class="ph-label">Roman Matviy &mdash; FullStack Developer</div>
+  <h1 class="ph-h1">Портфоліо та <em>відгуки</em></h1>
+  <p class="ph-lead">Відібрані Open Source проєкти і відгуки реальних клієнтів. 6+ років, 50+ проєктів для клієнтів з Німеччини, Нідерландів, Великобританії, Франції, Швеції та України.</p>
+  <div class="lang-switcher">
+    <span>Переглянути EN версію:</span>
+    <a href="/en/portfolio.html" class="lang-pill inactive">EN 🇬🇧</a>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-grid"><div class="stat-cell reveal"><div class="stat-val">6+</div><div class="stat-lbl">Років досвіду</div></div><div class="stat-cell reveal"><div class="stat-val">50+</div><div class="stat-lbl">Проєктів здано</div></div><div class="stat-cell reveal"><div class="stat-val">25+</div><div class="stat-lbl">WooCommerce магазинів</div></div><div class="stat-cell reveal"><div class="stat-val">15+</div><div class="stat-lbl">PrestaShop магазинів</div></div><div class="stat-cell reveal"><div class="stat-val">10+</div><div class="stat-lbl">Laravel API</div></div><div class="stat-cell reveal"><div class="stat-val">4.9★</div><div class="stat-lbl">Середній рейтинг</div></div></div>
+</div>
+
+<div class="port-section">
+
+  <div class="sep reveal">
+    <span class="sep-lbl">Проєкти</span>
+    <span class="sep-line"></span>
+  </div>
+  <div class="proj-grid"><div class="proj-card reveal"><div class="proj-thumb" style="background:linear-gradient(135deg,var(--bg3),var(--orange)18);"><div class="proj-code">GET /api/tasks<br>POST /api/tasks<br>PUT /api/tasks/{id}<br>DELETE /api/tasks/{id}<br>---<br>JWT Auth · Sanctum<br>Eloquent ORM<br>API Resources</div><div class="proj-icon">⚙️</div></div><div class="proj-body"><div class="proj-type">Open Source · Backend</div><div class="proj-name" style="border-left:3px solid var(--orange);padding-left:.7rem;">Task Manager REST API</div><div class="proj-desc">Система управління завданнями з повноцінним REST API. JWT авторизація, CRUD операції, Eloquent ORM, API Resources, покриття тестами Pest.</div><div class="proj-stack"><span class="stag">Laravel 11</span><span class="stag">PHP 8.2</span><span class="stag">REST API</span><span class="stag">MySQL</span><span class="stag">JWT</span></div><div class="proj-footer"><span class="proj-result">✓ REST API з документацією</span><div class="proj-links"><a href="https://github.com/MatviyRoman/Laravel-Task-Manager" class="proj-link" target="_blank" rel="noopener">GitHub ↗</a><span class="proj-arrow">↗</span></div></div></div></div><div class="proj-card reveal"><div class="proj-thumb" style="background:linear-gradient(135deg,var(--bg3),var(--purple)18);"><div class="proj-code">class ProjectResource<br>  extends Resource {<br><br>  protected static<br>    string $model = Project::class;<br><br>  // CRUD + RelationManagers<br>  // Roles via Spatie<br>  // Custom Widgets</div><div class="proj-icon">📊</div></div><div class="proj-body"><div class="proj-type">Open Source · Admin Panel</div><div class="proj-name" style="border-left:3px solid var(--purple);padding-left:.7rem;">CRM / ERP на Filament PHP</div><div class="proj-desc">Повноцінна CRM/ERP система для управління проєктами та командою. Адмін-панель на Filament PHP 3, ролі та права через Spatie Permission, кастомні звіти і дашборди.</div><div class="proj-stack"><span class="stag">Laravel 11</span><span class="stag">Filament PHP 3</span><span class="stag">Livewire 3</span><span class="stag">MySQL</span><span class="stag">Spatie</span></div><div class="proj-footer"><span class="proj-result">✓ Повний CRM під ключ</span><div class="proj-links"><a href="https://github.com/MatviyRoman/Laravel-FillamentPHP" class="proj-link" target="_blank" rel="noopener">GitHub ↗</a><span class="proj-arrow">↗</span></div></div></div></div><div class="proj-card reveal"><div class="proj-thumb" style="background:linear-gradient(135deg,var(--bg3),var(--green)18);"><div class="proj-code">// Livewire 3 Component<br>class DoctorSearch<br>  extends Component {<br><br>  #[Url] public $query;<br>  #[Url] public $region;<br><br>  #[Computed]<br>  public function doctors()<br>  { return Doctor::search(...); }</div><div class="proj-icon">🏥</div></div><div class="proj-body"><div class="proj-type">Open Source · Laravel + Livewire</div><div class="proj-name" style="border-left:3px solid var(--green);padding-left:.7rem;">OpenHealth — Медичний Сервіс</div><div class="proj-desc">Медичний сервіс на основі відкритих державних даних. Laravel backend, Livewire live-пошук лікарів і закладів, реактивні фільтри, Alpine.js мікровзаємодії.</div><div class="proj-stack"><span class="stag">Laravel 11</span><span class="stag">Livewire 3</span><span class="stag">Alpine.js</span><span class="stag">MySQL</span><span class="stag">Open Data</span></div><div class="proj-footer"><span class="proj-result">✓ Live-пошук по 50k+ записах</span><div class="proj-links"><a href="https://github.com/MatviyRoman/openHealth" class="proj-link" target="_blank" rel="noopener">GitHub ↗</a><span class="proj-arrow">↗</span></div></div></div></div><div class="proj-card reveal"><div class="proj-thumb" style="background:linear-gradient(135deg,var(--bg3),var(--blue)18);"><div class="proj-code">SELECT e.*, u.name<br>FROM events e<br>JOIN users u<br>  ON e.user_id = u.id<br>WHERE DATE(e.date) = CURDATE()<br>  AND e.user_id = ?<br>ORDER BY e.time ASC</div><div class="proj-icon">📅</div></div><div class="proj-body"><div class="proj-type">Open Source · Laravel + Vite</div><div class="proj-name" style="border-left:3px solid var(--blue);padding-left:.7rem;">Calendar Event Service</div><div class="proj-desc">Сервіс управління подіями та розкладом. Laravel + Vite збірка, jQuery UI, складні SQL запити з JOIN, фільтрація по даті, нагадування.</div><div class="proj-stack"><span class="stag">Laravel 11</span><span class="stag">PHP 8.2</span><span class="stag">Vite</span><span class="stag">MySQL</span><span class="stag">jQuery</span></div><div class="proj-footer"><span class="proj-result">✓ Планувальник подій</span><div class="proj-links"><a href="https://github.com/MatviyRoman/Calendar-Laravel-PHP-SQL" class="proj-link" target="_blank" rel="noopener">GitHub ↗</a><span class="proj-arrow">↗</span></div></div></div></div><div class="proj-card reveal"><div class="proj-thumb" style="background:linear-gradient(135deg,var(--bg3),var(--cyan)18);"><div class="proj-code">document.addEventListener(<br>  "keydown", (e) => {<br>    const key = e.key;<br>    highlight(key);<br>    showInfo({<br>      code: e.code,<br>      which: e.which,<br>      key:   e.key<br>    });<br>  }<br>);</div><div class="proj-icon">⌨️</div></div><div class="proj-body"><div class="proj-type">Open Source · Vanilla JS</div><div class="proj-name" style="border-left:3px solid var(--cyan);padding-left:.7rem;">KeyTest — Тест клавіатури</div><div class="proj-desc">Онлайн-сервіс для діагностики клавіш клавіатури. Чистий Vanilla JS без фреймворків, анімований візуальний відгук, відображення keyCode і key-коду.</div><div class="proj-stack"><span class="stag">HTML5</span><span class="stag">SCSS</span><span class="stag">Vanilla JS</span><span class="stag">jQuery</span></div><div class="proj-footer"><span class="proj-result">✓ 1 файл · нульові залежності</span><div class="proj-links"><a href="https://matviyroman.github.io/keytest/" class="proj-link" target="_blank" rel="noopener">Demo ↗</a><span class="proj-arrow">↗</span></div></div></div></div><div class="proj-card reveal"><div class="proj-thumb" style="background:linear-gradient(135deg,var(--bg3),var(--orange)18);"><div class="proj-code">// PDF Generation<br>const invoice = {<br>  from: sender,<br>  to:   recipient,<br>  items: lineItems,<br>  tax:  calcTax(items)<br>};<br><br>window.print(); // CSS print</div><div class="proj-icon">🧾</div></div><div class="proj-body"><div class="proj-type">Open Source · HTML/JS</div><div class="proj-name" style="border-left:3px solid var(--orange);padding-left:.7rem;">InvoiceMaker — Рахунки-фактури</div><div class="proj-desc">Онлайн-генератор рахунків-фактур. Готові шаблони, редагування в браузері, PDF export через CSS print, без реєстрації і серверу.</div><div class="proj-stack"><span class="stag">HTML5</span><span class="stag">SCSS</span><span class="stag">JS</span><span class="stag">jQuery</span><span class="stag">PDF</span></div><div class="proj-footer"><span class="proj-result">✓ PDF без серверу</span><div class="proj-links"><a href="https://matviyroman.github.io/invoice/" class="proj-link" target="_blank" rel="noopener">Demo ↗</a><span class="proj-arrow">↗</span></div></div></div></div></div>
+
+  <div class="sep reveal" style="margin-top:1.5rem;">
+    <span class="sep-lbl">Відгуки клієнтів</span>
+    <span class="sep-line"></span>
+  </div>
+  <div class="test-grid"><div class="test-card reveal"><div class="test-header"><div class="test-av" style="background:var(--orange);">T</div><div><div class="test-name">Thomas B.</div><div class="test-meta">Власник SaaS-стартапу &middot; 🇩🇪 Germany</div></div></div><div class="test-stars">★★★★★</div><div class="test-project">Laravel REST API + Filament адмін-панель</div><div class="test-text">&ldquo;Roman — один з найкращих розробників, з якими я мав досвід роботи. Побудував нам повноцінний REST API на Laravel 11 з Filament-адмінкою за 3 тижні. Код чистий, задокументований, покритий тестами. Завжди на зв'язку, чітко розуміє задачу ще до старту.&rdquo;</div><div class="test-platform">Upwork</div></div><div class="test-card reveal"><div class="test-header"><div class="test-av" style="background:var(--blue);">M</div><div><div class="test-name">Martijn V.</div><div class="test-meta">E-commerce менеджер &middot; 🇳🇱 Netherlands</div></div></div><div class="test-stars">★★★★★</div><div class="test-project">WooCommerce тема + LiqPay + Nova Poshta</div><div class="test-text">&ldquo;Замовляли кастомну WooCommerce тему pixel-perfect по Figma і інтеграцію LiqPay та Nova Poshta. Роман зробив все точно в строк, тема виглядає ідеально на всіх пристроях. Окремо вразила якість коду — ніяких правок ядра, все через хуки.&rdquo;</div><div class="test-platform">Freelancehunt</div></div><div class="test-card reveal"><div class="test-header"><div class="test-av" style="background:var(--cyan);">S</div><div><div class="test-name">Sarah K.</div><div class="test-meta">Product Manager &middot; 🇬🇧 United Kingdom</div></div></div><div class="test-stars">★★★★★</div><div class="test-project">Laravel + Vue.js FullStack застосунок</div><div class="test-text">&ldquo;Hire Roman якщо хочете розробника який не просто "виконує" задачі, а справді думає про продукт. Наш Laravel + Vue.js проєкт отримав архітектурні рекомендації які ми не просили — і вони були слушні. Collaborates like a team member, not a contractor.&rdquo;</div><div class="test-platform">Upwork</div></div><div class="test-card reveal"><div class="test-header"><div class="test-av" style="background:var(--purple);">О</div><div><div class="test-name">Олег П.</div><div class="test-meta">Власник інтернет-магазину &middot; 🇺🇦 Україна</div></div></div><div class="test-stars">★★★★★</div><div class="test-project">PrestaShop магазин + Monobank + Nova Poshta</div><div class="test-text">&ldquo;Роман переніс наш магазин з OpenCart на PrestaShop без втрати SEO і замовлень. Підключив Monobank, Nova Poshta (з автогенерацією ТТН), оптимізував швидкість — PageSpeed виріс з 42 до 91. Рекомендую всім хто шукає PrestaShop-спеціаліста.&rdquo;</div><div class="test-platform">Freelancehunt</div></div><div class="test-card reveal"><div class="test-header"><div class="test-av" style="background:var(--green);">L</div><div><div class="test-name">Lars M.</div><div class="test-meta">CTO стартапу &middot; 🇸🇪 Sweden</div></div></div><div class="test-stars">★★★★★</div><div class="test-project">Docker + CI/CD + Linux VPS налаштування</div><div class="test-text">&ldquo;Наймали Романа для налаштування Docker-інфраструктури і GitHub Actions CI/CD. Отримали продуманий docker-compose стек, автоматичний deploy через SSH, rollback одною командою. Документація настільки детальна, що новий девелопер розібрався за годину.&rdquo;</div><div class="test-platform">Upwork</div></div><div class="test-card reveal"><div class="test-header"><div class="test-av" style="background:var(--orange);">A</div><div><div class="test-name">Anaïs D.</div><div class="test-meta">Директор агентства &middot; 🇫🇷 France</div></div></div><div class="test-stars">★★★★★</div><div class="test-project">Filament PHP multi-tenant CRM</div><div class="test-text">&ldquo;Замовляли розробку multi-tenant CRM на Filament PHP 3 для кількох наших клієнтів. Роман реалізував ізоляцію даних per-tenant, окремі піддомени і кастомний branding. Здав в строк, без зайвих питань — просто зробив добре.&rdquo;</div><div class="test-platform">Direct</div></div></div>
+
+  <div class="fh-strip reveal">
+    <div class="fh-text"><strong>40+ відгуків</strong> на Freelancehunt з середнім рейтингом 5.0 ★</div>
+    <div>
+      <div class="fh-rating">4.9 <span>/ 5.0</span></div>
+    </div>
+    <a href="https://freelancehunt.com/freelancer/romas6ka.html#reviews"
+       class="btn-p btn-secondary" target="_blank" rel="noopener">Переглянути всі відгуки →</a>
+  </div>
+
+  <div class="sep reveal" style="margin-top:3rem;">
+    <span class="sep-lbl">Статистика</span>
+    <span class="sep-line"></span>
+  </div>
+  <div class="stats-grid" style="margin-bottom:3rem;">
+    <div class="stat-cell reveal"><div class="stat-val">6+</div><div class="stat-lbl">Років досвіду</div></div><div class="stat-cell reveal"><div class="stat-val">50+</div><div class="stat-lbl">Проєктів здано</div></div><div class="stat-cell reveal"><div class="stat-val">25+</div><div class="stat-lbl">WooCommerce магазинів</div></div><div class="stat-cell reveal"><div class="stat-val">15+</div><div class="stat-lbl">PrestaShop магазинів</div></div><div class="stat-cell reveal"><div class="stat-val">10+</div><div class="stat-lbl">Laravel API</div></div><div class="stat-cell reveal"><div class="stat-val">4.9★</div><div class="stat-lbl">Середній рейтинг</div></div>
+  </div>
+
+  <div class="port-cta reveal">
+    <h2>Хочете стати наступним кейсом?</h2>
+    <p>Доступний для нових проєктів — Laravel, WooCommerce, PrestaShop, Vue.js, Docker. Погодинно або фіксована ціна.</p>
+    <div class="cta-btns">
+      <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">💬 Написати в Telegram</a>
+      <a href="/pricing.html" class="btn-p btn-secondary">📄 Ціни</a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="main-footer">
+  <div class="footer-copy">&copy; 2018&ndash;2026 <a href="/">Roman Matviy</a> &middot; FullStack Developer &middot; Lviv, Ukraine &#127482;&#127462;</div>
+  <nav class="footer-nav">
+    <a href="/">Головна</a><a href="/about.html">Про мене</a>
+    <a href="/services/">Послуги</a><a href="/pricing.html">Ціни</a>
+    <a href="/portfolio.html">Портфоліо</a><a href="/stack/">Стек</a>
+    <a href="/blog/ua/">Блог</a>
+  </nav>
+</footer>
+<script>
+(function(){
+  var c=document.getElementById('cur'),r=document.getElementById('curRing');
+  if(c&&r){var mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c.style.transform='translate('+(mx-4)+'px,'+(my-4)+'px)';});
+    (function lp(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;r.style.transform='translate('+(rx-18)+'px,'+(ry-18)+'px)';requestAnimationFrame(lp);})();
+    document.querySelectorAll('a,button').forEach(function(el){
+      el.addEventListener('mouseenter',function(){r.classList.add('hovered');});
+      el.addEventListener('mouseleave',function(){r.classList.remove('hovered');});
+    });}
+  var sp=document.getElementById('sp');
+  if(sp)window.addEventListener('scroll',function(){sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';});
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobileNav'),mc=document.getElementById('mobileClose');
+  if(mb&&mn&&mc){mb.addEventListener('click',function(){mn.classList.add('open');});mc.addEventListener('click',function(){mn.classList.remove('open');});mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');});});}
+})();
+</script>
+</body>
+</html>
