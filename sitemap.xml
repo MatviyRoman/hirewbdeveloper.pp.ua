@@ -169,4 +169,295 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/fullstack.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/fullstack.html"/>
   </url>
+  
+  <!-- Blog Index Pages -->
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/blog/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/blog/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/"/>
+  </url>
+  
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/blog/laravel-vs-symfony.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/laravel-vs-symfony.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/laravel-vs-symfony.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/blog/laravel-vs-symfony.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/laravel-vs-symfony.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/laravel-vs-symfony.html"/>
+  </url>
+  
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/blog/laravel-rest-api-tutorial.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/laravel-rest-api-tutorial.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/laravel-rest-api-tutorial.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/blog/laravel-rest-api-tutorial.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/laravel-rest-api-tutorial.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/laravel-rest-api-tutorial.html"/>
+  </url>
+  
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/blog/prestashop-vs-woocommerce.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/prestashop-vs-woocommerce.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/prestashop-vs-woocommerce.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/blog/prestashop-vs-woocommerce.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/prestashop-vs-woocommerce.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/prestashop-vs-woocommerce.html"/>
+  </url>
+  
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/blog/how-to-hire-developer-ukraine.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/how-to-hire-developer-ukraine.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/how-to-hire-developer-ukraine.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/blog/how-to-hire-developer-ukraine.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/how-to-hire-developer-ukraine.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/how-to-hire-developer-ukraine.html"/>
+  </url>
+  
+  <!-- 404 Pages -->
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/404.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/404.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/404.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/404.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/404.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/404.html"/>
+  </url>
+  
+  <!-- Additional Service Pages -->
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/services/docker.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/docker.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/docker.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/services/docker.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/docker.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/docker.html"/>
+  </url>
+  
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/services/filament.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/filament.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/filament.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/services/filament.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/filament.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/filament.html"/>
+  </url>
+  
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/services/livewire.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/livewire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/livewire.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/services/livewire.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/livewire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/livewire.html"/>
+  </url>
+  
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/services/prestashop.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/prestashop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/prestashop.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/services/prestashop.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/prestashop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/prestashop.html"/>
+  </url>
+  
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/services/vuejs.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/vuejs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/vuejs.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/services/vuejs.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/vuejs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/vuejs.html"/>
+  </url>
+  
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/services/woocommerce.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/woocommerce.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/woocommerce.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/services/woocommerce.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/woocommerce.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/woocommerce.html"/>
+  </url>
+  
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/services/wordpress.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/wordpress.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/wordpress.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/en/services/wordpress.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/wordpress.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/wordpress.html"/>
+  </url>
+  
+  <!-- Legacy Service Pages -->
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/docker.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/docker.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/docker.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/filament.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/filament.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/filament.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/laravel.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/laravel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/laravel.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/livewire.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/livewire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/livewire.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/php.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/php.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/php.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/prestashop.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/prestashop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/prestashop.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/vuejs.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/vuejs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/vuejs.html"/>
+  </url>
+  <url>
+    <loc>https://hirewebdeveloper.pp.ua/api.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/api.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/api.html"/>
+  </url>
 </urlset>
