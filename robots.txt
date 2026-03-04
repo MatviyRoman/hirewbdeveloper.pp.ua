@@ -1,0 +1,84 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://hirewebdeveloper.pp.ua/sitemap.xml
+
+# Block common non-content paths
+Disallow: /_*
+Disallow: /admin/
+Disallow: /api/admin/
+Disallow: /.well-known/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /node_modules/
+Disallow: /vendor/
+Disallow: /storage/
+Disallow: /bootstrap/
+Disallow: /config/
+Disallow: /database/
+Disallow: /resources/
+Disallow: /routes/
+Disallow: /tests/
+Disallow: /.env
+Disallow: /.env.*
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /yarn.lock
+Disallow: /webpack.mix.js
+Disallow: /vite.config.js
+Disallow: /tailwind.config.js
+Disallow: /phpunit.xml
+Disallow: /.git/
+Disallow: /.gitignore
+Disallow: /README.md
+Disallow: /CHANGELOG.md
+Disallow: /LICENSE
+
+# Allow specific important files
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /favicon-32x32.png
+Allow: /apple-touch-icon.png
+Allow: /site.webmanifest
+
+# Crawl delay (optional, be careful with this)
+# Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Block unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: BacklinkCrawler
+Disallow: /
