@@ -187,13 +187,6 @@
   @media (max-width: 768px) { nav.main-nav .nav-links { display: none; } .nav-menu-btn { display: flex; } section { padding: 4rem 5vw; } .qf-row { grid-template-columns: 1fr; } }
 
 </style>
-  <link rel="icon" type="image/x-icon" href="../favicon.ico">
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-  <link rel="manifest" href="../site.webmanifest">
-  <meta name="theme-color" content="#00f5d4">
 </head>
 <body>
 <div class="scroll-progress" id="scrollProgress"></div>
@@ -225,7 +218,7 @@
   </button>
 </nav>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Laravel Development","provider":{"@type":"Person","name":"Roman Matviy","url":"https://hirewebdeveloper.pp.ua"},"description":"Professional Laravel backend development: REST API, Livewire, Filament admin panels, Docker, MySQL, DDD architecture.","areaServed":"Worldwide","offers":{"@type":"Offer","priceCurrency":"USD","price":"25","unitCode":"HUR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Laravel Development","provider":{"@type":"Person","name":"Roman Matviy","url":"https://romandev.pp.ua"},"description":"Professional Laravel backend development: REST API, Livewire, Filament admin panels, Docker, MySQL, DDD architecture.","areaServed":"Worldwide","offers":{"@type":"Offer","priceCurrency":"USD","price":"25","unitCode":"HUR"}}</script>
 
 <nav class="breadcrumb"><a href="/">Головна</a> › <a href="index.html">Послуги</a> › <span>Laravel розробник</span></nav>
 
@@ -341,7 +334,7 @@
     <div>
       <p style="font-size:0.84rem;color:var(--muted);line-height:1.9;margin-bottom:2rem;">Опишіть ваш Laravel проєкт — безкоштовно проконсультую. Зазвичай відповідаю протягом кількох годин.</p>
       <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener" style="display:inline-flex;margin-bottom:1rem;">💬 Telegram — @RomanMatviy</a><br><br>
-      <a href="/cdn-cgi/l/email-protection#87f5e8eae6e9c7eae6f3f1eefea9f7f7a9f2e6" class="btn-p btn-secondary" style="display:inline-flex;">📧 <span class="__cf_email__" data-cfemail="50223f3d313e103d31242639297e20207e2531">[email&#160;protected]</span></a>
+      <a href="mailto:roman@matviy.pp.ua" class="btn-p btn-secondary" style="display:inline-flex;">📧 roman@matviy.pp.ua</a>
     </div><form id="quickForm" class="quick-form">
       <div class="qf-row">
         <div><label class="qf-label">Ім'я</label><input id="qfn" class="qf-input" placeholder="Ваше ім'я"></div>
@@ -372,7 +365,7 @@
   <p class="cta-sub">Безкоштовна консультація. Оцінка вашого проєкту без зобов'язань.</p>
   <div class="cta-btns">
     <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">💬 Написати в Telegram</a>
-    <a href="/cdn-cgi/l/email-protection#681a070509062805091c1e0111461818461d09" class="btn-p btn-secondary">📧 Email</a>
+    <a href="mailto:roman@matviy.pp.ua" class="btn-p btn-secondary">📧 Email</a>
   </div>
 </div>
 
@@ -390,7 +383,7 @@
     <a href="fullstack.html">FullStack</a>
   </nav>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
   var c=document.getElementById('cur'),r=document.getElementById('curRing');
   if(c&&r){var mx=0,my=0,rx=0,ry=0;document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c.style.transform='translate('+(mx-4)+'px,'+(my-4)+'px)';
@@ -404,4 +397,7 @@
   var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobileNav'),mc=document.getElementById('mobileClose');
   if(mb&&mn&&mc){mb.addEventListener('click',function(){mn.classList.add('open');});mc.addEventListener('click',function(){mn.classList.remove('open');});mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');});});}
   var form=document.getElementById('quickForm');
-  if(form){form.addEventListener('submit',function(e){e.preventDefault();var n=document.getElementById('qfn').value||'',em=document.getElementById('qfe').value||'',msg=document.getElementById('qfm').value||'';if(!msg)return;var text='Привіт! '+document.title+'\nІм\'�
+  if(form){form.addEventListener('submit',function(e){e.preventDefault();var n=document.getElementById('qfn').value||'',em=document.getElementById('qfe').value||'',msg=document.getElementById('qfm').value||'';if(!msg)return;var text='Привіт! '+document.title+'\nІм\'я: '+n+' ('+em+')\n\n'+msg;window.open('https://t.me/RomanMatviy?text='+encodeURIComponent(text),'_blank');var ok=document.getElementById('qfOk');if(ok){ok.style.display='block';form.reset();setTimeout(function(){ok.style.display='none';},4000);}});}
+})();
+</script>
+</body></html>
