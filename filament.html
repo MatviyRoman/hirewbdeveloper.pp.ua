@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Filament PHP розробник — Адмін-панелі Laravel | Roman Matviy</title>
+<meta name="description" content="Замовте розробку адмін-панелі на Filament PHP 3. Ресурси, кастомні сторінки, віджети, multi-tenancy, ролі та дозволи. Laravel експерт. Від $25/год.">
+<meta name="keywords" content="Filament PHP розробник, Filament 3 адмін панель, Laravel Filament замовити, кастомна адмін панель Laravel, Filament resources widgets, Filament developer Ukraine">
+<meta name="author" content="Roman Matviy"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hirewebdeveloper.pp.ua/services/filament.html">
+<link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/filament.html">
+<link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/filament.html">
+<meta property="og:title" content="Filament PHP розробник | Адмін-панелі | Roman Matviy">
+<meta property="og:description" content="Filament PHP 3 адмін-панелі: ресурси, віджети, multi-tenancy. Laravel 11. Від $25/год.">
+<meta property="og:url" content="https://hirewebdeveloper.pp.ua/services/filament.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Filament PHP Development","provider":{"@type":"Person","name":"Roman Matviy","url":"https://hirewebdeveloper.pp.ua"},"serviceType":"Filament PHP Admin Panel","areaServed":"Worldwide","offers":{"@type":"Offer","priceCurrency":"USD","priceSpecification":{"@type":"UnitPriceSpecification","price":"25","priceCurrency":"USD","unitText":"HOUR"}}}</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#00f5d4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#03050d;--bg2:#070d1a;--bg3:#0a1428;--cyan:#00f5d4;--orange:#ff6b35;--blue:#3b82f6;--purple:#8b5cf6;--text:#e8edf5;--muted:#5a6a85;--border:rgba(0,245,212,0.12);--font-display:'Syne',sans-serif;--font-mono:'JetBrains Mono',monospace;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-mono);overflow-x:hidden;cursor:none;}
+.cur{width:8px;height:8px;background:var(--cyan);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;}
+.cur-ring{width:36px;height:36px;border:1px solid var(--cyan);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;opacity:.5;}
+.cur-ring.hovered{width:50px;height:50px;opacity:.8;border-color:var(--orange);}
+.scroll-progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue));z-index:200;width:0;}
+.bg-grid{position:fixed;inset:0;background-image:linear-gradient(rgba(0,245,212,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,212,.025) 1px,transparent 1px);background-size:55px 55px;pointer-events:none;z-index:0;}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;}
+@keyframes floatBlob{0%,100%{transform:translate(0,0);}33%{transform:translate(30px,-20px);}66%{transform:translate(-20px,15px);}}
+.main-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4vw;backdrop-filter:blur(20px);background:rgba(3,5,13,.85);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:var(--font-display);font-weight:800;font-size:1.05rem;color:var(--cyan);text-decoration:none;}
+.nav-logo em{color:var(--text);font-style:normal;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;transition:color .3s;}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan);}
+.nav-btn{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:.55rem 1.3rem;font-family:var(--font-display);font-weight:700;font-size:.72rem;cursor:pointer;text-decoration:none;transition:all .3s;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);}
+.nav-btn:hover{background:var(--cyan);color:var(--bg);}
+.nav-menu-btn{display:none;background:none;border:none;color:var(--text);cursor:pointer;}
+.mobile-nav{display:none;position:fixed;inset:0;z-index:500;background:rgba(3,5,13,.97);flex-direction:column;align-items:center;justify-content:center;gap:2rem;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--text);text-decoration:none;}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--muted);font-size:1.5rem;cursor:pointer;}
+@media(max-width:900px){.nav-links{display:none;}.nav-menu-btn{display:block;}}
+.breadcrumb{padding:5.5rem 5vw .5rem;font-size:.7rem;color:var(--muted);position:relative;z-index:1;}
+.breadcrumb a{color:var(--muted);text-decoration:none;}
+.breadcrumb a:hover{color:var(--cyan);}
+.page-hero{padding:1rem 5vw 4rem;position:relative;z-index:1;max-width:900px;}
+.page-badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);color:var(--cyan);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px;margin-bottom:1.5rem;}
+.page-h1{font-family:var(--font-display);font-weight:900;font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;margin-bottom:.8rem;letter-spacing:-.02em;}
+.page-tagline{font-size:1.05rem;color:var(--muted);margin-bottom:1.2rem;}
+.page-desc{font-size:.82rem;color:var(--muted);line-height:1.9;max-width:680px;margin-bottom:2rem;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;}
+.btn-p{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.8rem;font-family:var(--font-display);font-weight:700;font-size:.82rem;text-decoration:none;transition:all .3s;clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);}
+.btn-primary{background:linear-gradient(135deg,var(--cyan),var(--blue));color:var(--bg);}
+.btn-primary:hover{filter:brightness(1.1);transform:translateY(-2px);}
+.btn-secondary{border:1px solid rgba(255,107,53,.35);color:var(--orange);}
+.btn-secondary:hover{background:rgba(255,107,53,.07);transform:translateY(-2px);}
+section{padding:4rem 5vw;position:relative;z-index:1;}
+section.dark{background:var(--bg2);}
+.section-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:.8rem;}
+.section-h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.4rem,3vw,2.2rem);margin-bottom:.6rem;}
+.section-h2 em{color:var(--cyan);font-style:normal;}
+.svc-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;margin-top:2rem;}
+.code-win{background:var(--bg3);border:1px solid var(--border);border-radius:4px;overflow:hidden;font-family:var(--font-mono);}
+.code-bar{display:flex;align-items:center;gap:.5rem;padding:.65rem 1rem;background:rgba(255,255,255,.03);border-bottom:1px solid var(--border);}
+.code-dot{width:10px;height:10px;border-radius:50%;}
+.code-title{font-size:.65rem;color:var(--muted);margin-left:.3rem;}
+.code-body{padding:1.3rem 1.4rem;font-size:.7rem;line-height:1.9;overflow-x:auto;}
+.ck{color:#ff7c7c;}.cv{color:#00f5d4;}.cs{color:#ffd76d;}.cm{color:#9ca3af;font-style:italic;}.cb{color:#c084fc;}.co{color:#ff6b35;}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5px;background:var(--border);border:1px solid var(--border);margin-top:2.5rem;}
+.feat-card{background:var(--bg2);padding:2rem 1.8rem;transition:background .3s;}
+.feat-card:hover{background:var(--bg3);}
+.feat-icon{font-size:1.8rem;margin-bottom:1rem;}
+.feat-title{font-family:var(--font-display);font-weight:700;font-size:.95rem;margin-bottom:.5rem;}
+.feat-desc{font-size:.75rem;color:var(--muted);line-height:1.75;}
+.tech-grid{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2rem;}
+.tech-pill{padding:.35rem .85rem;font-size:.7rem;font-family:var(--font-mono);border:1px solid var(--border);color:var(--muted);border-radius:2px;transition:all .25s;}
+.tech-pill:hover,.tech-pill.hot{border-color:rgba(0,245,212,.35);color:var(--cyan);}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1px solid var(--border);margin-top:2.5rem;}
+.proc-card{background:var(--bg2);padding:1.8rem 1.5rem;transition:background .3s;}
+.proc-card:hover{background:var(--bg3);}
+.proc-num{font-family:var(--font-display);font-weight:900;font-size:2.2rem;color:rgba(0,245,212,.1);line-height:1;margin-bottom:.6rem;}
+.proc-title{font-family:var(--font-display);font-weight:700;font-size:.88rem;margin-bottom:.4rem;}
+.proc-desc{font-size:.73rem;color:var(--muted);line-height:1.7;}
+.faq-list{margin-top:2.5rem;display:grid;gap:1.5px;background:var(--border);border:1px solid var(--border);}
+.faq-item{background:var(--bg2);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;cursor:pointer;font-family:var(--font-display);font-weight:600;font-size:.9rem;user-select:none;}
+.faq-q:hover{background:var(--bg3);}
+.faq-toggle{font-size:1.3rem;color:var(--cyan);transition:transform .3s;}
+.faq-item.open .faq-toggle{transform:rotate(45deg);}
+.faq-a{display:none;padding:0 1.5rem 1.3rem;font-size:.78rem;color:var(--muted);line-height:1.85;}
+.faq-item.open .faq-a{display:block;}
+.rel-card{display:block;background:var(--bg2);border:1px solid var(--border);padding:1.5rem;text-decoration:none;transition:all .3s;border-radius:2px;}
+.rel-card:hover{background:var(--bg3);border-color:var(--cyan);transform:translateY(-3px);}
+.rel-icon{font-size:1.5rem;margin-bottom:.6rem;}
+.rel-title{font-family:var(--font-display);font-weight:700;font-size:.88rem;color:var(--text);margin-bottom:.25rem;}
+.rel-desc{font-size:.7rem;color:var(--muted);}
+.cta-section{padding:5rem 5vw;text-align:center;position:relative;z-index:1;overflow:hidden;}
+.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,245,212,.07) 0%,transparent 70%);pointer-events:none;}
+.promo-pill{display:inline-flex;align-items:center;gap:.5rem;border:1px dashed rgba(0,245,212,.35);padding:.4rem 1.2rem;border-radius:100px;font-size:.72rem;color:var(--muted);margin-bottom:1.5rem;}
+.cta-title{font-family:var(--font-display);font-weight:900;font-size:clamp(1.6rem,3.5vw,2.8rem);margin-bottom:.8rem;}
+.cta-title em{color:var(--cyan);font-style:normal;}
+.cta-sub{font-size:.85rem;color:var(--muted);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.8;}
+.cta-btns{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
+.main-footer{padding:2rem 5vw;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;position:relative;z-index:1;}
+.footer-copy{font-size:.7rem;color:var(--muted);}
+.footer-copy a{color:var(--muted);text-decoration:none;}
+.footer-nav{display:flex;flex-wrap:wrap;gap:1.5rem;}
+.footer-nav a{font-size:.68rem;color:var(--muted);text-decoration:none;transition:color .3s;}
+.footer-nav a:hover{color:var(--cyan);}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s,transform .65s;}
+.reveal.visible{opacity:1;transform:none;}
+@media(max-width:900px){.svc-hero-grid{grid-template-columns:1fr;}.process-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.process-grid{grid-template-columns:1fr;}.features-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cur" id="cur"></div><div class="cur-ring" id="curRing"></div>
+<div class="bg-grid"></div>
+<div class="bg-blob" style="width:600px;height:600px;top:-150px;right:-100px;background:var(--purple);opacity:.07;animation:floatBlob 22s ease-in-out infinite;"></div>
+<div class="bg-blob" style="width:380px;height:380px;bottom:-80px;left:-80px;background:var(--cyan);opacity:.05;animation:floatBlob 28s ease-in-out infinite reverse;"></div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="/">Головна</a><a href="/about.html">Про мене</a><a href="/services/">Послуги</a><a href="/pricing.html">Ціни</a>
+  <a href="/en/services/filament.html" style="color:var(--muted);">EN 🇬🇧</a>
+</nav>
+<nav class="main-nav">
+  <a href="/" class="nav-logo">Roman<em>Dev</em></a>
+  <ul class="nav-links">
+    <li><a href="/">Головна</a></li><li><a href="/about.html">Про мене</a></li>
+    <li><a href="/services/" class="active">Послуги</a></li><li><a href="/pricing.html">Ціни</a></li>
+    <li><a href="/en/services/filament.html" style="color:var(--muted);font-size:.63rem;border:1px solid var(--border);padding:.28rem .65rem;border-radius:100px;">EN</a></li>
+  </ul>
+  <a href="https://t.me/RomanMatviy" class="nav-btn" target="_blank" rel="noopener">⚡ Найняти</a>
+  <button class="nav-menu-btn" id="menuBtn"><svg width="22" height="16" viewBox="0 0 22 16"><rect y="0" width="22" height="2" rx="1" fill="currentColor"/><rect y="7" width="16" height="2" rx="1" fill="currentColor"/><rect y="14" width="22" height="2" rx="1" fill="currentColor"/></svg></button>
+</nav>
+
+<nav class="breadcrumb"><a href="/">Головна</a> › <a href="/services/">Послуги</a> › <span>Filament PHP</span></nav>
+
+<header class="page-hero">
+  <div class="page-badge">Filament PHP 3 · Адмін-панелі Laravel</div>
+  <h1 class="page-h1">Filament <em style="color:var(--cyan)">PHP Developer</em></h1>
+  <p class="page-tagline">Кастомні адмін-панелі, дашборди та CRM системи</p>
+  <p class="page-desc">Filament PHP — мій основний інструмент для потужних адмін-панелей у Laravel. Розробляю кастомні Resources, Pages, Widgets, multi-tenancy рішення і повноцінні CRM/ERP бекенди — швидко і з чистим кодом.</p>
+  <div class="hero-ctas">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">💬 Написати в Telegram</a>
+    <a href="/pricing.html" class="btn-p btn-secondary">💰 Ціни</a>
+  </div>
+</header>
+
+<section>
+  <div class="svc-hero-grid reveal">
+    <div>
+      <div class="section-label">Filament 3 Resource</div>
+      <p style="font-size:.8rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem;">Кожен CRUD-ресурс — це форма, таблиця з фільтрами, bulk-дії та менеджери зв'язків. Все на PHP, без зайвого JavaScript.</p>
+      <div class="tech-grid">
+        <span class="tech-pill hot">Filament PHP 3</span><span class="tech-pill hot">Laravel 11</span><span class="tech-pill hot">Livewire 3</span>
+        <span class="tech-pill">Spatie Permissions</span><span class="tech-pill">Alpine.js</span><span class="tech-pill">TailwindCSS</span>
+      </div>
+    </div>
+    <div class="code-win">
+      <div class="code-bar"><span class="code-dot" style="background:#ff5f57"></span><span class="code-dot" style="background:#febc2e"></span><span class="code-dot" style="background:#28c840"></span><span class="code-title">UserResource.php</span></div>
+      <div class="code-body">
+<span class="cm">// Filament 3 Resource</span><br>
+<span class="ck">class</span> <span class="cv">UserResource</span> <span class="ck">extends</span> <span class="co">Resource</span><br>
+{<br>
+&nbsp;&nbsp;<span class="ck">protected static</span> ?<span class="cv">string</span> <span class="cs">$model</span> = <span class="co">User</span>::<span class="cv">class</span>;<br><br>
+&nbsp;&nbsp;<span class="ck">public static function</span> <span class="cv">form</span>(<span class="co">Form</span> <span class="cs">$form</span>)<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="cs">$form</span>-><span class="cv">schema</span>([<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="co">TextInput</span>::<span class="cv">make</span>(<span class="cs">'name'</span>)-><span class="cv">required</span>(),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="co">TextInput</span>::<span class="cv">make</span>(<span class="cs">'email'</span>)-><span class="cv">email</span>(),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="co">Select</span>::<span class="cv">make</span>(<span class="cs">'role'</span>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-><span class="cv">options</span>(<span class="co">Role</span>::<span class="cv">pluck</span>(<span class="cs">'name'</span>,<span class="cs">'id'</span>)),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="co">Toggle</span>::<span class="cv">make</span>(<span class="cs">'is_active'</span>),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;]);<br>
+&nbsp;&nbsp;}<br>
+}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Що будую</div>
+  <h2 class="section-h2 reveal">Можливості <em>панелей</em></h2>
+  <div class="features-grid">
+    <div class="feat-card reveal"><div class="feat-icon">🖥️</div><h3 class="feat-title">Кастомні ресурси</h3><p class="feat-desc">CRUD-ресурси з кастомними формами, таблицями, фільтрами, bulk-діями та менеджерами зв'язків. Будь-яка складність.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">📊</div><h3 class="feat-title">Дашборди та віджети</h3><p class="feat-desc">Статистичні віджети, графіки, кастомні дашборд-сторінки. Real-time оновлення через Livewire polling без написання JS.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">👥</div><h3 class="feat-title">Ролі та дозволи</h3><p class="feat-desc">Повний контроль доступу через Spatie Laravel Permission, інтегрований у Filament. Різні панелі для різних ролей.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">🏢</div><h3 class="feat-title">Multi-tenancy</h3><p class="feat-desc">Мультиорендні панелі — кожен клієнт бачить лише свої дані. Filament 3 native tenancy або кастомна реалізація.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">📄</div><h3 class="feat-title">Кастомні сторінки</h3><p class="feat-desc">Не-CRUD сторінки: звіти, імпорт/експорт CSV, майстри налаштувань, сторінки settings — все всередині Filament.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">🔌</div><h3 class="feat-title">Плагіни та розширення</h3><p class="feat-desc">Медіабібліотека, SEO метатеги, audit log, переклади, Calendar, Kanban та інші Filament плагіни. Кастомні компоненти.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Технологічний стек</div>
+  <h2 class="section-h2 reveal"><em>Технології</em></h2>
+  <div class="tech-grid reveal">
+    <span class="tech-pill hot">Filament PHP 3</span><span class="tech-pill hot">Laravel 11</span><span class="tech-pill hot">Livewire 3</span>
+    <span class="tech-pill hot">Spatie Permissions</span><span class="tech-pill">Eloquent ORM</span><span class="tech-pill">Alpine.js</span>
+    <span class="tech-pill">TailwindCSS</span><span class="tech-pill">MySQL 8</span><span class="tech-pill">Docker</span>
+    <span class="tech-pill">PHP 8.3</span><span class="tech-pill">Pest Tests</span><span class="tech-pill">Git / GitHub</span>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Процес розробки</div>
+  <h2 class="section-h2 reveal">Від ідеї до <em>готової панелі</em></h2>
+  <div class="process-grid reveal">
+    <div class="proc-card"><div class="proc-num">01</div><div class="proc-title">Аналіз</div><div class="proc-desc">Вивчення вимог до панелі, ролей користувачів і моделей даних.</div></div>
+    <div class="proc-card"><div class="proc-num">02</div><div class="proc-title">Моделювання</div><div class="proc-desc">Проектування Eloquent моделей, міграцій і зв'язків у базі даних.</div></div>
+    <div class="proc-card"><div class="proc-num">03</div><div class="proc-title">Ресурси</div><div class="proc-desc">Розробка Filament Resources з формами, таблицями і кастомними діями.</div></div>
+    <div class="proc-card"><div class="proc-num">04</div><div class="proc-title">Кастомні сторінки</div><div class="proc-desc">Дашборд-віджети, звіти, спеціальні сторінки для бізнес-логіки.</div></div>
+    <div class="proc-card"><div class="proc-num">05</div><div class="proc-title">Ролі і доступ</div><div class="proc-desc">Інтеграція Spatie Permission, налаштування доступу до ресурсів і дій.</div></div>
+    <div class="proc-card"><div class="proc-num">06</div><div class="proc-title">Деплой</div><div class="proc-desc">Docker + production deploy з CI/CD пайплайном. Staging для тестування.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Питання та відповіді</div>
+  <h2 class="section-h2 reveal">Часті <em>питання</em></h2>
+  <div class="faq-list reveal">
+    <div class="faq-item"><div class="faq-q">Чому Filament, а не кастомний адмін?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Filament дає 80% функціоналу з коробки з чистим підтримуваним кодом. Швидше в розробці, легше в підтримці, виглядає професійно. Решту 20% кастомізую під ваші конкретні потреби.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Чи можете зробити мультиорендну панель?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Так. Filament 3 має нативний multi-tenancy. Будую панелі де кожна організація бачить лише свої дані, з кастомними налаштуваннями per-tenant і окремими піддоменами.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Скільки займає розробка?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Базова панель з 5–8 ресурсами: 1–2 тижні. Повноцінна CRM/ERP з кастомними звітами: 3–6 тижнів. Складний multi-tenant: 6–12 тижнів. Точна оцінка — після аналізу ТЗ.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Чи можете додати Filament до наявного Laravel-проєкту?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Так. Додаю Filament у наявні проєкти, переношу існуючу адмін-логіку в Resources і зберігаю зворотну сумісність. Можу аудитувати поточний код перед початком.</p></div></div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Схожі послуги</div>
+  <h2 class="section-h2 reveal">Більше <em>послуг</em></h2>
+  <div class="features-grid" style="margin-top:2rem;">
+    <a href="/services/laravel.html" class="rel-card reveal"><div class="rel-icon">⚙️</div><div class="rel-title">Laravel Developer</div><div class="rel-desc">Laravel бекенд, REST API, міграції</div></a>
+    <a href="/services/livewire.html" class="rel-card reveal"><div class="rel-icon">⚡</div><div class="rel-title">Livewire Developer</div><div class="rel-desc">Реактивні Laravel компоненти без JS</div></a>
+    <a href="/services/api.html" class="rel-card reveal"><div class="rel-icon">🔌</div><div class="rel-title">REST API</div><div class="rel-desc">API для вашої адмін-панелі</div></a>
+    <a href="/en/services/filament.html" class="rel-card reveal"><div class="rel-icon">🔥</div><div class="rel-title">English Version</div><div class="rel-desc">This page in English</div></a>
+  </div>
+</section>
+
+<div class="cta-section reveal">
+  <div class="cta-bg"></div>
+  <div class="promo-pill">🎁 <strong>HireRomanDev</strong> — 10% знижки на перший проєкт</div>
+  <h2 class="cta-title">Готові розпочати <em>проєкт?</em></h2>
+  <p class="cta-sub">Опишіть що потрібно зробити — відповім з оцінкою протягом кількох годин.</p>
+  <div class="cta-btns">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">💬 Написати в Telegram</a>
+    <a href="/pricing.html" class="btn-p btn-secondary">💰 Переглянути ціни</a>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="footer-copy">© 2018–2026 <a href="/">Roman Matviy</a> · FullStack Developer · Lviv, Ukraine 🇺🇦</div>
+  <nav class="footer-nav"><a href="/">Головна</a><a href="/about.html">Про мене</a><a href="/services/">Послуги</a><a href="/pricing.html">Ціни</a><a href="/stack/">Tech Stack</a></nav>
+</footer>
+<script>
+(function(){
+  var c=document.getElementById('cur'),r=document.getElementById('curRing');
+  if(c&&r){var mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c.style.transform='translate('+(mx-4)+'px,'+(my-4)+'px)';});
+    (function l(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;r.style.transform='translate('+(rx-18)+'px,'+(ry-18)+'px)';requestAnimationFrame(l);})();}
+  var sp=document.getElementById('scrollProgress');
+  if(sp)window.addEventListener('scroll',function(){sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';});
+  var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.07,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobileNav'),mc=document.getElementById('mobileClose');
+  if(mb&&mn&&mc){mb.addEventListener('click',function(){mn.classList.add('open');});mc.addEventListener('click',function(){mn.classList.remove('open');});mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');});});}
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var it=q.parentElement,was=it.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!was)it.classList.add('open');});});
+})();
+</script>
+</body></html>
