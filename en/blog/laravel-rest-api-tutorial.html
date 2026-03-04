@@ -263,7 +263,18 @@
 <div class="cur" id="cur"></div><div class="cur-ring" id="curRing"></div>
 <div class="bg-grid"></div>
 <div class="bg-blob" style="width:600px;height:600px;top:-150px;right:-100px;background:var(--purple);opacity:.06;animation:floatBlob 24s ease-in-out infinite;"></div>
-<nav class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Laravel REST API Tutorial</span></nav>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">✕</button><a href="/en/">Home</a><a href="/en/about.html">About</a><a href="/en/services/">Services</a><a href="/en/pricing.html">Pricing</a><a href="/blog/laravel-rest-api-tutorial.html" style="color:var(--muted);">UA 🇺🇦</a>
+</nav>
+<nav class="main-nav">
+  <a href="/" class="nav-logo">Roman<em>Dev</em></a>
+  <ul class="nav-links"><li><a href="/en/">Home</a></li><li><a href="/en/about.html">About</a></li><li><a href="/en/services/">Services</a></li><li><a href="/en/pricing.html">Pricing</a></li>
+    <li><a href="/blog/laravel-rest-api-tutorial.html" style="color:var(--muted);font-size:.63rem;border:1px solid var(--border);padding:.27rem .6rem;border-radius:100px;">UA 🇺🇦</a></li>
+  </ul>
+  <a href="https://t.me/RomanMatviy" class="nav-btn" target="_blank" rel="noopener">⚡ Hire Me</a>
+  <button class="nav-menu-btn" id="menuBtn"><svg width="22" height="16" viewBox="0 0 22 16"><rect y="0" width="22" height="2" rx="1" fill="currentColor"/><rect y="7" width="16" height="2" rx="1" fill="currentColor"/><rect y="14" width="22" height="2" rx="1" fill="currentColor"/></svg></button>
+</nav>
+<nav class="breadcrumb"><a href="/en/">Home</a> &rsaquo; <a href="/en/blog/">Blog</a> &rsaquo; <span>Laravel REST API Tutorial</span></nav>
 <div class="art-hero reveal"><div class="art-badge">Laravel 11 &middot; REST API &middot; Tutorial &middot; 2025</div><h1 class="art-h1">Build a REST API with Laravel 11:<br>Complete Tutorial with Authentication</h1><div class="art-meta"><span>March 2025</span><span>Roman Matviy &mdash; Laravel developer, 6+ years building production APIs</span><span>18 min read</span></div><p class="art-lead">Step-by-step: from a fresh Laravel 11 install to a production-ready REST API with Sanctum authentication, API Resources, Form Request validation, Policy authorization, and full Pest test coverage. All code is from real projects.</p></div>
 <div class="art-page"><div class="art-grid"><article class="prose"><h2>What We Are Building</h2>
 <p>A <strong>Task Management API</strong> with:</p>
