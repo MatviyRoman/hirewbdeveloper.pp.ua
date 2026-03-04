@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Livewire розробник — Laravel Livewire 3, реактивні компоненти | Roman Matviy</title>
+<meta name="description" content="Замовте розробку Livewire компонентів для Laravel. Live-пошук, модальні вікна, real-time дашборди, динамічні форми без JavaScript. Livewire 3 expert. Від $25/год.">
+<meta name="keywords" content="Livewire розробник, Laravel Livewire 3, Livewire компоненти, Laravel SPA без JavaScript, реактивні Laravel компоненти, Livewire developer Ukraine, Livewire Filament">
+<meta name="author" content="Roman Matviy"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hirewebdeveloper.pp.ua/services/livewire.html">
+<link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/services/livewire.html">
+<link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/livewire.html">
+<meta property="og:title" content="Livewire розробник | Laravel Livewire 3 | Roman Matviy">
+<meta property="og:description" content="Реактивні Laravel компоненти без JS: пошук, форми, дашборди. Livewire 3. Від $25/год.">
+<meta property="og:url" content="https://hirewebdeveloper.pp.ua/services/livewire.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Laravel Livewire Development","provider":{"@type":"Person","name":"Roman Matviy","url":"https://hirewebdeveloper.pp.ua"},"serviceType":"Livewire Developer","areaServed":"Worldwide","offers":{"@type":"Offer","priceCurrency":"USD","priceSpecification":{"@type":"UnitPriceSpecification","price":"25","priceCurrency":"USD","unitText":"HOUR"}}}</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#00f5d4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#03050d;--bg2:#070d1a;--bg3:#0a1428;--cyan:#00f5d4;--orange:#ff6b35;--blue:#3b82f6;--purple:#8b5cf6;--text:#e8edf5;--muted:#5a6a85;--border:rgba(0,245,212,0.12);--font-display:'Syne',sans-serif;--font-mono:'JetBrains Mono',monospace;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-mono);overflow-x:hidden;cursor:none;}
+.cur{width:8px;height:8px;background:var(--cyan);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;}
+.cur-ring{width:36px;height:36px;border:1px solid var(--cyan);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;opacity:.5;}
+.cur-ring.hovered{width:50px;height:50px;opacity:.8;border-color:var(--orange);}
+.scroll-progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--orange));z-index:200;width:0;}
+.bg-grid{position:fixed;inset:0;background-image:linear-gradient(rgba(0,245,212,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,212,.025) 1px,transparent 1px);background-size:55px 55px;pointer-events:none;z-index:0;}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;}
+@keyframes floatBlob{0%,100%{transform:translate(0,0);}33%{transform:translate(30px,-20px);}66%{transform:translate(-20px,15px);}}
+.main-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4vw;backdrop-filter:blur(20px);background:rgba(3,5,13,.85);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:var(--font-display);font-weight:800;font-size:1.05rem;color:var(--cyan);text-decoration:none;}
+.nav-logo em{color:var(--text);font-style:normal;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;transition:color .3s;}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan);}
+.nav-btn{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:.55rem 1.3rem;font-family:var(--font-display);font-weight:700;font-size:.72rem;cursor:pointer;text-decoration:none;transition:all .3s;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);}
+.nav-btn:hover{background:var(--cyan);color:var(--bg);}
+.nav-menu-btn{display:none;background:none;border:none;color:var(--text);cursor:pointer;}
+.mobile-nav{display:none;position:fixed;inset:0;z-index:500;background:rgba(3,5,13,.97);flex-direction:column;align-items:center;justify-content:center;gap:2rem;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--text);text-decoration:none;}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--muted);font-size:1.5rem;cursor:pointer;}
+@media(max-width:900px){.nav-links{display:none;}.nav-menu-btn{display:block;}}
+.breadcrumb{padding:5.5rem 5vw .5rem;font-size:.7rem;color:var(--muted);position:relative;z-index:1;}
+.breadcrumb a{color:var(--muted);text-decoration:none;}.breadcrumb a:hover{color:var(--cyan);}
+.page-hero{padding:1rem 5vw 4rem;position:relative;z-index:1;max-width:900px;}
+.page-badge{display:inline-flex;align-items:center;border:1px solid var(--border);color:var(--cyan);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px;margin-bottom:1.5rem;}
+.page-h1{font-family:var(--font-display);font-weight:900;font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;margin-bottom:.8rem;}
+.page-tagline{font-size:1.05rem;color:var(--muted);margin-bottom:1.2rem;}
+.page-desc{font-size:.82rem;color:var(--muted);line-height:1.9;max-width:680px;margin-bottom:2rem;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;}
+.btn-p{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.8rem;font-family:var(--font-display);font-weight:700;font-size:.82rem;text-decoration:none;transition:all .3s;clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);}
+.btn-primary{background:linear-gradient(135deg,var(--cyan),var(--blue));color:var(--bg);}
+.btn-primary:hover{filter:brightness(1.1);transform:translateY(-2px);}
+.btn-secondary{border:1px solid rgba(255,107,53,.35);color:var(--orange);}
+.btn-secondary:hover{background:rgba(255,107,53,.07);transform:translateY(-2px);}
+section{padding:4rem 5vw;position:relative;z-index:1;}
+section.dark{background:var(--bg2);}
+.section-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:.8rem;}
+.section-h2{font-family:var(--font-display);font-weight:800;font-size:clamp(1.4rem,3vw,2.2rem);margin-bottom:.6rem;}
+.section-h2 em{color:var(--cyan);font-style:normal;}
+.svc-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;margin-top:2rem;}
+.code-win{background:var(--bg3);border:1px solid var(--border);border-radius:4px;overflow:hidden;}
+.code-bar{display:flex;align-items:center;gap:.5rem;padding:.65rem 1rem;background:rgba(255,255,255,.03);border-bottom:1px solid var(--border);}
+.code-dot{width:10px;height:10px;border-radius:50%;}
+.code-title{font-size:.65rem;color:var(--muted);margin-left:.3rem;}
+.code-body{padding:1.3rem 1.4rem;font-size:.7rem;line-height:1.9;overflow-x:auto;font-family:var(--font-mono);}
+.ck{color:#ff7c7c;}.cv{color:#00f5d4;}.cs{color:#ffd76d;}.cm{color:#9ca3af;font-style:italic;}.cb{color:#c084fc;}.co{color:#ff6b35;}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5px;background:var(--border);border:1px solid var(--border);margin-top:2.5rem;}
+.feat-card{background:var(--bg2);padding:2rem 1.8rem;transition:background .3s;}.feat-card:hover{background:var(--bg3);}
+.feat-icon{font-size:1.8rem;margin-bottom:1rem;}
+.feat-title{font-family:var(--font-display);font-weight:700;font-size:.95rem;margin-bottom:.5rem;}
+.feat-desc{font-size:.75rem;color:var(--muted);line-height:1.75;}
+.tech-grid{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2rem;}
+.tech-pill{padding:.35rem .85rem;font-size:.7rem;font-family:var(--font-mono);border:1px solid var(--border);color:var(--muted);border-radius:2px;transition:all .25s;}
+.tech-pill.hot{border-color:rgba(0,245,212,.35);color:var(--cyan);}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1px solid var(--border);margin-top:2.5rem;}
+.proc-card{background:var(--bg2);padding:1.8rem 1.5rem;transition:background .3s;}.proc-card:hover{background:var(--bg3);}
+.proc-num{font-family:var(--font-display);font-weight:900;font-size:2.2rem;color:rgba(0,245,212,.1);line-height:1;margin-bottom:.6rem;}
+.proc-title{font-family:var(--font-display);font-weight:700;font-size:.88rem;margin-bottom:.4rem;}
+.proc-desc{font-size:.73rem;color:var(--muted);line-height:1.7;}
+.faq-list{margin-top:2.5rem;display:grid;gap:1.5px;background:var(--border);border:1px solid var(--border);}
+.faq-item{background:var(--bg2);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;cursor:pointer;font-family:var(--font-display);font-weight:600;font-size:.9rem;user-select:none;}
+.faq-q:hover{background:var(--bg3);}
+.faq-toggle{font-size:1.3rem;color:var(--cyan);transition:transform .3s;}
+.faq-item.open .faq-toggle{transform:rotate(45deg);}
+.faq-a{display:none;padding:0 1.5rem 1.3rem;font-size:.78rem;color:var(--muted);line-height:1.85;}
+.faq-item.open .faq-a{display:block;}
+.rel-card{display:block;background:var(--bg2);border:1px solid var(--border);padding:1.5rem;text-decoration:none;transition:all .3s;border-radius:2px;}
+.rel-card:hover{background:var(--bg3);border-color:var(--cyan);transform:translateY(-3px);}
+.rel-icon{font-size:1.5rem;margin-bottom:.6rem;}
+.rel-title{font-family:var(--font-display);font-weight:700;font-size:.88rem;color:var(--text);margin-bottom:.25rem;}
+.rel-desc{font-size:.7rem;color:var(--muted);}
+.cta-section{padding:5rem 5vw;text-align:center;position:relative;z-index:1;overflow:hidden;}
+.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,245,212,.07) 0%,transparent 70%);pointer-events:none;}
+.promo-pill{display:inline-flex;align-items:center;gap:.5rem;border:1px dashed rgba(0,245,212,.35);padding:.4rem 1.2rem;border-radius:100px;font-size:.72rem;color:var(--muted);margin-bottom:1.5rem;}
+.cta-title{font-family:var(--font-display);font-weight:900;font-size:clamp(1.6rem,3.5vw,2.8rem);margin-bottom:.8rem;}
+.cta-title em{color:var(--cyan);font-style:normal;}
+.cta-sub{font-size:.85rem;color:var(--muted);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.8;}
+.cta-btns{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
+.main-footer{padding:2rem 5vw;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;position:relative;z-index:1;}
+.footer-copy{font-size:.7rem;color:var(--muted);}.footer-copy a{color:var(--muted);text-decoration:none;}
+.footer-nav{display:flex;flex-wrap:wrap;gap:1.5rem;}.footer-nav a{font-size:.68rem;color:var(--muted);text-decoration:none;transition:color .3s;}.footer-nav a:hover{color:var(--cyan);}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s,transform .65s;}.reveal.visible{opacity:1;transform:none;}
+@media(max-width:900px){.svc-hero-grid{grid-template-columns:1fr;}.process-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.process-grid{grid-template-columns:1fr;}.features-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cur" id="cur"></div><div class="cur-ring" id="curRing"></div>
+<div class="bg-grid"></div>
+<div class="bg-blob" style="width:600px;height:600px;top:-150px;right:-100px;background:var(--orange);opacity:.06;animation:floatBlob 22s ease-in-out infinite;"></div>
+<div class="bg-blob" style="width:380px;height:380px;bottom:-80px;left:-80px;background:var(--cyan);opacity:.05;animation:floatBlob 28s ease-in-out infinite reverse;"></div>
+
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="/">Головна</a><a href="/about.html">Про мене</a><a href="/services/">Послуги</a><a href="/pricing.html">Ціни</a>
+  <a href="/en/services/livewire.html" style="color:var(--muted);">EN 🇬🇧</a>
+</nav>
+<nav class="main-nav">
+  <a href="/" class="nav-logo">Roman<em>Dev</em></a>
+  <ul class="nav-links">
+    <li><a href="/">Головна</a></li><li><a href="/about.html">Про мене</a></li>
+    <li><a href="/services/" class="active">Послуги</a></li><li><a href="/pricing.html">Ціни</a></li>
+    <li><a href="/en/services/livewire.html" style="color:var(--muted);font-size:.63rem;border:1px solid var(--border);padding:.28rem .65rem;border-radius:100px;">EN</a></li>
+  </ul>
+  <a href="https://t.me/RomanMatviy" class="nav-btn" target="_blank" rel="noopener">⚡ Найняти</a>
+  <button class="nav-menu-btn" id="menuBtn"><svg width="22" height="16" viewBox="0 0 22 16"><rect y="0" width="22" height="2" rx="1" fill="currentColor"/><rect y="7" width="16" height="2" rx="1" fill="currentColor"/><rect y="14" width="22" height="2" rx="1" fill="currentColor"/></svg></button>
+</nav>
+
+<nav class="breadcrumb"><a href="/">Головна</a> › <a href="/services/">Послуги</a> › <span>Livewire</span></nav>
+
+<header class="page-hero">
+  <div class="page-badge">Laravel Livewire 3 · Реактивні компоненти</div>
+  <h1 class="page-h1">Livewire <em style="color:var(--cyan)">Developer</em></h1>
+  <p class="page-tagline">Інтерактивні Laravel-додатки без написання JavaScript</p>
+  <p class="page-desc">Livewire 3 дозволяє будувати реактивні real-time інтерфейси повністю на PHP і Blade. Використовую Livewire з першої версії — будую складні пошукові системи, живі форми, дашборди та Filament адмін-панелі.</p>
+  <div class="hero-ctas">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">💬 Написати в Telegram</a>
+    <a href="/pricing.html" class="btn-p btn-secondary">💰 Ціни</a>
+  </div>
+</header>
+
+<section>
+  <div class="svc-hero-grid reveal">
+    <div>
+      <div class="section-label">Livewire 3 Component</div>
+      <p style="font-size:.8rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem;">Один PHP клас — і ви маєте реактивний компонент з URL-синхронізацією, computed properties і live-оновленнями без написання жодного рядка JavaScript.</p>
+      <div class="tech-grid">
+        <span class="tech-pill hot">Livewire 3</span><span class="tech-pill hot">Laravel 11</span><span class="tech-pill hot">Alpine.js</span>
+        <span class="tech-pill">Filament PHP</span><span class="tech-pill">TailwindCSS</span><span class="tech-pill">Pest Tests</span>
+      </div>
+    </div>
+    <div class="code-win">
+      <div class="code-bar"><span class="code-dot" style="background:#ff5f57"></span><span class="code-dot" style="background:#febc2e"></span><span class="code-dot" style="background:#28c840"></span><span class="code-title">SearchUsers.php</span></div>
+      <div class="code-body">
+<span class="ck">class</span> <span class="cv">SearchUsers</span> <span class="ck">extends</span> <span class="co">Component</span><br>
+{<br>
+&nbsp;&nbsp;<span class="cb">#[Url]</span> <span class="cm">// синхронізація з URL</span><br>
+&nbsp;&nbsp;<span class="ck">public</span> <span class="cv">string</span> <span class="cs">$search</span> = <span class="cs">''</span>;<br><br>
+&nbsp;&nbsp;<span class="cb">#[Computed]</span><br>
+&nbsp;&nbsp;<span class="ck">public function</span> <span class="cv">users</span>()<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="co">User</span>::<span class="cv">query</span>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-><span class="cv">when</span>(<span class="cs">$this</span>-><span class="cv">search</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">fn</span>(<span class="cs">$q</span>) => <span class="cs">$q</span>-><span class="cv">search</span>(<span class="cs">$this</span>-><span class="cv">search</span>))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-><span class="cv">paginate</span>(<span class="cv">20</span>);<br>
+&nbsp;&nbsp;}<br>
+}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Livewire можливості</div>
+  <h2 class="section-h2 reveal"><em>Livewire</em> можливості</h2>
+  <div class="features-grid">
+    <div class="feat-card reveal"><div class="feat-icon">🔍</div><h3 class="feat-title">Live пошук і фільтри</h3><p class="feat-desc">Real-time пошук, фасетні фільтри, сортовані таблиці — оновлення без перезавантаження. URL-стан синхронізований автоматично.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">📋</div><h3 class="feat-title">Динамічні форми</h3><p class="feat-desc">Багатокрокові wizard-форми, умовні поля, inline валідація — все на PHP без JS-бойлерплейту. Миттєвий зворотній зв'язок.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">🔔</div><h3 class="feat-title">Real-time сповіщення</h3><p class="feat-desc">Livewire polling або Laravel Echo + Pusher для живих сповіщень і оновлень даних. Без WebSocket-конфігурації вручну.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">📊</div><h3 class="feat-title">Живі дашборди</h3><p class="feat-desc">Авто-оновлювані статистичні віджети, графіки і фіди. Дашборди що залишаються актуальними без ручного refresh.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">🎭</div><h3 class="feat-title">Модальні вікна</h3><p class="feat-desc">Повторно використовувані modal і slideover компоненти. Стан управляється в PHP — ніякого JavaScript-перехоплення подій.</p></div>
+    <div class="feat-card reveal"><div class="feat-icon">🏗️</div><h3 class="feat-title">Інтеграція з Filament</h3><p class="feat-desc">Filament 3 побудований на Livewire 3. Розширюю Filament кастомними Livewire widgets і сторінками для складної логіки.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Стек</div>
+  <h2 class="section-h2 reveal"><em>Технології</em></h2>
+  <div class="tech-grid reveal">
+    <span class="tech-pill hot">Livewire 3</span><span class="tech-pill hot">Laravel 11</span><span class="tech-pill hot">PHP 8.3</span>
+    <span class="tech-pill hot">Filament PHP</span><span class="tech-pill hot">Alpine.js</span><span class="tech-pill">TailwindCSS</span>
+    <span class="tech-pill">Blade Templates</span><span class="tech-pill">Laravel Echo</span><span class="tech-pill">Pusher</span>
+    <span class="tech-pill">MySQL 8</span><span class="tech-pill">Pest Tests</span><span class="tech-pill">Docker</span>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Процес розробки</div>
+  <h2 class="section-h2 reveal">Процес <em>розробки</em></h2>
+  <div class="process-grid reveal">
+    <div class="proc-card"><div class="proc-num">01</div><div class="proc-title">Вимоги</div><div class="proc-desc">Визначити які взаємодії потребують реактивності і межі компонентів.</div></div>
+    <div class="proc-card"><div class="proc-num">02</div><div class="proc-title">Дизайн компонентів</div><div class="proc-desc">Планування дерева компонентів, властивостей, emits і lifecycle хуків.</div></div>
+    <div class="proc-card"><div class="proc-num">03</div><div class="proc-title">Бекенд логіка</div><div class="proc-desc">PHP класи компонентів: actions, computed properties, validation rules.</div></div>
+    <div class="proc-card"><div class="proc-num">04</div><div class="proc-title">Blade шаблони</div><div class="proc-desc">Blade views з wire:model, wire:click, Alpine.js для дрібних взаємодій.</div></div>
+    <div class="proc-card"><div class="proc-num">05</div><div class="proc-title">Тестування</div><div class="proc-desc">Livewire тести через Pest: assert component behavior, form submissions.</div></div>
+    <div class="proc-card"><div class="proc-num">06</div><div class="proc-title">Оптимізація</div><div class="proc-desc">Lazy loading, deferred rendering, wire:navigate для відчуття повноцінного SPA.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Питання та відповіді</div>
+  <h2 class="section-h2 reveal">Часті <em>питання</em></h2>
+  <div class="faq-list reveal">
+    <div class="faq-item"><div class="faq-q">Коли обрати Livewire замість Vue.js?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Livewire ідеальний коли ваша команда знає Laravel/PHP і вам потрібні реактивні UI без складності окремого JS-додатку. Vue.js краще для дуже складних SPA, мобільних застосунків (через API) або коли потрібен тонкий клієнтський контроль.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Чи працює Livewire з Filament?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Так — Filament 3 повністю побудований на Livewire 3. Всі мої Filament адмін-панелі використовують Livewire. Також розширюю Filament кастомними Livewire віджетами і сторінками.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Чи можете мігрувати Livewire v2 на v3?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Так. Провів кілька міграцій Livewire 2 → 3. Основні зміни — синтаксис компонентів та lifecycle хуки. Мігрую і тестую всі компоненти з мінімальним downtime.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Яка вартість?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Livewire компоненти від $20/год. Типова функція живого пошуку з фільтрами: 4–8 год ($80–160). Повний дашборд з живими віджетами: 15–30 год. Filament панель з Livewire розширеннями — від $800.</p></div></div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="section-label">Схожі послуги</div>
+  <h2 class="section-h2 reveal">Більше <em>послуг</em></h2>
+  <div class="features-grid" style="margin-top:2rem;">
+    <a href="/services/filament.html" class="rel-card reveal"><div class="rel-icon">🔥</div><div class="rel-title">Filament PHP</div><div class="rel-desc">Адмін-панелі побудовані на Livewire</div></a>
+    <a href="/services/laravel.html" class="rel-card reveal"><div class="rel-icon">⚙️</div><div class="rel-title">Laravel Developer</div><div class="rel-desc">Повний Laravel бекенд і REST API</div></a>
+    <a href="/services/vuejs.html" class="rel-card reveal"><div class="rel-icon">💚</div><div class="rel-title">Vue.js Developer</div><div class="rel-desc">Коли потрібен повноцінний SPA</div></a>
+    <a href="/en/services/livewire.html" class="rel-card reveal"><div class="rel-icon">⚡</div><div class="rel-title">English Version</div><div class="rel-desc">This page in English</div></a>
+  </div>
+</section>
+
+<div class="cta-section reveal">
+  <div class="cta-bg"></div>
+  <div class="promo-pill">🎁 <strong>HireRomanDev</strong> — 10% знижки на перший проєкт</div>
+  <h2 class="cta-title">Готові розпочати <em>проєкт?</em></h2>
+  <p class="cta-sub">Опишіть задачу — відповім з оцінкою протягом кількох годин. Перша консультація безкоштовна.</p>
+  <div class="cta-btns">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">💬 Написати в Telegram</a>
+    <a href="/pricing.html" class="btn-p btn-secondary">💰 Переглянути ціни</a>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="footer-copy">© 2018–2026 <a href="/">Roman Matviy</a> · FullStack Developer · Lviv, Ukraine 🇺🇦</div>
+  <nav class="footer-nav"><a href="/">Головна</a><a href="/about.html">Про мене</a><a href="/services/">Послуги</a><a href="/pricing.html">Ціни</a><a href="/stack/">Tech Stack</a></nav>
+</footer>
+<script>
+(function(){
+  var c=document.getElementById('cur'),r=document.getElementById('curRing');
+  if(c&&r){var mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c.style.transform='translate('+(mx-4)+'px,'+(my-4)+'px)';});
+    (function l(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;r.style.transform='translate('+(rx-18)+'px,'+(ry-18)+'px)';requestAnimationFrame(l);})();}
+  var sp=document.getElementById('scrollProgress');
+  if(sp)window.addEventListener('scroll',function(){sp.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';});
+  var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.07,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobileNav'),mc=document.getElementById('mobileClose');
+  if(mb&&mn&&mc){mb.addEventListener('click',function(){mn.classList.add('open');});mc.addEventListener('click',function(){mn.classList.remove('open');});mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');});});}
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var it=q.parentElement,was=it.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!was)it.classList.add('open');});});
+})();
+</script>
+</body></html>
