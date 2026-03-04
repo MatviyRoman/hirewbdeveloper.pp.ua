@@ -1,130 +1,65 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Про мене — Roman Matviy, FullStack Developer Lviv | Досвід та навички</title>
-<meta name="description" content="Roman Matviy — FullStack розробник з Lviv, Ukraine. 6+ років досвіду. Laravel, PHP, Vue.js, WordPress, PrestaShop, Docker. Дізнайтеся про мій шлях та цінності.">
-<meta name="keywords" content="Roman Matviy, веб-розробник Львів, FullStack Developer Lviv, Laravel розробник Україна, PHP розробник Львів, Vue.js розробник">
-<meta name="author" content="Roman Matviy"><meta name="robots" content="index,follow">
-<link rel="canonical" href="https://hirewebdeveloper.pp.ua/about.html">
-<link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/about.html"><link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/about.html">
-<meta property="og:title" content="Про мене — Roman Matviy, FullStack Developer Lviv | Досвід та навички"><meta property="og:description" content="Roman Matviy — FullStack розробник з Lviv, Ukraine. 6+ років досвіду. Laravel, PHP, Vue.js, WordPress, PrestaShop, Docker. Дізнайтеся про мій шлях та цінності."><meta property="og:url" content="https://hirewebdeveloper.pp.ua/about.html">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Roman Matviy","alternateName":"Роман Матвій","jobTitle":"FullStack Developer","url":"https://hirewebdeveloper.pp.ua","sameAs":["https://linkedin.com/in/MatviyRoman","https://github.com/MatviyRoman","https://t.me/RomanMatviy"],"address":{"@type":"PostalAddress","addressLocality":"Lviv","addressCountry":"UA"}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
-<style>  :root {
-    --bg: #03050d; --bg2: #070d1a; --bg3: #0a1428;
-    --cyan: #00f5d4; --orange: #ff6b35; --blue: #3b82f6;
-    --purple: #8b5cf6; --green: #22c55e;
-    --text: #e8edf5; --muted: #5a6a85;
-    --card: rgba(255,255,255,0.04);
-    --border: rgba(0,245,212,0.12);
-    --font-display: 'Syne', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-  }
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Roman Matviy — FullStack розробник з Lviv, Ukraine. 6+ років досвіду. Laravel, PHP, Vue.js, WordPress, PrestaShop, Docker. Дізнайтеся про мій шлях та цінності.">
+  <meta name="keywords" content="FullStack Developer, Laravel, Vue.js, PHP, WordPress, PrestaShop, Docker, REST API, Lviv, Ukraine">
+  <meta name="author" content="Roman Matviy">
+  <link rel="canonical" href="https://hirewebdeveloper.pp.ua/about.html">
+  <link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/about.html">
+  <link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/about.html">
+  <title>Про мене — Roman Matviy, FullStack Developer Lviv | Досвід та навички</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Roman Matviy","jobTitle":"FullStack Developer","url":"https://hirewebdeveloper.pp.ua","workLocation":{"@type":"Place","name":"Lviv, Ukraine"},"sameAs":["https://github.com/MatviyRoman","https://linkedin.com/in/MatviyRoman","https://t.me/RomanMatviy"]}</script>
+<style>
+  :root { --bg: #03050d; --bg2: #070d1a; --bg3: #0a1428; --card: #0e1527; --border: #1a273b; --cyan: #00f5d4; --orange: #ff6b35; --blue: #3b82f6; --purple: #8b5cf6; --green: #22c55e; --text: #e8edf5; --muted: #5a6a85; --font-display: 'Syne', sans-serif; --font-mono: 'JetBrains Mono', monospace; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text); font-family: var(--font-mono); overflow-x: hidden; line-height: 1.7; cursor: none; }
-  a { color: inherit; text-decoration: none; } ul { list-style: none; }
-  /* CURSOR */
-  .cur { width: 8px; height: 8px; background: var(--cyan); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; mix-blend-mode: screen; transition: transform 0.08s ease; }
-  .cur-ring { width: 36px; height: 36px; border: 1.5px solid var(--cyan); border-radius: 50%; position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998; transition: all 0.18s ease; opacity: 0.4; }
-  .cur-ring.hovered { transform: scale(2) !important; opacity: 0.15; }
-  /* SCROLL PROGRESS */
-  .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; z-index: 600; background: linear-gradient(90deg, var(--cyan), var(--orange)); transition: width 0.1s linear; }
-  /* GRID BG */
-  .bg-grid { position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(rgba(0,245,212,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,212,0.025) 1px, transparent 1px); background-size: 70px 70px; }
-  /* BLOBS */
-  .bg-blob { position: fixed; pointer-events: none; z-index: 0; border-radius: 50%; filter: blur(130px); }
-  @keyframes floatBlob { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(40px,-60px) scale(1.1)} 66%{transform:translate(-30px,40px) scale(0.95)} }
-  /* NAV */
-  nav.main-nav { position: fixed; top: 0; inset-inline: 0; z-index: 500; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 5vw; background: rgba(3,5,13,0.88); backdrop-filter: blur(24px) saturate(1.4); border-bottom: 1px solid var(--border); }
-  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.03em; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-size: 1rem; line-height: 1.6; position: relative; overflow-x: hidden; }
+  section { position: relative; z-index: 1; padding: 5rem 5vw; }
+  section.dark { background: linear-gradient(180deg, #030609 0%, #070d1a 50%, #030609 100%); }
+  .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue)); width: 0; z-index: 9999; }
+  .cur, .cur-ring { position: fixed; pointer-events: none; z-index: 9998; }
+  .cur { width: 8px; height: 8px; background: var(--cyan); border-radius: 50%; }
+  .cur-ring { width: 36px; height: 36px; border: 1px solid var(--cyan); border-radius: 50%; opacity: 0.5; transition: width 0.3s, height 0.3s, opacity 0.3s; }
+  .cur-ring.hovered { width: 50px; height: 50px; opacity: 1; }
+  .bg-grid { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-image: linear-gradient(rgba(0,245,212,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,212,0.03) 1px, transparent 1px); background-size: 100px 100px; pointer-events: none; z-index: 0; }
+  .bg-blob { position: fixed; border-radius: 50%; filter: blur(100px); z-index: 0; pointer-events: none; animation: floatBlob 20s ease-in-out infinite; }
+  @keyframes floatBlob { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(30px, -30px); } }
+  nav.main-nav { position: fixed; top: 0; left: 0; right: 0; height: 4.2rem; display: flex; justify-content: space-between; align-items: center; padding: 0 5vw; background: rgba(3,5,13,0.7); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 100; font-family: var(--font-display); }
+  .nav-logo { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; text-decoration: none; color: var(--text); }
   .nav-logo em { color: var(--cyan); font-style: normal; }
-  .nav-links { display: flex; gap: 2rem; align-items: center; }
-  .nav-links a { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color 0.3s; }
+  .nav-links { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
+  .nav-links a { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
-  .nav-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.6rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; border-radius: 2px; clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%); transition: all 0.3s; white-space: nowrap; }
-  .nav-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
-  .nav-menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--text); }
-  /* MOBILE NAV */
-  .mobile-nav { position: fixed; inset: 0; z-index: 400; background: var(--bg); padding: 5rem 2rem 2rem; display: none; flex-direction: column; gap: 2rem; }
-  .mobile-nav.open { display: flex; }
-  .mobile-nav a { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--text); }
-  .mobile-nav a:hover { color: var(--cyan); }
-  .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
-  /* BREADCRUMB */
-  .breadcrumb { position: relative; z-index: 1; padding: 6.5rem 5vw 0; display: flex; align-items: center; gap: 0.5rem; font-size: 0.68rem; color: var(--muted); }
-  .breadcrumb a { color: var(--muted); transition: color 0.2s; }
-  .breadcrumb a:hover, .breadcrumb span { color: var(--cyan); }
-  /* PAGE HERO */
-  .page-hero { position: relative; z-index: 1; padding: 2.5rem 5vw 5rem; overflow: hidden; }
-  .page-badge { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px solid var(--border); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 1.2rem; }
-  .page-badge::before { content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: blink 2s ease infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  .page-h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: 1.02; letter-spacing: -0.04em; margin-bottom: 0.5rem; }
-  .page-tagline { font-family: var(--font-display); font-size: clamp(0.9rem, 2vw, 1.2rem); color: var(--orange); font-weight: 600; margin-bottom: 1.5rem; }
-  .page-desc { font-size: 0.88rem; color: var(--muted); max-width: 680px; line-height: 1.9; margin-bottom: 2.5rem; }
-  .page-desc strong { color: var(--text); }
-  .hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-  /* BUTTONS */
+  .nav-btn { padding: 0.6rem 1.5rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.72rem; border: none; border-radius: 3px; cursor: pointer; text-decoration: none; transition: all 0.3s; }
+  .nav-btn:hover { filter: brightness(1.1); transform: translateY(-2px); }
+  .nav-menu-btn { display: none; background: none; border: none; color: var(--text); font-size: 1.4rem; cursor: pointer; align-items: center; gap: 0.5rem; }
+  .nav-menu-btn:hover { color: var(--cyan); }
+  nav.mobile-nav { display: none; position: fixed; top: 0; left: -300px; width: 300px; height: 100%; background: var(--bg3); border-right: 1px solid var(--border); padding: 5rem 1.5rem 2rem; z-index: 101; flex-direction: column; gap: 2rem; transition: left 0.3s; }
+  nav.mobile-nav.open { left: 0; }
+  .mobile-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+  nav.mobile-nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  nav.mobile-nav a:hover { color: var(--cyan); }
+  nav.breadcrumb { position: relative; z-index: 1; padding: 0.8rem 5vw; font-size: 0.75rem; color: var(--muted); border-bottom: 1px solid var(--border); }
+  nav.breadcrumb a { color: var(--cyan); text-decoration: none; }
+  nav.breadcrumb a:hover { text-decoration: underline; }
+  .reveal { }
+  .reveal.visible { }
+  .section-label { display: inline-block; font-family: var(--font-mono); font-size: 0.65rem; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem; }
+  .section-h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: -0.02em; margin-bottom: 0.5rem; line-height: 1.2; }
+  .section-h2 em { font-style: normal; color: var(--cyan); }
+  .section-sub { font-size: 0.88rem; color: var(--muted); max-width: 600px; line-height: 1.85; margin-bottom: 3rem; }
+  .btn-p { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 2rem; border-radius: 3px; font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; cursor: pointer; text-decoration: none; user-select: none; border: 1px solid transparent; transition: all 0.3s; }
+  .btn-primary { background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); }
+  .btn-primary:hover { filter: brightness(1.15); transform: translateY(-2px); }
+  .btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text); }
+  .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+  header.page-hero { position: relative; z-index: 1; padding: 7rem 5vw 4rem; }
+  .page-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+  .page-h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+  .page-tagline { font-size: 0.95rem; color: var(--muted); margin-bottom: 2rem; letter-spacing: 0.05em; }
   .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-p { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; border-radius: 2px; transition: all 0.3s; letter-spacing: 0.03em; }
-  .btn-primary { background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
-  .btn-primary:hover { filter: brightness(1.12); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,245,212,0.25); }
-  .btn-secondary { border: 1px solid rgba(255,107,53,0.35); color: var(--orange); clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
-  .btn-secondary:hover { background: rgba(255,107,53,0.08); transform: translateY(-2px); }
-  /* STATS */
-  .stats-row { display: flex; flex-wrap: wrap; gap: 2.5rem; margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
-  .stat-val { font-family: var(--font-display); font-weight: 800; font-size: 2.2rem; color: var(--cyan); line-height: 1; }
-  .stat-label { font-size: 0.66rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem; }
-  /* SECTIONS */
-  section { position: relative; z-index: 1; padding: 5.5rem 5vw; }
-  section.dark { background: var(--bg2); }
-  .section-label { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.8rem; }
-  .section-label::before { content: '// '; color: var(--muted); }
-  .section-h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
-  .section-h2 em { color: var(--cyan); font-style: normal; }
-  .section-sub { font-size: 0.86rem; color: var(--muted); max-width: 580px; line-height: 1.85; margin-bottom: 3.5rem; }
-  /* REVEAL */
-  .reveal { opacity: 0; transform: translateY(36px); transition: all 0.65s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  /* FEATURES GRID */
-  .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.2rem; }
-  .feat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 2rem 1.8rem; transition: all 0.35s; position: relative; overflow: hidden; }
-  .feat-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), transparent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
-  .feat-card:hover { border-color: rgba(0,245,212,0.25); }
-  .feat-card:hover::after { transform: scaleX(1); }
-  .feat-icon { width: 44px; height: 44px; background: rgba(0,245,212,0.07); border: 1px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1.2rem; }
-  .feat-title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
-  .feat-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
-  /* TECH GRID */
-  .tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.8rem; }
-  .tech-item { background: var(--card); border: 1px solid var(--border); border-radius: 3px; padding: 1.2rem 1rem; text-align: center; transition: all 0.3s; cursor: default; }
-  .tech-item:hover { border-color: var(--cyan); background: rgba(0,245,212,0.05); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
-  .tech-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
-  .tech-name { font-size: 0.72rem; font-weight: 600; color: var(--text); }
-  .tech-sub { font-size: 0.62rem; color: var(--muted); margin-top: 0.2rem; }
-  /* PROCESS */
-  .process-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5px; background: var(--border); border: 1px solid var(--border); }
-  .process-step { background: var(--bg2); padding: 2.2rem 1.8rem; position: relative; transition: background 0.3s; }
-  .process-step:hover { background: var(--bg3); }
-  .step-num { font-family: var(--font-display); font-weight: 800; font-size: 3.5rem; line-height: 1; color: rgba(0,245,212,0.07); position: absolute; top: 1.2rem; right: 1.5rem; }
-  .step-icon { font-size: 1.6rem; margin-bottom: 1rem; }
-  .step-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
-  .step-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
-  /* FAQ */
-  .faq-list { display: grid; gap: 0; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
-  .faq-item { border-bottom: 1px solid var(--border); }
-  .faq-item:last-child { border-bottom: none; }
-  .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 1.8rem; cursor: pointer; background: var(--bg2); transition: background 0.2s; font-family: var(--font-display); font-weight: 600; font-size: 0.92rem; gap: 1rem; }
-  .faq-q:hover { background: var(--bg3); }
-  .faq-toggle { width: 24px; height: 24px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; color: var(--cyan); transition: transform 0.3s, background 0.3s; }
-  .faq-item.open .faq-toggle { transform: rotate(45deg); background: rgba(0,245,212,0.1); }
-  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.8rem; }
-  .faq-item.open .faq-a { max-height: 400px; padding: 1rem 1.8rem 1.6rem; }
-  .faq-a p { font-size: 0.82rem; color: var(--muted); line-height: 1.85; }
-  /* SERVICES MEGA GRID */
   .services-mega { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.5px; background: var(--border); border: 1px solid var(--border); margin-top: 3rem; }
   .svc-card { background: var(--bg2); padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 0.8rem; position: relative; transition: background 0.3s; overflow: hidden; }
   .svc-card:hover { background: var(--bg3); }
@@ -135,69 +70,28 @@
   .svc-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.85; flex: 1; }
   .svc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
   .svc-tag { font-size: 0.62rem; padding: 0.22rem 0.6rem; background: rgba(0,245,212,0.06); border: 1px solid rgba(0,245,212,0.14); border-radius: 2px; color: var(--cyan); }
-  .svc-price { font-family: var(--font-display); font-size: 0.75rem; color: var(--muted); margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); }
-  .svc-price span { color: var(--cyan); font-weight: 700; }
-  .svc-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--cyan); font-size: 0.76rem; transition: gap 0.2s; }
-  .svc-link:hover { gap: 0.7rem; }
-  /* RELATED */
-  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
-  .related-card { display: flex; flex-direction: column; gap: 0.5rem; background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 1.5rem; transition: all 0.3s; }
-  .related-card:hover { border-color: rgba(0,245,212,0.3); transform: translateY(-3px); }
-  .related-icon { font-size: 1.4rem; }
-  .related-title { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
-  .related-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.7; flex: 1; }
-  .related-link { font-size: 0.7rem; color: var(--cyan); margin-top: 0.3rem; }
-  /* CTA SECTION */
+  .faq-list { display: grid; gap: 0; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 1.8rem; cursor: pointer; background: var(--bg2); transition: background 0.2s; font-family: var(--font-display); font-weight: 600; font-size: 0.92rem; gap: 1rem; }
+  .faq-q:hover { background: var(--bg3); }
+  .faq-toggle { width: 24px; height: 24px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; color: var(--cyan); transition: transform 0.3s, background 0.3s; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); background: rgba(0,245,212,0.1); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.8rem; }
+  .faq-item.open .faq-a { max-height: 400px; padding: 1rem 1.8rem 1.6rem; }
+  .faq-a p { font-size: 0.82rem; color: var(--muted); line-height: 1.85; }
   .cta-section { position: relative; z-index: 1; background: linear-gradient(135deg, var(--bg3) 0%, rgba(0,245,212,0.04) 50%, var(--bg3) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6rem 5vw; text-align: center; overflow: hidden; }
   .cta-bg { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: var(--cyan); filter: blur(160px); opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%,-50%); }
   .cta-title { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 3.2rem); letter-spacing: -0.03em; margin-bottom: 1rem; position: relative; }
   .cta-sub { font-size: 0.88rem; color: var(--muted); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.85; position: relative; }
   .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; }
   .promo-pill { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px dashed rgba(0,245,212,0.3); padding: 0.5rem 1.2rem; border-radius: 100px; font-size: 0.72rem; color: var(--cyan); margin-bottom: 2rem; position: relative; }
-  /* CODE WINDOW */
-  .code-window { background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; font-size: 0.78rem; }
-  .code-bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1rem; background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border); }
-  .code-dot { width: 10px; height: 10px; border-radius: 50%; }
-  .code-body { padding: 1.5rem; line-height: 2; overflow-x: auto; white-space: pre; }
-  .kw{color:#ff79c6} .fn{color:#50fa7b} .str{color:#f1fa8c} .cm{color:#6272a4;font-style:italic} .cl{color:#00f5d4} .vr{color:#bd93f9} .tg{color:#ff6b6b} .at{color:#50fa7b}
-  /* QUICK FORM */
-  .quick-form { display: grid; gap: 0.9rem; }
-  .qf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
-  .qf-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); display: block; margin-bottom: 0.3rem; }
-  .qf-input, .qf-textarea { width: 100%; background: var(--card); border: 1px solid var(--border); color: var(--text); font-family: var(--font-mono); font-size: 0.8rem; padding: 0.75rem; border-radius: 2px; outline: none; transition: border 0.3s; }
-  .qf-input:focus, .qf-textarea:focus { border-color: var(--cyan); }
-  .qf-textarea { resize: none; min-height: 110px; }
-  .qf-btn { padding: 0.85rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; border: none; border-radius: 2px; cursor: pointer; clip-path: polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%); transition: all 0.3s; width: 100%; }
-  .qf-btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
-  .qf-ok { display: none; text-align: center; color: var(--green); font-size: 0.8rem; padding: 0.5rem; }
-  /* FOOTER */
   footer.main-footer { position: relative; z-index: 1; border-top: 1px solid var(--border); padding: 1.8rem 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
   .footer-copy { font-size: 0.7rem; color: var(--muted); }
   .footer-copy a { color: var(--cyan); }
   .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
   .footer-nav a { font-size: 0.68rem; color: var(--muted); transition: color 0.2s; }
   .footer-nav a:hover { color: var(--cyan); }
-  /* RESPONSIVE */
-  @media (max-width: 900px) { .hero-split { grid-template-columns: 1fr; } }
-  @media (max-width: 768px) { nav.main-nav .nav-links { display: none; } .nav-menu-btn { display: flex; } section { padding: 4rem 5vw; } .qf-row { grid-template-columns: 1fr; } }
-
-  .about-hero-grid { display: grid; grid-template-columns: 1fr 400px; gap: 4rem; align-items: start; }
-  .avatar-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; position: sticky; top: 7rem; }
-  .avatar-circle { width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--cyan), var(--blue)); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; font-size: 2rem; color: var(--bg); margin: 0 auto 1.5rem; position: relative; }
-  .avatar-circle::after { content: ''; position: absolute; inset: -5px; border-radius: 50%; border: 2px dashed rgba(0,245,212,0.3); animation: spin 20s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .avatar-name { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; margin-bottom: 0.2rem; }
-  .avatar-title { font-size: 0.78rem; color: var(--cyan); margin-bottom: 1.5rem; }
-  .avail-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; border-radius: 100px; background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2); font-size: 0.68rem; color: #22c55e; margin-bottom: 1rem; }
-  .avail-dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; animation: blink 2s infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  .avatar-links { display: grid; gap: 0.6rem; margin-top: 1.5rem; }
-  .avatar-link { display: flex; align-items: center; gap: 0.8rem; padding: 0.7rem 1rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 3px; font-size: 0.75rem; color: var(--muted); transition: all 0.3s; }
-  .avatar-link:hover { border-color: rgba(0,245,212,0.3); color: var(--cyan); }
-  .avatar-link .ali { font-size: 1rem; }
-  .story p { font-size: 0.88rem; color: var(--muted); line-height: 2; margin-bottom: 1.5rem; }
-  .story p strong { color: var(--text); }
-  .story p:first-child { font-size: 0.96rem; color: var(--text); }
   .timeline { padding-left: 2rem; border-left: 1px solid var(--border); display: grid; gap: 0; }
   .tl-item { position: relative; padding: 0 0 2.5rem 2rem; }
   .tl-item::before { content: ''; position: absolute; left: -2.42rem; top: 0.35rem; width: 10px; height: 10px; border-radius: 50%; background: var(--bg); border: 2px solid var(--border); transition: border-color 0.3s; }
@@ -209,26 +103,19 @@
   .tl-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
   .tl-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.7rem; }
   .tl-tag { font-size: 0.6rem; padding: 0.18rem 0.55rem; background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.18); border-radius: 2px; color: var(--blue); }
-  .skill-bars { display: grid; gap: 1.2rem; }
-  .sbi { }
-  .sbi-head { display: flex; justify-content: space-between; font-size: 0.75rem; margin-bottom: 0.4rem; }
-  .sbi-name { color: var(--text); font-weight: 600; }
-  .sbi-pct { color: var(--muted); }
-  .sbi-track { height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; }
-  .sbi-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue)); width: 0; transition: width 1.2s ease; }
-  .sbi.visible .sbi-fill { width: var(--w); }
   .values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
   .value-card { background: var(--bg2); padding: 2rem 1.8rem; transition: background 0.3s; }
   .value-card:hover { background: var(--bg3); }
   .value-num { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; color: rgba(0,245,212,0.1); line-height: 1; margin-bottom: 0.6rem; }
   .value-title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
   .value-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
-  .stat-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5px; background: var(--border); border: 1px solid var(--border); }
+  .stat-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5px; background: var(--border); border: 1px solid var(--border); margin-top: 2rem; }
   .stat-card { background: var(--bg2); padding: 2rem 1.5rem; text-align: center; transition: background 0.3s; }
   .stat-card:hover { background: var(--bg3); }
   .sc-val { font-family: var(--font-display); font-weight: 800; font-size: 2.8rem; color: var(--cyan); line-height: 1; }
   .sc-lbl { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.4rem; }
-  @media (max-width: 900px) { .about-hero-grid { grid-template-columns: 1fr; } .avatar-card { position: static; } .stat-cards { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 900px) { .stat-cards { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 768px) { nav.main-nav .nav-links { display: none; } .nav-menu-btn { display: flex; } section { padding: 4rem 5vw; } header.page-hero { padding: 5rem 5vw 3rem; } }
 </style>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -262,38 +149,13 @@
 <nav class="breadcrumb"><a href="/">Головна</a> &#8250; <span>Про мене</span></nav>
 
 <header class="page-hero">
-  <div class="about-hero-grid">
-    <div>
-      <div class="page-badge">Roman Matviy &middot; Lviv, Ukraine &#127482;&#127462;</div>
-      <h1 class="page-h1">Привіт, я<br><em style="color:var(--cyan)">Roman</em></h1>
-      <p class="page-tagline">FullStack Developer &middot; Laravel &middot; PHP &middot; Vue.js</p>
-      <div class="story"><p>Я <strong>FullStack розробник з Lviv, Ukraine</strong> з понад <strong>6 роками комерційного досвіду</strong>. Спеціалізуюся на Laravel, PHP та Vue.js — від бізнес-сайтів до складних SaaS-платформ і enterprise-систем.</p>
-<p>Починав з <strong>HTML/CSS і WordPress</strong>, поступово занурюючись у PHP-фреймворки. Сьогодні мій основний стек — <strong>Laravel + Vue.js + Docker</strong>. Щодня пишу чистий, тестований, добре задокументований код.</p>
-<p>Окрім комерційної розробки, я <strong>викладав PHP і SQL</strong> у технічній школі — 90-годинний курс. Вмію не лише писати код, але й пояснювати складні речі простими словами.</p>
-<p>Ціную <strong>чесність, точні дедлайни і технічну якість</strong>. Не беру проєкти, якщо не впевнений що виконаю їх добре. Краще сказати "ні" одразу.</p>
-<p>Зараз доступний для <strong>фрілансу та remote-позицій</strong> в Україні та за кордоном.</p></div>
-      <div class="hero-ctas" style="margin-top:2rem;">
-        <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">&#128172; Написати в Telegram</a>
-        <a href="services/" class="btn-p btn-secondary">&#9881;&#65039; Мої послуги</a>
-      </div>
-    </div>
-    <aside class="reveal">
-  <div class="avatar-card">
-    <div class="avail-badge"><span class="avail-dot"></span>Доступний до проєктів</div>
-    <div class="avatar-circle">RM</div>
-    <div class="avatar-name">Roman Matviy</div>
-    <div class="avatar-title">FullStack Developer &middot; Laravel &middot; Vue.js</div>
-    <div style="font-size:0.72rem;color:var(--muted);margin-bottom:1.2rem;">&#128205; Lviv, Ukraine &middot; Remote Worldwide</div>
-    <div class="avatar-links">
-      <a href="https://t.me/RomanMatviy" class="avatar-link" target="_blank" rel="noopener"><span class="ali">&#128172;</span><div><div style="color:var(--text);font-size:0.72rem;font-weight:600;">Telegram</div><div style="font-size:0.62rem;">@RomanMatviy</div></div></a>
-      <a href="https://github.com/MatviyRoman" class="avatar-link" target="_blank" rel="noopener"><span class="ali">&#128187;</span><div><div style="color:var(--text);font-size:0.72rem;font-weight:600;">GitHub</div><div style="font-size:0.62rem;">MatviyRoman</div></div></a>
-      <a href="https://linkedin.com/in/MatviyRoman" class="avatar-link" target="_blank" rel="noopener"><span class="ali">&#128101;</span><div><div style="color:var(--text);font-size:0.72rem;font-weight:600;">LinkedIn</div><div style="font-size:0.62rem;">MatviyRoman</div></div></a>
-      <a href="https://freelancehunt.com/freelancer/Roman_Matviy.html" class="avatar-link" target="_blank" rel="noopener"><span class="ali">&#11088;</span><div><div style="color:var(--text);font-size:0.72rem;font-weight:600;">Freelancehunt</div><div style="font-size:0.62rem;">Roman_Matviy</div></div></a>
-      <a href="/cdn-cgi/l/email-protection#c8baa7a5a9a688a5a9bcbea1b1e6b8b8e6bda9" class="avatar-link"><span class="ali">&#128231;</span><div><div style="color:var(--text);font-size:0.72rem;font-weight:600;">Email</div><div style="font-size:0.62rem;"><span class="__cf_email__" data-cfemail="42302d2f232c022f2336342b3b6c32326c3723">[email&#160;protected]</span></div></div></a>
-    </div>
-    <a href="/pricing.html" style="display:block;margin-top:1.5rem;text-align:center;font-size:0.72rem;color:var(--cyan);border:1px dashed rgba(0,245,212,0.25);padding:0.6rem;border-radius:3px;">&#127873; HireRomanDev &mdash; 10% знижки</a>
-  </div>
-</aside>
+  <div class="page-badge">Roman Matviy &middot; Lviv, Ukraine &#127482;&#127462;</div>
+  <h1 class="page-h1">Привіт, я<br><em style="color:var(--cyan)">Roman</em></h1>
+  <p class="page-tagline">FullStack Developer &middot; Laravel &middot; PHP &middot; Vue.js</p>
+  <p style="font-size:0.95rem;color:var(--muted);line-height:1.85;margin-bottom:2rem;max-width:700px;">Я <strong style="color:var(--text);">FullStack розробник з Lviv, Ukraine</strong> з понад <strong style="color:var(--text);">6 роками комерційного досвіду</strong>. Спеціалізуюся на Laravel, PHP та Vue.js — від бізнес-сайтів до складних SaaS-платформ і enterprise-систем.</p>
+  <div class="hero-ctas" style="margin-bottom:3rem;">
+    <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">&#128172; Написати в Telegram</a>
+    <a href="services/" class="btn-p btn-secondary">&#9881;&#65039; Мої послуги</a>
   </div>
 </header>
 
@@ -304,21 +166,55 @@
 <section class="dark">
   <div class="section-label">Технічні навички</div>
   <h2 class="section-h2 reveal">Рівень <em>майстерності</em></h2>
-  <p class="section-sub reveal">Відсотки — суб'єктивний рівень впевненості в кожній технології після 6+ років практики.</p>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
-    <div class="skill-bars"><div class="sbi reveal" style="--w:95%"><div class="sbi-head"><span class="sbi-name">Laravel / PHP</span><span class="sbi-pct">95%</span></div><div class="sbi-track"><div class="sbi-fill"></div></div></div>
-<div class="sbi reveal" style="--w:85%"><div class="sbi-head"><span class="sbi-name">Vue.js 3 / TypeScript</span><span class="sbi-pct">85%</span></div><div class="sbi-track"><div class="sbi-fill"></div></div></div>
-<div class="sbi reveal" style="--w:92%"><div class="sbi-head"><span class="sbi-name">WordPress / WooCommerce</span><span class="sbi-pct">92%</span></div><div class="sbi-track"><div class="sbi-fill"></div></div></div>
-<div class="sbi reveal" style="--w:88%"><div class="sbi-head"><span class="sbi-name">PrestaShop / Thirty Bees</span><span class="sbi-pct">88%</span></div><div class="sbi-track"><div class="sbi-fill"></div></div></div>
-<div class="sbi reveal" style="--w:93%"><div class="sbi-head"><span class="sbi-name">REST API / Swagger</span><span class="sbi-pct">93%</span></div><div class="sbi-track"><div class="sbi-fill"></div></div></div>
-<div class="sbi reveal" style="--w:87%"><div class="sbi-head"><span class="sbi-name">MySQL / MariaDB</span><span class="sbi-pct">87%</span></div><div class="sbi-track"><div class="sbi-fill"></div></div></div>
-<div class="sbi reveal" style="--w:78%"><div class="sbi-head"><span class="sbi-name">Docker / DevOps</span><span class="sbi-pct">78%</span></div><div class="sbi-track"><div class="sbi-fill"></div></div></div>
-<div class="sbi reveal" style="--w:88%"><div class="sbi-head"><span class="sbi-name">Filament / Livewire</span><span class="sbi-pct">88%</span></div><div class="sbi-track"><div class="sbi-fill"></div></div></div>
-</div>
-    <div>
-      <div style="margin-bottom:1.8rem;"><div class="section-label" style="margin-bottom:0.8rem;">Backend &amp; PHP</div><div style="display:flex;flex-wrap:wrap;gap:0.35rem;"><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">Laravel 11</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">PHP 8.3</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">Livewire 3</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">Filament 3</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">CakePHP</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">CodeIgniter</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">Yii 2</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">Composer</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">PHPUnit</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">Eloquent ORM</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">Queue</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">DDD</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">SOLID</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--cyan);">PSR</span></div></div>
-      <div style="margin-bottom:1.8rem;"><div class="section-label" style="margin-bottom:0.8rem;">Frontend &amp; JS</div><div style="display:flex;flex-wrap:wrap;gap:0.35rem;"><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">Vue.js 3</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">TypeScript</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">Pinia</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">Vue Router</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">Vite</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">TailwindCSS</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">SCSS</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">jQuery</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">Axios</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">GSAP</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">Bootstrap</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--blue);">BEM</span></div></div>
-      <div><div class="section-label" style="margin-bottom:0.8rem;">Tools &amp; DevOps</div><div style="display:flex;flex-wrap:wrap;gap:0.35rem;"><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">Docker</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">Nginx</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">Git</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">GitHub</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">GitLab</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">CI/CD</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">Linux</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">SSH</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">Postman</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">Swagger</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">Figma</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">MySQL</span><span style="font-size:0.68rem;padding:0.28rem 0.65rem;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.08);border-radius:2px;color:var(--orange);">Redis</span></div></div>
+  <p class="section-sub reveal">Вісім основних фокусів — де я маю найбільший досвід і впевненість.</p>
+  <div class="services-mega reveal">
+    <div class="svc-card">
+      <div class="svc-icon">🎯</div>
+      <div class="svc-title">Laravel / PHP</div>
+      <div class="svc-desc">Основна спеціальність. 6+ років комерційного досвіду. Laravel 11, PHP 8.3, чистий код, SOLID принципи.</div>
+      <div class="svc-tags"><span class="svc-tag">Laravel</span><span class="svc-tag">PHP 8.3</span><span class="svc-tag">SOLID</span><span class="svc-tag">95%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">📱</div>
+      <div class="svc-title">Vue.js 3 & TypeScript</div>
+      <div class="svc-desc">Сучасний frontend на Vue 3, TypeScript, Pinia, Vue Router, TailwindCSS. Reactive, composition API.</div>
+      <div class="svc-tags"><span class="svc-tag">Vue.js 3</span><span class="svc-tag">TypeScript</span><span class="svc-tag">Pinia</span><span class="svc-tag">85%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">📦</div>
+      <div class="svc-title">WordPress & WooCommerce</div>
+      <div class="svc-desc">Теми, плагіни, ACF, кастомні поля. WooCommerce — від простих магазинів до складних систем.</div>
+      <div class="svc-tags"><span class="svc-tag">WordPress</span><span class="svc-tag">WooCommerce</span><span class="svc-tag">ACF</span><span class="svc-tag">92%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🛒</div>
+      <div class="svc-title">PrestaShop & Thirty Bees</div>
+      <div class="svc-desc">E-commerce платформи. Модулі, теми, Smarty, API інтеграції. Переважно B2B системи.</div>
+      <div class="svc-tags"><span class="svc-tag">PrestaShop</span><span class="svc-tag">Thirty Bees</span><span class="svc-tag">Twig</span><span class="svc-tag">88%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">⚙️</div>
+      <div class="svc-title">REST API & Swagger</div>
+      <div class="svc-desc">API-first архітектура. RESTful дизайн, документація Swagger, тестування, версіонування.</div>
+      <div class="svc-tags"><span class="svc-tag">REST API</span><span class="svc-tag">Swagger</span><span class="svc-tag">Postman</span><span class="svc-tag">93%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">💾</div>
+      <div class="svc-title">MySQL & Databases</div>
+      <div class="svc-desc">Дизайн схем, оптимізація, нормалізація. MariaDB, Redis, Eloquent ORM, міграції.</div>
+      <div class="svc-tags"><span class="svc-tag">MySQL</span><span class="svc-tag">MariaDB</span><span class="svc-tag">Eloquent</span><span class="svc-tag">87%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🐳</div>
+      <div class="svc-title">Docker & DevOps</div>
+      <div class="svc-desc">Контейнеризація, docker-compose, Nginx, CI/CD, Linux, SSH. Production-ready setup.</div>
+      <div class="svc-tags"><span class="svc-tag">Docker</span><span class="svc-tag">Nginx</span><span class="svc-tag">CI/CD</span><span class="svc-tag">78%</span></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">✨</div>
+      <div class="svc-title">Filament & Livewire</div>
+      <div class="svc-desc">Сучасні Laravel admin-панелі та interactive компоненти. Filament 3, Livewire 3, rapid development.</div>
+      <div class="svc-tags"><span class="svc-tag">Filament</span><span class="svc-tag">Livewire</span><span class="svc-tag">Admin</span><span class="svc-tag">88%</span></div>
     </div>
   </div>
 </section>
@@ -326,28 +222,118 @@
 <section>
   <div class="section-label">Кар'єра</div>
   <h2 class="section-h2 reveal">Мій шлях <em>у розробці</em></h2>
-  <p class="section-sub reveal">Від перших HTML-сторінок до enterprise Laravel-систем. 7 компаній, 6+ років.</p>
+  <p class="section-sub reveal">Від перших HTML-сторінок до enterprise Laravel-систем. 7 компаній, 6+ років комерційного досвіду.</p>
   <div class="timeline reveal">
-<div class="tl-item current"><div class="tl-date">Актуально</div><div class="tl-company">Freelancehunt · Remote</div><h3 class="tl-role">Backend / FullStack Developer (Freelance)</h3><p class="tl-desc">Розробка на Laravel, Livewire, Docker, REST API, Swagger, MySQL. Архітектура серверної частини для надійних продуктивних застосунків.</p><div class="tl-tags"><span class="tl-tag">Laravel</span><span class="tl-tag">PHP</span><span class="tl-tag">Livewire</span><span class="tl-tag">Docker</span><span class="tl-tag">REST API</span><span class="tl-tag">MySQL</span></div></div>
-<div class="tl-item "><div class="tl-date">NC-ONE.com</div><div class="tl-company">NC-ONE.com · FullTime</div><h3 class="tl-role">Fullstack Engineer — Laravel, Vue.js</h3><p class="tl-desc">Повний цикл розробки продукту. Laravel + Vue.js, API-first, TypeScript, TailwindCSS, Docker.</p><div class="tl-tags"><span class="tl-tag">Laravel</span><span class="tl-tag">Vue.js</span><span class="tl-tag">TypeScript</span><span class="tl-tag">Docker</span><span class="tl-tag">Swagger</span></div></div>
-<div class="tl-item "><div class="tl-date">Викладач</div><div class="tl-company">nikos-ltv.lviv.ua · PartTime</div><h3 class="tl-role">PHP &amp; SQL Teacher</h3><p class="tl-desc">Викладання PHP та SQL. Навчальний курс 90 годин — наставництво студентів від нуля до впевненого рівня.</p><div class="tl-tags"><span class="tl-tag">PHP</span><span class="tl-tag">SQL</span><span class="tl-tag">Teaching</span></div></div>
-<div class="tl-item "><div class="tl-date">WebSpirit</div><div class="tl-company">WebSpirit.com.ua · FullTime</div><h3 class="tl-role">Fullstack Engineer — PHP Developer</h3><p class="tl-desc">Фреймворк WhiteLion (аналог Laravel). HTML5, CSS3, SCSS, JS, jQuery, AJAX, PHP, SQL, Figma, Git.</p><div class="tl-tags"><span class="tl-tag">PHP</span><span class="tl-tag">WhiteLion</span><span class="tl-tag">SCSS</span><span class="tl-tag">jQuery</span><span class="tl-tag">MySQL</span></div></div>
-<div class="tl-item "><div class="tl-date">SoftSprint</div><div class="tl-company">SoftSprint.net · FullTime</div><h3 class="tl-role">Fullstack Engineer — PrestaShop Developer</h3><p class="tl-desc">Теми і модулі для PrestaShop, WordPress, Thirty Bees. Smarty/Twig, frontend i backend.</p><div class="tl-tags"><span class="tl-tag">PrestaShop</span><span class="tl-tag">WordPress</span><span class="tl-tag">Thirty Bees</span><span class="tl-tag">Twig</span></div></div>
-<div class="tl-item "><div class="tl-date">APARTNER</div><div class="tl-company">APARTNER.PRO · FullTime</div><h3 class="tl-role">Fullstack Engineer — WordPress, PrestaShop, Laravel</h3><p class="tl-desc">WordPress, PrestaShop, Laravel. HTML/CSS/SCSS, PHP, SQL, ACF, JS, jQuery, Laravel Mix.</p><div class="tl-tags"><span class="tl-tag">Laravel</span><span class="tl-tag">WordPress</span><span class="tl-tag">PrestaShop</span><span class="tl-tag">ACF</span></div></div>
-<div class="tl-item "><div class="tl-date">Старт</div><div class="tl-company">Перші кроки · Freelance</div><h3 class="tl-role">HTML, CSS, PHP — перші комерційні проєкти</h3><p class="tl-desc">Початок шляху у веб-розробці. Перші замовлення на фрілансі.</p><div class="tl-tags"><span class="tl-tag">HTML</span><span class="tl-tag">CSS</span><span class="tl-tag">PHP</span><span class="tl-tag">JS</span></div></div>
-</div>
+    <div class="tl-item current">
+      <div class="tl-date">Актуально</div>
+      <div class="tl-company">Freelancehunt · Remote</div>
+      <h3 class="tl-role">Backend / FullStack Developer (Freelance)</h3>
+      <p class="tl-desc">Розробка на Laravel, Livewire, Docker, REST API, Swagger, MySQL. Архітектура серверної частини для надійних продукивних застосунків.</p>
+      <div class="tl-tags"><span class="tl-tag">Laravel</span><span class="tl-tag">PHP</span><span class="tl-tag">Livewire</span><span class="tl-tag">Docker</span><span class="tl-tag">REST API</span><span class="tl-tag">MySQL</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">NC-ONE.com</div>
+      <div class="tl-company">NC-ONE.com · FullTime</div>
+      <h3 class="tl-role">Fullstack Engineer — Laravel, Vue.js</h3>
+      <p class="tl-desc">Повний цикл розробки продукту. Laravel + Vue.js, API-first, TypeScript, TailwindCSS, Docker.</p>
+      <div class="tl-tags"><span class="tl-tag">Laravel</span><span class="tl-tag">Vue.js</span><span class="tl-tag">TypeScript</span><span class="tl-tag">Docker</span><span class="tl-tag">Swagger</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Викладач</div>
+      <div class="tl-company">nikos-ltv.lviv.ua · PartTime</div>
+      <h3 class="tl-role">PHP & SQL Teacher</h3>
+      <p class="tl-desc">Викладання PHP та SQL. Навчальний курс 90 годин — наставництво студентів від нуля до впевненого рівня.</p>
+      <div class="tl-tags"><span class="tl-tag">PHP</span><span class="tl-tag">SQL</span><span class="tl-tag">Teaching</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">WebSpirit</div>
+      <div class="tl-company">WebSpirit.com.ua · FullTime</div>
+      <h3 class="tl-role">Fullstack Engineer — PHP Developer</h3>
+      <p class="tl-desc">Фреймворк WhiteLion (аналог Laravel). HTML5, CSS3, SCSS, JS, jQuery, AJAX, PHP, SQL, Figma, Git.</p>
+      <div class="tl-tags"><span class="tl-tag">PHP</span><span class="tl-tag">WhiteLion</span><span class="tl-tag">SCSS</span><span class="tl-tag">jQuery</span><span class="tl-tag">MySQL</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">SoftSprint</div>
+      <div class="tl-company">SoftSprint.net · FullTime</div>
+      <h3 class="tl-role">Fullstack Engineer — PrestaShop Developer</h3>
+      <p class="tl-desc">Теми і модулі для PrestaShop, WordPress, Thirty Bees. Smarty/Twig, frontend і backend.</p>
+      <div class="tl-tags"><span class="tl-tag">PrestaShop</span><span class="tl-tag">WordPress</span><span class="tl-tag">Thirty Bees</span><span class="tl-tag">Twig</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">APARTNER</div>
+      <div class="tl-company">APARTNER.PRO · FullTime</div>
+      <h3 class="tl-role">Fullstack Engineer — WordPress, PrestaShop, Laravel</h3>
+      <p class="tl-desc">WordPress, PrestaShop, Laravel. HTML/CSS/SCSS, PHP, SQL, ACF, JS, jQuery, Laravel Mix.</p>
+      <div class="tl-tags"><span class="tl-tag">Laravel</span><span class="tl-tag">WordPress</span><span class="tl-tag">PrestaShop</span><span class="tl-tag">ACF</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Старт</div>
+      <div class="tl-company">Перші кроки · Freelance</div>
+      <h3 class="tl-role">HTML, CSS, PHP — перші комерційні проєкти</h3>
+      <p class="tl-desc">Початок шляху у веб-розробці. Перші замовлення на фрілансі.</p>
+      <div class="tl-tags"><span class="tl-tag">HTML</span><span class="tl-tag">CSS</span><span class="tl-tag">PHP</span><span class="tl-tag">JS</span></div>
+    </div>
+  </div>
 </section>
 
 <section class="dark">
   <div class="section-label">Підхід до роботи</div>
   <h2 class="section-h2 reveal">Мої <em>цінності</em></h2>
-  <div class="values-grid"><div class="value-card reveal"><div class="value-num">01</div><h3 class="value-title">Якість понад швидкість</h3><p class="value-desc">Краще зробити добре та трохи довше, ніж швидко і переробляти. Технічний борг — це ворог бізнесу.</p></div><div class="value-card reveal"><div class="value-num">02</div><h3 class="value-title">Прозора комунікація</h3><p class="value-desc">Якщо щось не вкладається в строки — скажу одразу. Завжди знаєте реальний стан проєкту.</p></div><div class="value-card reveal"><div class="value-num">03</div><h3 class="value-title">Код — це мова</h3><p class="value-desc">Пишу код так, щоб інший розробник зрозумів без пояснень. PSR, коментарі, чисті імена — завжди.</p></div><div class="value-card reveal"><div class="value-num">04</div><h3 class="value-title">Постійне зростання</h3><p class="value-desc">Стежу за Laravel і Vue.js екосистемою. Нові патерни тестую у side-проєктах перед продакшном.</p></div><div class="value-card reveal"><div class="value-num">05</div><h3 class="value-title">Орієнтація на результат</h3><p class="value-desc">Важливо щоб проєкт вирішував реальну задачу, а не просто технічно запрацював.</p></div><div class="value-card reveal"><div class="value-num">06</div><h3 class="value-title">Надійність</h3><p class="value-desc">Якщо взявся — доведу до кінця. Без зникань, без несподіваних перенесень дедлайнів.</p></div></div>
+  <div class="values-grid">
+    <div class="value-card reveal">
+      <div class="value-num">01</div>
+      <h3 class="value-title">Якість понад швидкість</h3>
+      <p class="value-desc">Краще зробити добре та трохи довше, ніж швидко і переробляти. Технічний борг — це ворог бізнесу.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-num">02</div>
+      <h3 class="value-title">Прозора комунікація</h3>
+      <p class="value-desc">Якщо щось не вкладається в строки — скажу одразу. Завжди знаєте реальний стан проєкту.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-num">03</div>
+      <h3 class="value-title">Код — це мова</h3>
+      <p class="value-desc">Пишу код так, щоб інший розробник зрозумів без пояснень. PSR, коментарі, чисті імена — завжди.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-num">04</div>
+      <h3 class="value-title">Постійне зростання</h3>
+      <p class="value-desc">Стежу за Laravel і Vue.js екосистемою. Нові патерни тестую у side-проєктах перед продакшном.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-num">05</div>
+      <h3 class="value-title">Орієнтація на результат</h3>
+      <p class="value-desc">Важливо щоб проєкт вирішував реальну задачу, а не просто технічно запрацював.</p>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-num">06</div>
+      <h3 class="value-title">Надійність</h3>
+      <p class="value-desc">Якщо взявся — доведу до кінця. Без зникань, без несподіваних перенесень дедлайнів.</p>
+    </div>
+  </div>
 </section>
 
 <section>
   <div class="section-label">Питання</div>
   <h2 class="section-h2 reveal">Часто <em>запитують</em></h2>
-  <div class="faq-list reveal"><div class="faq-item"><div class="faq-q">Де ви знаходитесь і в якому часовому поясі?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Lviv, Ukraine — UTC+2/UTC+3. Доступний з 9:00 до 21:00. Для клієнтів зі США або Азії — обговорюємо зручний формат.</p></div></div><div class="faq-item"><div class="faq-q">Ви фрілансер чи готові до повної зайнятості?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Зараз переважно фріланс і remote-контракти. Відкритий до full-time remote від іноземних компаній.</p></div></div><div class="faq-item"><div class="faq-q">Є публічні проєкти чи GitHub?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Так: github.com/MatviyRoman. Laravel Task Manager, Project Management System (FilamentPHP), OpenHealth та інші.</p></div></div><div class="faq-item"><div class="faq-q">Якою мовою спілкуєтесь?<div class="faq-toggle">+</div></div><div class="faq-a"><p>Українська (рідна), англійська B2, трохи польської. З міжнародними клієнтами комфортно англійською.</p></div></div></div>
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <div class="faq-q">Де ви знаходитесь і в якому часовому поясі?<div class="faq-toggle">+</div></div>
+      <div class="faq-a"><p>Lviv, Ukraine — UTC+2/UTC+3. Доступний з 9:00 до 21:00. Для клієнтів зі США або Азії — обговорюємо зручний формат.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Ви фрілансер чи готові до повної зайнятості?<div class="faq-toggle">+</div></div>
+      <div class="faq-a"><p>Зараз переважно фріланс і remote-контракти. Відкритий до full-time remote від іноземних компаній.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Є публічні проєкти чи GitHub?<div class="faq-toggle">+</div></div>
+      <div class="faq-a"><p>Так: github.com/MatviyRoman. Laravel Task Manager, Project Management System (FilamentPHP), OpenHealth та інші.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Якою мовою спілкуєтесь?<div class="faq-toggle">+</div></div>
+      <div class="faq-a"><p>Українська (рідна), англійська B2, трохи польської. З міжнародними клієнтами комфортно англійською.</p></div>
+    </div>
+  </div>
 </section>
 
 <div class="cta-section reveal">
@@ -357,7 +343,7 @@
   <p class="cta-sub">Напишіть — обговоримо деталі, оцінимо обсяг. Перша консультація безкоштовна.</p>
   <div class="cta-btns">
     <a href="https://t.me/RomanMatviy" class="btn-p btn-primary" target="_blank" rel="noopener">&#128172; Написати в Telegram</a>
-    <a href="/cdn-cgi/l/email-protection#5d2f32303c331d303c292b3424732d2d73283c" class="btn-p btn-secondary">&#128231; <span class="__cf_email__" data-cfemail="15677a78747b55787461637c6c3b65653b6074">[email&#160;protected]</span></a>
+    <a href="mailto:roman@hirewebdeveloper.pp.ua" class="btn-p btn-secondary">&#128231; Email</a>
   </div>
 </div>
 
@@ -367,7 +353,8 @@
     <a href="/">Головна</a><a href="about.html">Про мене</a><a href="services/">Послуги</a><a href="pricing.html">Ціни</a><a href="/#portfolio">Портфоліо</a><a href="en/">EN</a>
   </nav>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+<script>
 (function(){
   var c=document.getElementById('cur'),r=document.getElementById('curRing');
   if(c&&r){var mx=0,my=0,rx=0,ry=0;
@@ -379,4 +366,9 @@
   var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal,.sbi').forEach(function(el){obs.observe(el);});
   document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var item=q.parentElement,was=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!was)item.classList.add('open');});});
-  var mb=document.getElementById('menuBtn'),mn=document.
+  var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobileNav'),mc=document.getElementById('mobileClose');
+  if(mb&&mn){mb.addEventListener('click',function(){mn.classList.toggle('open');});mc.addEventListener('click',function(){mn.classList.remove('open');});}
+})();
+</script>
+</body>
+</html>
