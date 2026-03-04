@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrestaShop розробник — теми, модулі, мультимагазин | Roman Matviy</title>
+  <meta name="description" content="Розробка тем, модулів та мультимагазинів на PrestaShop. Платіжні інтеграції, миграція з інших платформ. Thirty Bees, OpenCart. Roman Matviy — FullStack розробник з 6+ років досвіду.">
+  <meta name="keywords" content="PrestaShop розробник, розробка тем PrestaShop, модулі PrestaShop, мультимагазин, Smarty, Thirty Bees, OpenCart, розробник е-комерції">
+  <meta property="og:title" content="PrestaShop розробник — теми, модулі, мультимагазин | Roman Matviy">
+  <meta property="og:description" content="Розробка тем, модулів та мультимагазинів на PrestaShop. Платіжні інтеграції, миграція з інших платформ. Roman Matviy — FullStack розробник.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://hirewebdeveloper.pp.ua/services/prestashop.html">
+  <link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/services/prestashop.html">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    :root {
+      --bg: #0a0e27;
+      --bg2: #10152e;
+      --bg3: #151b3a;
+      --cyan: #00d9ff;
+      --orange: #ff8c42;
+      --blue: #3b82f6;
+      --purple: #a855f7;
+      --green: #10b981;
+      --text: #e5e7eb;
+      --muted: #a1a5b4;
+      --logo: #00d9ff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .cursor { position: fixed; width: 20px; height: 20px; border: 2px solid var(--cyan); border-radius: 50%; pointer-events: none; z-index: 9999; transition: opacity 0.3s; }
+    .cursor-ring { position: fixed; width: 40px; height: 40px; border: 2px solid var(--orange); border-radius: 50%; pointer-events: none; z-index: 9998; }
+    .bg-grid { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(0deg, rgba(0,217,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,217,255,.05) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; z-index: 0; }
+    .blob { position: fixed; border-radius: 50%; mix-blend-mode: screen; opacity: 0.15; pointer-events: none; z-index: 1; animation: drift 20s ease-in-out infinite; }
+    .blob1 { width: 400px; height: 400px; background: var(--cyan); top: -100px; left: -100px; }
+    .blob2 { width: 350px; height: 350px; background: var(--purple); top: 50%; right: -50px; animation-delay: -5s; }
+    .blob3 { width: 300px; height: 300px; background: var(--blue); bottom: -100px; left: 20%; animation-delay: -10s; }
+    @keyframes drift { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(30px, 30px); } }
+    .nav-mobile { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg); z-index: 99; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+    .nav-mobile.open { opacity: 1; pointer-events: all; }
+    .nav-mobile-content { padding: 80px 30px; display: flex; flex-direction: column; gap: 20px; }
+    .nav-mobile-content a { color: var(--text); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--bg2); }
+    .nav-mobile-close { position: absolute; top: 30px; right: 30px; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .nav { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 30px; background: rgba(10, 14, 39, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0, 217, 255, 0.1); display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+    .logo { font-size: 20px; font-weight: bold; color: var(--logo); text-decoration: none; }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { color: var(--text); text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--cyan); }
+    .hire-btn { background: linear-gradient(135deg, var(--cyan), var(--blue)); border: none; padding: 10px 20px; border-radius: 6px; color: var(--bg); cursor: pointer; font-weight: bold; transition: transform 0.2s; }
+    .hire-btn:hover { transform: scale(1.05); }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
+    .breadcrumb { position: fixed; top: 80px; left: 30px; font-size: 12px; color: var(--muted); z-index: 50; margin-top: 10px; }
+    .breadcrumb a { color: var(--cyan); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .page-hero { margin-top: 100px; padding: 60px 30px; text-align: center; position: relative; z-index: 2; }
+    .promo-pill { display: inline-block; background: rgba(0, 217, 255, 0.1); border: 1px solid var(--cyan); border-radius: 20px; padding: 8px 16px; font-size: 12px; color: var(--cyan); margin-bottom: 20px; }
+    .page-hero h1 { font-size: 48px; font-family: 'Syne', sans-serif; margin: 20px 0; line-height: 1.2; }
+    .page-hero h1 em { color: var(--orange); font-style: normal; }
+    .page-tagline { color: var(--orange); font-size: 16px; margin: 10px 0 20px; }
+    .page-desc { color: var(--muted); max-width: 600px; margin: 20px auto; font-size: 15px; }
+    .page-ctas { display: flex; gap: 15px; justify-content: center; margin-top: 30px; }
+    .btn { padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; transition: all 0.3s; display: inline-block; text-align: center; }
+    .btn-primary { background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2); }
+    .btn-secondary { border: 2px solid var(--cyan); color: var(--cyan); background: transparent; padding: 10px 26px; }
+    .btn-secondary:hover { background: rgba(0, 217, 255, 0.1); }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1200px; margin: 80px auto; padding: 0 30px; align-items: center; position: relative; z-index: 2; }
+    .hero-content p { color: var(--muted); margin: 15px 0; line-height: 1.8; }
+    .code-win { background: var(--bg2); border: 1px solid var(--bg3); border-radius: 8px; padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); overflow-x: auto; }
+    .code-win .kw { color: var(--blue); }
+    .code-win .st { color: var(--green); }
+    .code-win .cm { color: var(--muted); opacity: 0.7; }
+    .section-dark { background: var(--bg2); padding: 80px 30px; margin-top: 60px; position: relative; z-index: 2; }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
+    .feature-card { background: var(--bg3); border: 1px solid rgba(0, 217, 255, 0.1); padding: 30px; border-radius: 8px; transition: all 0.3s; }
+    .feature-card:hover { border-color: var(--cyan); transform: translateY(-5px); }
+    .feature-card h3 { color: var(--cyan); margin-bottom: 15px; }
+    .feature-card p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .tech-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; justify-content: center; max-width: 1200px; margin-left: auto; margin-right: auto; }
+    .tech-pill { background: rgba(58, 134, 255, 0.1); border: 1px solid var(--blue); color: var(--blue); padding: 8px 16px; border-radius: 20px; font-size: 13px; }
+    .proc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
+    .proc-card { text-align: center; }
+    .proc-num { font-size: 32px; font-family: 'Syne', sans-serif; font-weight: bold; color: var(--orange); margin-bottom: 10px; }
+    .proc-card h3 { color: var(--cyan); margin: 15px 0; }
+    .proc-card p { color: var(--muted); font-size: 14px; }
+    .faq-list { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+    .faq-item { background: var(--bg3); border: 1px solid rgba(0, 217, 255, 0.1); border-radius: 8px; overflow: hidden; }
+    .faq-q { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+    .faq-q:hover { background: rgba(0, 217, 255, 0.05); }
+    .faq-q h3 { color: var(--cyan); font-size: 15px; }
+    .faq-toggle { color: var(--orange); font-size: 20px; transition: transform 0.3s; }
+    .faq-item.open .faq-toggle { transform: rotate(180deg); }
+    .faq-a { padding: 0 20px 20px; color: var(--muted); display: none; line-height: 1.8; font-size: 14px; }
+    .faq-item.open .faq-a { display: block; }
+    .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+    .related-card { background: var(--bg3); border: 1px solid rgba(0, 217, 255, 0.1); padding: 25px; border-radius: 8px; text-align: center; transition: all 0.3s; text-decoration: none; color: inherit; }
+    .related-card:hover { border-color: var(--cyan); transform: translateY(-3px); }
+    .related-card h4 { color: var(--cyan); margin: 15px 0; font-size: 15px; }
+    .related-card p { color: var(--muted); font-size: 13px; }
+    .cta-section { max-width: 1200px; margin: 80px auto; padding: 60px 30px; text-align: center; }
+    .cta-section h2 { font-size: 32px; font-family: 'Syne', sans-serif; margin: 20px 0; }
+    .cta-section p { color: var(--muted); margin: 15px 0 30px; }
+    footer { background: var(--bg2); padding: 40px 30px; text-align: center; border-top: 1px solid var(--bg3); margin-top: 80px; }
+    footer a { color: var(--cyan); text-decoration: none; margin: 0 15px; }
+    footer a:hover { text-decoration: underline; }
+    .reveal { opacity: 0; animation: reveal-in 0.8s ease-out forwards; }
+    @keyframes reveal-in { to { opacity: 1; } }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      .nav-links { display: none; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .features-grid, .proc-grid { grid-template-columns: repeat(2, 1fr); }
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+      .page-hero h1 { font-size: 32px; }
+      .page-hero { margin-top: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+  <div class="bg-grid"></div>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+
+  <nav class="nav">
+    <a href="/services/" class="logo">Roman Matviy</a>
+    <ul class="nav-links">
+      <li><a href="/services/">Послуги</a></li>
+      <li><a href="/pricing.html">Ціни</a></li>
+      <li><a href="/about.html">Про мене</a></li>
+      <li><a href="/en/services/prestashop.html" style="color: var(--orange);">EN</a></li>
+    </ul>
+    <button class="hire-btn" onclick="window.open('https://t.me/RomanMatviy', '_blank')">Найняти</button>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-mobile').classList.toggle('open'); return false;">☰</button>
+  </nav>
+
+  <div class="nav-mobile">
+    <button class="nav-mobile-close" onclick="document.querySelector('.nav-mobile').classList.remove('open')">✕</button>
+    <div class="nav-mobile-content">
+      <a href="/services/">Послуги</a>
+      <a href="/pricing.html">Ціни</a>
+      <a href="/about.html">Про мене</a>
+      <a href="/en/services/prestashop.html">English 🇬🇧</a>
+      <button class="hire-btn" onclick="window.open('https://t.me/RomanMatviy', '_blank'); document.querySelector('.nav-mobile').classList.remove('open');" style="width: 100%;">Написати в Telegram</button>
+    </div>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="/">Головна</a> / <a href="/services/">Послуги</a> / PrestaShop
+  </div>
+
+  <div class="page-hero">
+    <div class="promo-pill">🛒 Розробка е-комерції</div>
+    <h1>PrestaShop <em>розробка</em></h1>
+    <p class="page-tagline">Теми, модулі, мультимагазини, платіжні інтеграції</p>
+    <p class="page-desc">Повнофункціональні PrestaShop-магазини реалізовані з нуля. Кастомні теми на Smarty, модулі з PHP 8+, платіжні шлюзи (Stripe, Fondy, LiqPay, PayPal), миграція з WooCommerce, OpenCart, Abandoned Cart. Оптимізація, безпека, документація.</p>
+    <div class="page-ctas">
+      <button class="btn btn-primary" onclick="window.open('https://t.me/RomanMatviy', '_blank')">Написати в Telegram</button>
+      <a href="/pricing.html" class="btn btn-secondary">Дізнатися про ціни</a>
+    </div>
+  </div>
+
+  <div class="hero-grid">
+    <div class="hero-content reveal">
+      <h2 style="font-family: 'Syne', sans-serif; font-size: 28px; margin-bottom: 20px;">Розробка тем і модулів</h2>
+      <p>Створюю кастомні теми PrestaShop на Smarty з адаптивним дизайном та полегшеним майнтненансом. Модулі розробляються з дотриманням SOLID-принципів для надійності та розширюваності.</p>
+      <p><strong>Платіжні інтеграції:</strong> Stripe, Fondy, LiqPay, PayPal, 2Checkout, Skrill.</p>
+      <p><strong>Мультимагазин:</strong> Налаштовування кількох магазинів з єдиним адміністративним панелем, спільною каталогізацією, різними валютами та мовами.</p>
+      <p><strong>Миграція:</strong> Перенесення з WooCommerce, OpenCart, Shopify без втрати даних, категорій, товарів, замовлень та рейтингів.</p>
+    </div>
+    <div class="code-win reveal">
+<span class="cm">// PrestaShop модуль с платежной интеграцией (PHP)</span>
+<span class="kw">class</span> PaymentModule <span class="kw">extends</span> Module
+{
+  <span class="kw">public function</span> getProducts($page = 1)
+  {
+    <span class="st">$sql = 'SELECT * FROM ps_product 
+            WHERE active = 1 
+            LIMIT 12 OFFSET ' . (($page-1)*12) . ';'</span>;
+    
+    <span class="kw">return</span> Db::getInstance()
+      ->executeS(<span class="st">$sql</span>);
+  }
+
+  <span class="kw">private function</span> stripeCharge(<span class="st">$amount</span>)
+  {
+    <span class="kw">return</span> \Stripe\Charge::create([
+      <span class="st">'amount'</span> => <span class="st">$amount</span> * 100,
+      <span class="st">'currency'</span> => <span class="st">'uah'</span>,
+      <span class="st">'source'</span> => <span class="st">$this</span>->token,
+      <span class="st">'metadata'</span> => [<span class="st">'order'</span> => <span class="st">$this</span>->orderId]
+    ]);
+  }
+}
+    </div>
+  </div>
+
+  <div class="section-dark">
+    <h2 style="font-family: 'Syne', sans-serif; font-size: 28px; text-align: center; margin-bottom: 50px;">Можливості</h2>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <h3>Кастомні теми на Smarty</h3>
+        <p>Адаптивне поточення з дизайном для всіх пристроїв. Полегшена підтримка та оновлення.</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>SOLID модулі</h3>
+        <p>Висока якість коду з тестами. Легко розширювати і розробляти нові функції.</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>Платіжні інтеграції</h3>
+        <p>Stripe, Fondy, LiqPay, PayPal, 2Checkout. Безпечна обробка платежів та шифрування.</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>Мультимагазин</h3>
+        <p>Кілька магазинів, різні валюти, мови, адреси доставки. Єдиний адмін-панель.</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>Миграція та імпорт</h3>
+        <p>Перенесення з WooCommerce, OpenCart, Shopify. Імпорт товарів, замовлень, клієнтів.</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>SEO і кешування</h3>
+        <p>Оптимізація для пошукових машин, URL-дружні посилання, кешування сторінок.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 80px 30px; position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;">
+    <h3 style="text-align: center; margin-bottom: 30px; color: var(--muted);">Стек технологій</h3>
+    <div class="tech-grid">
+      <span class="tech-pill">PrestaShop 8.0+</span>
+      <span class="tech-pill">Smarty 3</span>
+      <span class="tech-pill">PHP 8.0+</span>
+      <span class="tech-pill">MySQL 8</span>
+      <span class="tech-pill">Stripe API</span>
+      <span class="tech-pill">Fondy API</span>
+      <span class="tech-pill">LiqPay API</span>
+      <span class="tech-pill">PayPal SDK</span>
+      <span class="tech-pill">REST API</span>
+      <span class="tech-pill">GraphQL</span>
+      <span class="tech-pill">Redis</span>
+      <span class="tech-pill">Docker</span>
+      <span class="tech-pill">GitHub Actions</span>
+      <span class="tech-pill">SOLID</span>
+      <span class="tech-pill">PHPUnit</span>
+    </div>
+  </div>
+
+  <div class="section-dark">
+    <h2 style="font-family: 'Syne', sans-serif; font-size: 28px; text-align: center; margin-bottom: 50px;">Процес розробки</h2>
+    <div class="proc-grid">
+      <div class="proc-card reveal">
+        <div class="proc-num">1</div>
+        <h3>Аналіз вимог</h3>
+        <p>Визначення функціоналу, інтеграцій, платіжних систем, дизайну.</p>
+      </div>
+      <div class="proc-card reveal">
+        <div class="proc-num">2</div>
+        <h3>Дизайн теми</h3>
+        <p>Створення макету в Figma, адаптивність, UX/UI для мобільних.</p>
+      </div>
+      <div class="proc-card reveal">
+        <div class="proc-num">3</div>
+        <h3>Розробка теми</h3>
+        <p>Верстання на Smarty, CSS, JavaScript, інтеграція з PrestaShop API.</p>
+      </div>
+      <div class="proc-card reveal">
+        <div class="proc-num">4</div>
+        <h3>Розробка модулів</h3>
+        <p>Кастомні модулі під конкретні потреби, платіжні системи, доставка.</p>
+      </div>
+      <div class="proc-card reveal">
+        <div class="proc-num">5</div>
+        <h3>Тестування</h3>
+        <p>QA, функціональне тестування, перевірка платежів, SEO-аудит.</p>
+      </div>
+      <div class="proc-card reveal">
+        <div class="proc-num">6</div>
+        <h3>Деплой та запуск</h3>
+        <p>Розгортання на продакшені, налаштування SSL, резервні копії, документація.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 80px 30px; position: relative; z-index: 2;">
+    <h2 style="font-family: 'Syne', sans-serif; font-size: 28px; text-align: center; margin-bottom: 50px; max-width: 1200px; margin-left: auto; margin-right: auto;">Часті питання</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>Чи можу я мігрувати мій магазин з інший платформи?</h3>
+          <div class="faq-toggle">⌄</div>
+        </div>
+        <div class="faq-a">Так, допомагаю мігрувати з WooCommerce, OpenCart, Shopify і інших платформ. Переносимо все: товари, категорії, замовлення, клієнтів, рейтинги, відгуки. Даних не втрачається, SEO з редиректами зберігається.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>Які платіжні системи можна інтегрувати?</h3>
+          <div class="faq-toggle">⌄</div>
+        </div>
+        <div class="faq-a">Stripe, Fondy, LiqPay, PayPal, 2Checkout, Skrill, Wise та інші. Всі стандартні проходять легко, можна навіть нетипові сервіси інтегрувати під конкретні потреби.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>Скільки коштує розробка кастомної теми?</h3>
+          <div class="faq-toggle">⌄</div>
+        </div>
+        <div class="faq-a">Від $600 за просту тему з базовим дизайном. Для складних мультимагазинів з платіжними інтеграціями: $1500-3000+. Точна ціна залежить від функціоналу та складності.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>Як забезпечується безпека магазину?</h3>
+          <div class="faq-toggle">⌄</div>
+        </div>
+        <div class="faq-a">SSL сертифікати, шифрування даних клієнтів, захист від XSS та CSRF атак, обновлені залежності, регулярні оновлення PrestaShop, резервні копії, скріпти для аналізу вразливостей.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-dark">
+    <h2 style="font-family: 'Syne', sans-serif; font-size: 28px; text-align: center; margin-bottom: 50px; max-width: 1200px; margin-left: auto; margin-right: auto;">Інші послуги</h2>
+    <div class="related-grid">
+      <a href="wordpress.html" class="related-card reveal">
+        <div style="font-size: 32px;">📝</div>
+        <h4>WordPress розробка</h4>
+        <p>Кастомні теми, WooCommerce магазини, миграції</p>
+      </a>
+      <a href="api.html" class="related-card reveal">
+        <div style="font-size: 32px;">🔌</div>
+        <h4>REST API</h4>
+        <p>Сучасні REST API, OpenAPI документація, тестування</p>
+      </a>
+      <a href="docker.html" class="related-card reveal">
+        <div style="font-size: 32px;">🐳</div>
+        <h4>Docker & DevOps</h4>
+        <p>Контейнеризація, деплой, CI/CD, GitHub Actions</p>
+      </a>
+      <a href="fullstack.html" class="related-card reveal">
+        <div style="font-size: 32px;">🚀</div>
+        <h4>FullStack розробка</h4>
+        <p>Laravel + Vue.js, повний цикл розробки</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <div class="promo-pill">Готові до мегазаказу?</div>
+    <h2>Почнімо ваш проект сьогодні</h2>
+    <p>Напишіть мені в Telegram або розробіть детальний brief з вимогами</p>
+    <div class="page-ctas">
+      <button class="btn btn-primary" onclick="window.open('https://t.me/RomanMatviy', '_blank')">Написати в Telegram</button>
+      <a href="/pricing.html" class="btn btn-secondary">Дізнатися про ціни</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Roman Matviy. Всі права захищені.</p>
+    <p>
+      <a href="/services/">Послуги</a>
+      <a href="/pricing.html">Ціни</a>
+      <a href="/about.html">Про мене</a>
+      <a href="https://t.me/RomanMatviy" target="_blank">Telegram</a>
+    </p>
+  </footer>
+
+  <script>
+    const cursor = document.querySelector('.cursor');
+    const cursorRing = document.querySelector('.cursor-ring');
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX - 10 + 'px';
+      cursor.style.top = e.clientY - 10 + 'px';
+      cursorRing.style.left = e.clientX - 20 + 'px';
+      cursorRing.style.top = e.clientY - 20 + 'px';
+    });
+
+    document.querySelectorAll('.faq-q').forEach(item => {
+      item.addEventListener('click', () => {
+        item.parentElement.classList.toggle('open');
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal').forEach((el, index) => {
+        el.style.animationDelay = (index * 0.1) + 's';
+      });
+    });
+  </script>
+</body>
+</html>
