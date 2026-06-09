@@ -27,6 +27,16 @@
     --font-display: 'Syne', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
   }
+  body.light {
+    --bg: #f5f7fb; --bg2: #edf0f7; --bg3: #e2e7f0;
+    --text: #1a1e2e; --muted: #6b7a94;
+    --card: rgba(0,0,0,0.03);
+    --border: rgba(0,50,80,0.1);
+  }
+  body.light .bg-grid { background-image: linear-gradient(rgba(0,80,120,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,80,120,0.04) 1px, transparent 1px); }
+  body.light nav.main-nav { background: rgba(245,247,251,0.92); }
+  body.light .cur { background: var(--cyan); mix-blend-mode: multiply; }
+  body.light .scroll-progress { background: linear-gradient(90deg, var(--cyan), var(--orange)); }
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { background: var(--bg); color: var(--text); font-family: var(--font-mono); overflow-x: hidden; line-height: 1.7; cursor: none; }
@@ -51,6 +61,11 @@
   .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
   .nav-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.6rem; background: linear-gradient(135deg, var(--cyan), var(--blue)); color: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; border-radius: 2px; clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%); transition: all 0.3s; white-space: nowrap; }
   .nav-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+  .nav-actions { display: flex; align-items: center; gap: 0.6rem; }
+  .nav-lang { font-size: 0.63rem; color: var(--muted); border: 1px solid var(--border); padding: 0.27rem 0.6rem; border-radius: 100px; transition: all 0.25s; text-decoration: none; white-space: nowrap; }
+  .nav-lang:hover { color: var(--cyan); border-color: rgba(0,245,212,0.3); }
+  .theme-toggle { background: none; border: 1px solid var(--border); color: var(--muted); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.85rem; transition: all 0.3s; }
+  .theme-toggle:hover { color: var(--cyan); border-color: rgba(0,245,212,0.3); }
   .nav-menu-btn { display: none; background: none; border: none; cursor: pointer; color: var(--text); }
   /* MOBILE NAV */
   .mobile-nav { position: fixed; inset: 0; z-index: 400; background: var(--bg); padding: 5rem 2rem 2rem; display: none; flex-direction: column; gap: 2rem; }
@@ -255,6 +270,7 @@
   <a href="index.html">Послуги</a>
   <a href="/portfolio.html">Портфоліо</a>
   <a href="/#contact">Контакти</a>
+  <a href="/en/" style="color:var(--muted);font-size:1.1rem;">EN 🇬🇧</a>
 </nav>
 
 <nav class="main-nav">
@@ -266,6 +282,10 @@
     <li><a href="/#contact">Контакти</a></li>
   </ul>
   <a href="https://t.me/RomanMatviy" class="nav-btn" target="_blank" rel="noopener">⚡ Найняти</a>
+  <div class="nav-actions">
+    <a href="/en/" class="nav-lang">EN 🇬🇧</a>
+    <button class="theme-toggle" id="themeToggle" title="Змінити тему">🌙</button>
+  </div>
   <button class="nav-menu-btn" id="menuBtn">
     <svg width="22" height="16" viewBox="0 0 22 16"><rect y="0" width="22" height="2" rx="1" fill="currentColor"/><rect y="7" width="16" height="2" rx="1" fill="currentColor"/><rect y="14" width="22" height="2" rx="1" fill="currentColor"/></svg>
   </button>
@@ -393,7 +413,7 @@
 
 <section class="dark">
   <div class="section-label">Що кажуть клієнти</div>
-  <h2 class="section-h2 reveal">Останні <em>Відгуки</em></h2>
+  <h2 class="section-h2 reveal">Наші <em>Відгуки</em></h2>
   <div class="test-grid">
     <div class="test-card reveal"><div class="test-header"><div class="test-av" style="background:var(--orange);">T</div><div><div class="test-name">Thomas B.</div><div class="test-meta">Власник SaaS-стартапу &middot; 🇩🇪 Germany</div></div></div><div class="test-stars">★★★★★</div><div class="test-project">Laravel REST API + Filament адмін-панель</div><div class="test-text">&ldquo;Roman — один з найкращих розробників, з якими я мав досвід роботи. Побудував нам повноцінний REST API на Laravel 11 з Filament-адмінкою за 3 тижні. Код чистий, задокументований, покритий тестами. Завжди на зв'язку, чітко розуміє задачу ще до старту.&rdquo;</div><div class="test-platform">Upwork</div></div>
     <div class="test-card reveal"><div class="test-header"><div class="test-av" style="background:var(--blue);">M</div><div><div class="test-name">Martijn V.</div><div class="test-meta">E-commerce менеджер &middot; 🇳🇱 Netherlands</div></div></div><div class="test-stars">★★★★★</div><div class="test-project">WooCommerce тема + LiqPay + Nova Poshta</div><div class="test-text">&ldquo;Замовляли кастомну WooCommerce тему pixel-perfect по Figma і інтеграцію LiqPay та Nova Poshta. Роман зробив все точно в строк, тема виглядає ідеально на всіх пристроях. Окремо вразила якість коду — ніяких правок ядра, все через хуки.&rdquo;</div><div class="test-platform">Freelancehunt</div></div>
@@ -452,6 +472,18 @@
   if(mb&&mn&&mc){mb.addEventListener('click',function(){mn.classList.add('open');});mc.addEventListener('click',function(){mn.classList.remove('open');});mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');});});}
   var form=document.getElementById('quickForm');
   if(form){form.addEventListener('submit',function(e){e.preventDefault();var n=document.getElementById('qfn').value||'',em=document.getElementById('qfe').value||'',msg=document.getElementById('qfm').value||'';if(!msg)return;var text='Привіт! '+document.title+'\nІм\'я: '+n+' ('+em+')\n\n'+msg;window.open('https://t.me/RomanMatviy?text='+encodeURIComponent(text),'_blank');var ok=document.getElementById('qfOk');if(ok){ok.style.display='block';form.reset();setTimeout(function(){ok.style.display='none';},4000);}});}
+  // Theme toggle
+  var tt=document.getElementById('themeToggle');
+  if(tt){
+    var saved=localStorage.getItem('theme');
+    if(saved==='light'){document.body.classList.add('light');tt.textContent='☀️';}
+    tt.addEventListener('click',function(){
+      document.body.classList.toggle('light');
+      var isLight=document.body.classList.contains('light');
+      tt.textContent=isLight?'☀️':'🌙';
+      localStorage.setItem('theme',isLight?'light':'dark');
+    });
+  }
 })();
 </script>
 </body></html>
