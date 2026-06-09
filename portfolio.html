@@ -364,6 +364,10 @@
     <li><a href="/en/portfolio.html" style="color:var(--muted);font-size:.63rem;border:1px solid var(--border);padding:.27rem .6rem;border-radius:100px;">EN &#127468;&#127463;</a></li>
   </ul>
   <a href="https://t.me/RomanMatviy" class="nav-btn" target="_blank" rel="noopener">&#9889; Найняти</a>
+  <div class="nav-actions">
+    <a href="/en/" class="nav-lang">EN 🇬🇧</a>
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+  </div>
   <button class="nav-menu-btn" id="menuBtn"><svg width="22" height="16" viewBox="0 0 22 16"><rect y="0" width="22" height="2" rx="1" fill="currentColor"/><rect y="7" width="16" height="2" rx="1" fill="currentColor"/><rect y="14" width="22" height="2" rx="1" fill="currentColor"/></svg></button>
 </nav>
 <nav class="breadcrumb"><a href="/">Головна</a> &rsaquo; <span>Портфоліо</span></nav>
@@ -449,6 +453,17 @@
   document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
   var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobileNav'),mc=document.getElementById('mobileClose');
   if(mb&&mn&&mc){mb.addEventListener('click',function(){mn.classList.add('open');});mc.addEventListener('click',function(){mn.classList.remove('open');});mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');});});}
+  var tt=document.getElementById('themeToggle');
+  if(tt){
+    var saved=localStorage.getItem('theme');
+    if(saved==='light'){document.body.classList.add('light');tt.textContent='☀️';}
+    tt.addEventListener('click',function(){
+      document.body.classList.toggle('light');
+      var isLight=document.body.classList.contains('light');
+      tt.textContent=isLight?'☀️':'🌙';
+      localStorage.setItem('theme',isLight?'light':'dark');
+    });
+  }
 })();
 </script>
 </body>
