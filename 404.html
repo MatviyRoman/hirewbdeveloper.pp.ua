@@ -78,6 +78,42 @@
   .footer-nav a { font-size: 0.68rem; color: var(--muted); transition: color 0.2s; }
   .footer-nav a:hover { color: var(--cyan); }
   @media (max-width: 768px) { nav.main-nav .nav-links { display: none; } .nav-menu-btn { display: flex; } .error-container { padding: 4rem 5vw 3rem; } .suggestions-grid { grid-template-columns: 1fr; } }
+
+  body.light {
+    --bg: #f5f7fb; --bg2: #edf0f7; --bg3: #e2e7f0;
+    --text: #1a1e2e; --muted: #6b7a94;
+    --card: rgba(0,0,0,0.03);
+    --border: rgba(0,50,80,0.1);
+  }
+  body.light .bg-grid { background-image: linear-gradient(rgba(0,80,120,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,80,120,0.04) 1px, transparent 1px); }
+  body.light nav.main-nav { background: rgba(245,247,251,0.94); }
+  body.light .cur { background: var(--cyan); mix-blend-mode: multiply; }
+  body.light .mobile-nav { background: var(--bg); }
+  /* NAV ACTIONS */
+  .nav-actions { display: flex; align-items: center; gap: 0.6rem; }
+  .nav-lang { font-size: 0.63rem; color: var(--muted); border: 1px solid var(--border); padding: 0.27rem 0.65rem; border-radius: 100px; transition: all 0.25s; text-decoration: none; white-space: nowrap; font-family: var(--font-display); font-weight: 600; }
+  .nav-lang:hover { color: var(--cyan); border-color: rgba(0,245,212,0.35); }
+  .theme-toggle { background: none; border: 1px solid var(--border); color: var(--muted); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.85rem; transition: all 0.3s; flex-shrink: 0; }
+  .theme-toggle:hover { color: var(--cyan); border-color: rgba(0,245,212,0.35); }
+  /* SERVICES DROPDOWN */
+  .nav-has-drop { position: relative; }
+  .nav-has-drop > a { display: flex; align-items: center; gap: 0.3rem; }
+  .nav-has-drop > a::after { content: '▾'; font-size: 0.55rem; opacity: 0.5; transition: transform 0.25s; }
+  .nav-has-drop:hover > a::after { transform: rotate(180deg); }
+  .nav-drop {
+    position: absolute; top: calc(100% + 0.8rem); left: 50%; transform: translateX(-50%);
+    background: rgba(7,13,26,0.97); backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem;
+    min-width: 220px; display: grid; gap: 1px;
+    opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px);
+    transition: all 0.22s ease; z-index: 600; pointer-events: none;
+  }
+  body.light .nav-drop { background: rgba(237,240,247,0.98); }
+  .nav-has-drop:hover .nav-drop { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  .nav-drop a { display: flex; align-items: center; gap: 0.55rem; padding: 0.5rem 0.8rem; font-size: 0.69rem; letter-spacing: 0.04em; color: var(--muted); border-radius: 4px; transition: all 0.18s; white-space: nowrap; text-transform: none; }
+  .nav-drop a:hover { color: var(--cyan); background: rgba(0,245,212,0.06); }
+  .nav-drop a span { font-size: 0.85rem; }
+
 </style>
 <script type="application/ld+json">
 {
