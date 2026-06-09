@@ -152,6 +152,25 @@
   .related-title { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
   .related-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.7; flex: 1; }
   .related-link { font-size: 0.7rem; color: var(--cyan); margin-top: 0.3rem; }
+  /* TESTIMONIALS */
+  .test-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:1.5px;background:var(--border);border:1px solid var(--border);}
+  .test-card{background:var(--bg2);padding:1.8rem 1.6rem;display:flex;flex-direction:column;transition:background .25s;}
+  .test-card:hover{background:var(--bg3);}
+  .test-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;}
+  .test-av{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:1.05rem;color:var(--bg);flex-shrink:0;}
+  .test-name{font-family:var(--font-display);font-weight:700;font-size:.88rem;color:var(--text);}
+  .test-meta{font-size:.66rem;color:var(--muted);margin-top:.15rem;}
+  .test-stars{color:#fbbf24;font-size:.75rem;letter-spacing:.05em;margin-bottom:.6rem;}
+  .test-project{font-size:.65rem;font-family:var(--font-mono);color:var(--cyan);margin-bottom:.85rem;padding:.25rem .65rem;background:rgba(0,245,212,.06);border:1px solid rgba(0,245,212,.12);border-radius:2px;display:inline-block;}
+  .test-text{font-size:.77rem;color:var(--muted);line-height:1.9;flex:1;}
+  .test-platform{margin-top:1rem;font-size:.62rem;color:var(--muted);display:flex;align-items:center;gap:.4rem;}
+  .test-platform::before{content:'';width:16px;height:1px;background:var(--border);}
+  /* FREELANCEHUNT STRIP */
+  .fh-strip{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:2rem 2.2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-top:2rem;}
+  .fh-text{font-size:.8rem;color:var(--muted);line-height:1.75;}
+  .fh-text strong{color:var(--text);}
+  .fh-rating{font-family:var(--font-display);font-weight:900;font-size:2.2rem;color:var(--cyan);white-space:nowrap;line-height:1;}
+  .fh-rating span{font-size:.7rem;color:var(--muted);font-family:var(--font-mono);font-weight:400;display:block;margin-top:.2rem;}
   /* CTA SECTION */
   .cta-section { position: relative; z-index: 1; background: linear-gradient(135deg, var(--bg3) 0%, rgba(0,245,212,0.04) 50%, var(--bg3) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6rem 5vw; text-align: center; overflow: hidden; }
   .cta-bg { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: var(--cyan); filter: blur(160px); opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%,-50%); }
@@ -194,6 +213,33 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
   <meta name="theme-color" content="#00f5d4">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Roman Matviy — Веб-розробник",
+  "description": "Замовити розробку сайту, інтернет-магазину або REST API. Roman Matviy — FullStack розробник з Lviv, Ukraine. Laravel, PHP, Vue.js, WordPress, PrestaShop. 6+ років досвіду. Від $500.",
+  "image": "https://hirewebdeveloper.pp.ua/android-chrome-512x512.png",
+  "@id": "https://hirewebdeveloper.pp.ua",
+  "url": "https://hirewebdeveloper.pp.ua",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ukraine",
+    "addressCountry": "UA"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "54"
+  }
+}
+</script>
+<meta property="og:image" content="https://hirewebdeveloper.pp.ua/android-chrome-512x512.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Послуги веб-розробника — Laravel, PHP, Vue.js, WordPress, PrestaShop | Roman Matviy">
+<meta name="twitter:description" content="Замовити розробку сайту, інтернет-магазину або REST API. Roman Matviy — FullStack розробник з Lviv, Ukraine. Laravel, PHP, Vue.js, WordPress, PrestaShop. 6+ років досвіду. Від $500.">
+<meta name="twitter:image" content="https://hirewebdeveloper.pp.ua/android-chrome-512x512.png">
 </head>
 <body>
 <div class="scroll-progress" id="scrollProgress"></div>
@@ -229,7 +275,7 @@
 
 <header class="page-hero">
   <div class="page-badge">Доступний до співпраці</div>
-  <h1 class="page-h1">Послуги <em style="color:var(--cyan)">веб-розробника</em><br>у Львові та Remote</h1>
+  <h1 class="page-h1">Послуги <em style="color:var(--cyan)">веб-розробника</em><br>в Україні</h1>
   <p class="page-tagline">Laravel · PHP · Vue.js · WordPress · PrestaShop · REST API</p>
   <p class="page-desc">Розробляю <strong>сайти, інтернет-магазини, SaaS-платформи та REST API</strong> для бізнесу по всьому світу. Більше <strong>6 років комерційного досвіду</strong>, 50+ проєктів. Від невеликих задач до складних enterprise-систем — завжди в строк і з чистим кодом.</p>
   <div class="hero-ctas">
@@ -312,6 +358,22 @@
       <div class="svc-tags"><span class="svc-tag">MySQL</span><span class="svc-tag">MariaDB</span><span class="svc-tag">SQL</span><span class="svc-tag">Eloquent</span></div>
       <div class="svc-price">Від <span>$20/год</span></div>
       <a href="fullstack.html" class="svc-link">Детальніше →</a>
+    </article>
+    <article class="svc-card reveal">
+      <div class="svc-icon">🤖</div>
+      <h3 class="svc-title">Розробка Telegram-ботів</h3>
+      <p class="svc-desc">Створення ботів для бізнесу, інтеграція з API, Laravel. Автоматизація процесів та підтримка клієнтів.</p>
+      <div class="svc-tags"><span class="svc-tag">Telegram API</span><span class="svc-tag">Laravel</span><span class="svc-tag">Webhooks</span></div>
+      <div class="svc-price">Від <span>$300</span></div>
+      <a href="api.html" class="svc-link">Детальніше →</a>
+    </article>
+    <article class="svc-card reveal">
+      <div class="svc-icon">📈</div>
+      <h3 class="svc-title">SEO оптимізація та аудит</h3>
+      <p class="svc-desc">Технічне SEO, оптимізація швидкості (Core Web Vitals), мікророзмітка (Schema.org), виправлення помилок.</p>
+      <div class="svc-tags"><span class="svc-tag">Tech SEO</span><span class="svc-tag">PageSpeed</span><span class="svc-tag">Schema.org</span></div>
+      <div class="svc-price">Від <span>$150</span></div>
+      <a href="/#contact" class="svc-link">Детальніше →</a>
     </article>
   </div>
 </section>
