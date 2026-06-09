@@ -101,15 +101,22 @@
   .nav-has-drop > a::after { content: '▾'; font-size: 0.55rem; opacity: 0.5; transition: transform 0.25s; }
   .nav-has-drop:hover > a::after { transform: rotate(180deg); }
   .nav-drop {
-    position: absolute; top: calc(100% + 0.8rem); left: 50%; transform: translateX(-50%);
+    position: absolute; top: calc(100% + 0.8rem); left: 50%; transform: translateX(-50%) translateY(-6px);
     background: rgba(7,13,26,0.97); backdrop-filter: blur(20px) saturate(1.4);
     border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem;
-    min-width: 220px; display: grid; gap: 1px;
-    opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-6px);
-    transition: all 0.22s ease; z-index: 600; pointer-events: none;
+    min-width: 220px; list-style: none;
+    display: none;
+    transition: transform 0.22s ease, opacity 0.22s ease; z-index: 600;
   }
-  body.light .nav-drop { background: rgba(237,240,247,0.98); }
-  .nav-has-drop:hover .nav-drop { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  body.light .nav-drop {
+    position: absolute; top: calc(100% + 0.8rem); left: 50%; transform: translateX(-50%) translateY(-6px);
+    background: rgba(7,13,26,0.97); backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem;
+    min-width: 220px; list-style: none;
+    display: none;
+    transition: transform 0.22s ease, opacity 0.22s ease; z-index: 600;
+  }
+  .nav-has-drop:hover .nav-drop { display: grid; gap: 1px; transform: translateX(-50%) translateY(0); }
   .nav-drop a { display: flex; align-items: center; gap: 0.55rem; padding: 0.5rem 0.8rem; font-size: 0.69rem; letter-spacing: 0.04em; color: var(--muted); border-radius: 4px; transition: all 0.18s; white-space: nowrap; text-transform: none; }
   .nav-drop a:hover { color: var(--cyan); background: rgba(0,245,212,0.06); }
   .nav-drop a span { font-size: 0.85rem; }
