@@ -1,0 +1,35 @@
+# Roman Matviy - FullStack Web Developer
+*[English version available at /en/llms.txt]*
+
+## Про мене (About Me)
+Я — Roman Matviy, FullStack веб-розробник з понад 6 роками комерційного досвіду. Знаходжусь у Львові (Україна) та працюю з клієнтами по всьому світу (remote).
+Спеціалізуюсь на створенні складних веб-додатків, REST API, інтернет-магазинів та SaaS-платформ. Здав понад 50 успішних проєктів для бізнесу в Європі та США.
+
+## Основний Стек Технологій (Tech Stack)
+- **Backend**: PHP 8.x, Laravel 11, Livewire 3, Filament PHP, REST API, JWT
+- **Frontend**: Vue.js 3 (Composition API), TypeScript, Pinia, Vite, Alpine.js, Vanilla JS
+- **CMS / E-commerce**: WordPress, WooCommerce, PrestaShop
+- **Бази даних**: MySQL, MariaDB, SQL (оптимізація запитів, складні JOIN)
+- **Інфраструктура**: Docker, CI/CD (GitHub Actions), Linux (VPS)
+
+## Послуги (Services)
+- **Laravel розробка**: Backend-системи, REST API, Livewire, Filament-адмін, DDD-архітектура.
+- **WordPress розробка**: Кастомні теми та плагіни, ACF, WooCommerce-магазини.
+- **PrestaShop розробка**: Теми, модулі, платіжні інтеграції (LiqPay, Monobank).
+- **Vue.js розробка**: SPA, SSR, інтеграція з Laravel API.
+- **PHP розробка**: Чистий PHP 8 з OOP, CakePHP, CodeIgniter, Yii.
+- **REST API розробка**: Проектування, Swagger/OpenAPI, JWT, OAuth2.
+- **Розробка Telegram-ботів**: Інтеграція з API, автоматизація бізнес-процесів.
+- **SEO оптимізація та аудит**: Технічне SEO, оптимізація швидкості (Core Web Vitals).
+
+## Контакти (Contact)
+- **Telegram**: [Написати в Telegram](https://t.me/RomanMatviy)
+- **Email**: roman@matviy.pp.ua
+- **Сайт**: https://hirewebdeveloper.pp.ua
+
+## Корисні посилання (Links)
+- [Головна сторінка](https://hirewebdeveloper.pp.ua/)
+- [Портфоліо](https://hirewebdeveloper.pp.ua/portfolio.html)
+- [Ціни (Pricing)](https://hirewebdeveloper.pp.ua/pricing.html)
+
+Звертайтеся для безкоштовної консультації та оцінки вашого проєкту!

@@ -1,0 +1,34 @@
+# Roman Matviy - FullStack Web Developer
+
+## About Me
+I am Roman Matviy, a FullStack Web Developer with over 6 years of commercial experience. Based in Lviv, Ukraine, I work remotely with clients worldwide.
+I specialize in building complex web applications, REST APIs, e-commerce stores, and SaaS platforms. I have successfully delivered 50+ projects for businesses in Europe and the US.
+
+## Tech Stack
+- **Backend**: PHP 8.x, Laravel 11, Livewire 3, Filament PHP, REST API, JWT
+- **Frontend**: Vue.js 3 (Composition API), TypeScript, Pinia, Vite, Alpine.js, Vanilla JS
+- **CMS / E-commerce**: WordPress, WooCommerce, PrestaShop
+- **Databases**: MySQL, MariaDB, SQL (query optimization, complex JOINs)
+- **Infrastructure**: Docker, CI/CD (GitHub Actions), Linux (VPS)
+
+## Services
+- **Laravel Development**: Backend systems, REST APIs, Livewire, Filament admin panels, DDD architecture.
+- **WordPress Development**: Custom themes and plugins, ACF, WooCommerce stores.
+- **PrestaShop Development**: Themes, modules, payment integrations.
+- **Vue.js Development**: SPAs, SSR, integration with Laravel API.
+- **PHP Development**: Clean PHP 8 with OOP, CakePHP, CodeIgniter, Yii.
+- **REST API Development**: Architecture design, Swagger/OpenAPI, JWT, OAuth2.
+- **Telegram Bot Development**: API integration, business process automation.
+- **SEO Optimization & Audit**: Technical SEO, Core Web Vitals optimization, Schema.org.
+
+## Contact
+- **Telegram**: [Message me on Telegram](https://t.me/RomanMatviy)
+- **Email**: roman@matviy.pp.ua
+- **Website**: https://hirewebdeveloper.pp.ua/en/
+
+## Useful Links
+- [Home (EN)](https://hirewebdeveloper.pp.ua/en/)
+- [Portfolio (EN)](https://hirewebdeveloper.pp.ua/en/portfolio.html)
+- [Pricing (EN)](https://hirewebdeveloper.pp.ua/en/pricing.html)
+
+Feel free to reach out for a free consultation and project estimation!
