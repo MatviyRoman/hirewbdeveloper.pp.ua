@@ -136,11 +136,26 @@
   <nav class="nav">
     <a href="/en/services/" class="logo">Roman Matviy</a>
     <ul class="nav-links">
-      <li><a href="/en/services/">Services</a></li>
-      <li><a href="/en/pricing.html">Pricing</a></li>
-      <li><a href="/en/about.html">About</a></li>
-      <li><a href="/services/prestashop.html" style="color: var(--orange);">UK</a></li>
-    </ul>
+  <li><a href="/en/">Home</a></li>
+  <li><a href="/en/about.html">About</a></li>
+  <li class="nav-has-drop"><a href="/en/services/" class="active">Services</a>
+   <ul class="nav-drop">
+    <li><a href="/en/services/laravel.html"><span>⚙️</span> Laravel Development</a></li>
+    <li><a href="/en/services/wordpress.html"><span>📝</span> WordPress Development</a></li>
+    <li><a href="/en/services/prestashop.html"><span>🛒</span> PrestaShop Development</a></li>
+    <li><a href="/en/services/vuejs.html"><span>🟢</span> Vue.js Development</a></li>
+    <li><a href="/en/services/php.html"><span>🐘</span> PHP Development</a></li>
+    <li><a href="/en/services/api.html"><span>🔌</span> REST API</a></li>
+    <li><a href="/en/services/fullstack.html"><span>🚀</span> FullStack Development</a></li>
+    <li><a href="/en/services/filament.html"><span>🎛️</span> Filament PHP</a></li>
+    <li><a href="/en/services/livewire.html"><span>🌊</span> Livewire</a></li>
+    <li><a href="/en/services/docker.html"><span>🐳</span> Docker</a></li>
+   </ul>
+  </li>
+  <li><a href="/en/pricing.html">Pricing</a></li>
+  <li><a href="/en/portfolio.html">Portfolio</a></li>
+  <li><a href="/en/#contact">Contact</a></li>
+ </ul>
     <button class="hire-btn" onclick="window.open('https://t.me/RomanMatviy', '_blank')">Hire me</button>
     <button class="menu-toggle" onclick="document.querySelector('.nav-mobile').classList.toggle('open'); return false;">☰</button>
   </nav>
