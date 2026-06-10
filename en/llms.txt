@@ -1,7 +1,7 @@
 # Roman Matviy - FullStack Web Developer
 
 ## About Me
-I am Roman Matviy, a FullStack Web Developer with over 6 years of commercial experience. Based in Lviv, Ukraine, I work remotely with clients worldwide.
+I am Roman Matviy, a FullStack Web Developer with over 10 years of commercial experience. Based in Lviv, Ukraine, I work remotely with clients worldwide.
 I specialize in building complex web applications, REST APIs, e-commerce stores, and SaaS platforms. I have successfully delivered 50+ projects for businesses in Europe and the US.
 
 ## Tech Stack
