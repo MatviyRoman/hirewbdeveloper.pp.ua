@@ -256,25 +256,7 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/blog/how-to-hire-developer-ukraine.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/blog/how-to-hire-developer-ukraine.html"/>
   </url>
-  
-  <!-- 404 Pages -->
-  <url>
-    <loc>https://hirewebdeveloper.pp.ua/404.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.1</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/404.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/404.html"/>
-  </url>
-  <url>
-    <loc>https://hirewebdeveloper.pp.ua/en/404.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.1</priority>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://hirewebdeveloper.pp.ua/404.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hirewebdeveloper.pp.ua/en/404.html"/>
-  </url>
-  
+
   <!-- Additional Service Pages -->
   <url>
     <loc>https://hirewebdeveloper.pp.ua/services/docker.html</loc>
