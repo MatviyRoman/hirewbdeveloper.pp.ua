@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/shared.css">
 <style>
   :root {
     --bg: #03050d; --bg2: #070d1a; --bg3: #0a1428;
@@ -230,30 +231,7 @@
   .nav-drop a { display: flex; align-items: center; gap: 0.55rem; padding: 0.5rem 0.8rem; font-size: 0.69rem; letter-spacing: 0.04em; color: var(--muted); border-radius: 4px; transition: all 0.18s; white-space: nowrap; text-transform: none; }
   .nav-drop a:hover { color: var(--cyan); background: rgba(0,245,212,0.06); }
   .nav-drop a span { font-size: 0.85rem; }
-
-
-  /* ── TESTIMONIALS ───────────────────────────── */
-  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1px solid var(--border);}
-  .test-card{background:var(--bg2);padding:1.8rem 1.6rem;display:flex;flex-direction:column;transition:background .25s;}
-  .test-card:hover{background:var(--bg3);}
-  .test-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;}
-  .test-av{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:1.05rem;color:var(--bg);flex-shrink:0;}
-  .test-name{font-family:var(--font-display);font-weight:700;font-size:.88rem;color:var(--text);}
-  .test-meta{font-size:.66rem;color:var(--muted);margin-top:.15rem;}
-  .test-stars{color:#fbbf24;font-size:.75rem;letter-spacing:.05em;margin-bottom:.6rem;}
-  .test-project{font-size:.65rem;font-family:var(--font-mono);color:var(--cyan);margin-bottom:.85rem;padding:.25rem .65rem;background:rgba(0,245,212,.06);border:1px solid rgba(0,245,212,.12);border-radius:2px;display:inline-block;}
-  .test-text{font-size:.77rem;color:var(--muted);line-height:1.9;flex:1;}
-  .test-platform{margin-top:1rem;font-size:.62rem;color:var(--muted);display:flex;align-items:center;gap:.4rem;}
-  .test-platform::before{content:'';width:16px;height:1px;background:var(--border);}
-
-  /* ── FREELANCEHUNT STRIP ────────────────────── */
-  .fh-strip{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:2rem 2.2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-top:2rem;}
-  .fh-text{font-size:.8rem;color:var(--muted);line-height:1.75;}
-  .fh-text strong{color:var(--text);}
-  .fh-rating{font-family:var(--font-display);font-weight:900;font-size:2.2rem;color:var(--cyan);white-space:nowrap;line-height:1;}
-  .fh-rating span{font-size:.7rem;color:var(--muted);font-family:var(--font-mono);font-weight:400;display:block;margin-top:.2rem;}
-
-  </style>
+</style>
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
